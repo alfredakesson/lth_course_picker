@@ -103,12 +103,12 @@
         var Course = Backbone.Model.extend({
             initialize: function () {
                 //console.log("Hej hopp");
-            }
+            },
         });
 
         var CourseList = Backbone.Collection.extend({
+            localStorage: new Backbone.LocalStorage("SomeCollection"),
             model: Course,
-            localStorage: new Backbone.LocalStorage("courseCollection"),
         });
 
         var courses = new CourseList();
@@ -134,7 +134,7 @@
             temp: '#home_template',
             render: function () {
                 console.log("render");
-                var template = _.template($(this.temp).html());
+                var template = _.template($(this. temp).html());
                 this.$el.html(template({
                     data: this.dataSource.toJSON(),
                 }));
@@ -143,11 +143,16 @@
                 e.preventDefault();
                 var id = $(e.currentTarget).data("id");
                 var item = courses.get(id);
-                coursesAdded.add([item]);
+                coursesAdded.fetch();
+                coursesAdded.add([item.clone()]);
+                item.save();
                 sideView.render();
+                
             },
         });
+        
         homeView = new HomeView();
+        
         var SideView = HomeView.extend({
             temp: '#side_template',
             el: '.page2',
@@ -155,11 +160,13 @@
             clicked: function(e){
                 e.preventDefault();
                 var id = $(e.currentTarget).data("id");
-                var item = courses.get(id);
-                coursesAdded.remove([item]);
+                var item = coursesAdded.get(id);
+                coursesAdded.fetch();
+                item.destroy();
                 sideView.render();
             }
         });
+        
         sideView = new SideView();        
 
         var Router = Backbone.Router.extend({
@@ -168,12 +175,15 @@
                 "": "home"
             }
         });
+        
         var router = new Router;
         router.on('route:test', function () {
             testView.render();
         })
          router.on('route:home', function () {
             homeView.render();
+            coursesAdded.fetch();
+            sideView.render();
         })
          Backbone.history.start();
     </script>
