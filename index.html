@@ -13,7 +13,8 @@
     <div class="container">
         <h1>LTH</h1>
         <hr />
-        <div class="page"></div>
+        <div class="page col-md-6"></div>
+        <div class="page2 col-md-6"></div>
     </div>
 
 
@@ -29,7 +30,7 @@
 <table>
     <thead>
         <tr>
-            <th>Id</th>
+            <th>Code</th>
             <th>Name</th>
             <th>Credits</th>
             <th> </th>
@@ -42,7 +43,7 @@
             <tr>
                 <!-- use variables -->
                 <td>
-                    <%= item.id %>
+                    <%= item.code %>
                 </td>
                 <td>
                     <%= item.name %>
@@ -51,7 +52,42 @@
                     <%= item.credits %>
                 </td>
                 <td>
-                    <a href="#" class="btn"> Lägg till</a>
+                    <a href="#" class="btn" data-id=<%= item.id%>> Lägg till</a>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>
+    </script>
+    
+    
+    <script type="text/template" id="side_template">
+<table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Credits</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+         <% 
+        _.each(data,function(item){
+        %>
+            <tr>
+                <!-- use variables -->
+                <td>
+                    <%= item.code %>
+                </td>
+                <td>
+                    <%= item.name %>
+                </td>
+                <td>
+                    <%= item.credits %>
+                </td>
+                <td>
+                    <a href="#" class="btn" data-id=<%= item.id%>> Ta bort</a>
                 </td>
             </tr>
             <% }); %>
@@ -76,6 +112,7 @@
         });
 
         var courses = new CourseList();
+        var coursesAdded = new CourseList();
         courses.add(ourData);
 
         var TestView = Backbone.View.extend({
@@ -90,14 +127,40 @@
         testView = new TestView();
         var HomeView = Backbone.View.extend({
             el: '.page',
+            events: {
+                "click a": "clicked"
+            },
+            dataSource: courses,
+            temp: '#home_template',
             render: function () {
-                var template = _.template($('#home_template').html());
+                console.log("render");
+                var template = _.template($(this.temp).html());
                 this.$el.html(template({
-                    data: courses.toJSON(),
+                    data: this.dataSource.toJSON(),
                 }));
+            },
+            clicked: function(e){
+                e.preventDefault();
+                var id = $(e.currentTarget).data("id");
+                var item = courses.get(id);
+                coursesAdded.add([item]);
+                sideView.render();
             },
         });
         homeView = new HomeView();
+        var SideView = HomeView.extend({
+            temp: '#side_template',
+            el: '.page2',
+            dataSource: coursesAdded,
+            clicked: function(e){
+                e.preventDefault();
+                var id = $(e.currentTarget).data("id");
+                var item = courses.get(id);
+                coursesAdded.remove([item]);
+                sideView.render();
+            }
+        });
+        sideView = new SideView();        
 
         var Router = Backbone.Router.extend({
             routes: {
