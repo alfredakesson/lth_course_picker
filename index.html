@@ -22,6 +22,8 @@
     <script src="lib/backbone-min.js" type="text/javascript"></script>
     <script src="lib/bootstrap.min.js" type="text/javascript"></script>
     <script src="lib/backbone.localStorage-min.js" type="text/javascript"></script>
+    <script src="courses.json" type="text/javascript"></script>
+
 
 
     <script type="text/template" id="test_test">
@@ -41,11 +43,8 @@
         });
 
         var courses = new CourseList();
-
-        $.getJSON("courses.json", function (data) {
-            courses.add(data);
-        });
-
+        courses.add(ourData);
+        
         var TestView = Backbone.View.extend({
             el: '.page',
             render: function () {
