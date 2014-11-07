@@ -1,1102 +1,3197 @@
-ourData = [
+[
     {
-        "id": "EDA070",
+        "id": "0",
+        "code": "EDA070",
         "credits": "3",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Datorer och datoranvändning"
     },
     {
-        "id": "EDAA05",
+        "id": "1",
+        "code": "EDAA05",
         "credits": "8",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Datorer i system"
     },
     {
-        "id": "EDA016",
+        "id": "2",
+        "code": "EDA016",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Programmeringsteknik"
     },
     {
-        "id": "FMAA01",
+        "id": "3",
+        "code": "FMAA01",
         "credits": "15",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Endimensionell analys"
     },
     {
-        "id": "ETIA01",
+        "id": "4",
+        "code": "ETIA01",
         "credits": "8",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Elektronik"
     },
     {
-        "id": "EDAA01",
+        "id": "5",
+        "code": "EDAA01",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Programmeringsteknik - fördjupningskurs"
     },
     {
-        "id": "ETSA01",
+        "id": "6",
+        "code": "ETSA01",
         "credits": "5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Ingenjörsprocessen för programvaruutveckling - metodik"
     },
     {
-        "id": "FMA420",
+        "id": "7",
+        "code": "FMA420",
         "credits": "6",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Linjär algebra"
     },
     {
-        "id": "ETS052",
+        "id": "8",
+        "code": "ETS052",
         "credits": "4,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Datorkommunikation"
     },
     {
-        "id": "EIT020",
+        "id": "9",
+        "code": "EIT020",
         "credits": "9",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Digitalteknik"
     },
     {
-        "id": "EDAF10",
+        "id": "10",
+        "code": "EDAF10",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Objektorienterad modellering och diskreta strukturer"
     },
     {
-        "id": "FMA430",
+        "id": "11",
+        "code": "FMA430",
         "credits": "6",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Flerdimensionell analys"
     },
     {
-        "id": "EDA260",
+        "id": "12",
+        "code": "EDA260",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Programvaruutveckling i grupp – projekt"
     },
     {
-        "id": "EIT070",
+        "id": "13",
+        "code": "EIT070",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Datorteknik"
     },
     {
-        "id": "FMAF10",
+        "id": "14",
+        "code": "FMAF10",
         "credits": "5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Tillämpad matematik - Linjära system"
     },
     {
-        "id": "EDAF05",
+        "id": "15",
+        "code": "EDAF05",
         "credits": "5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Algoritmer, datastrukturer och komplexitet"
     },
     {
-        "id": "ETSA05",
+        "id": "16",
+        "code": "ETSA05",
         "credits": "4",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Ingenjörsprocessen för programvaruutveckling - samhällsaspekter"
     },
     {
-        "id": "ETI265",
+        "id": "17",
+        "code": "ETI265",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Signalbehandling i multimedia"
     },
     {
-        "id": "FMAF01",
+        "id": "18",
+        "code": "FMAF01",
         "credits": "7",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Matematik - Funktionsteori"
     },
     {
-        "id": "FMAF05",
+        "id": "19",
+        "code": "FMAF05",
         "credits": "7",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Matematik - System och transformer"
     },
     {
-        "id": "FRT010",
+        "id": "20",
+        "code": "FRT010",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Reglerteknik, allmän kurs"
     },
     {
-        "id": "FMS012",
+        "id": "21",
+        "code": "FMS012",
         "credits": "9",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Matematisk statistik, allmän kurs"
     },
     {
-        "id": "EDA040",
+        "id": "22",
+        "code": "EDA040",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Realtidsprogrammering"
     },
     {
-        "id": "TEK210",
+        "id": "23",
+        "code": "TEK210",
         "credits": "4,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Kognition"
     },
     {
-        "id": "FAFF25",
+        "id": "24",
+        "code": "FAFF25",
         "credits": "11",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Fysik"
     },
     {
-        "id": "EIT060",
+        "id": "25",
+        "code": "EIT060",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Datasäkerhet"
     },
     {
-        "id": "ETSF01",
+        "id": "26",
+        "code": "ETSF01",
         "credits": "4",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Ingenjörsprocessen för programvaruutveckling - ekonomi och kvalitet"
     },
     {
-        "id": "ETS075",
+        "id": "27",
+        "code": "ETS075",
         "credits": "4,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Kösystem"
     },
     {
-        "id": "FMN011",
+        "id": "28",
+        "code": "FMN011",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Numerisk analys"
     },
     {
-        "id": "FMAN20",
+        "id": "29",
+        "code": "FMAN20",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Bildanalys"
     },
     {
-        "id": "EDA221",
+        "id": "30",
+        "code": "EDA221",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Datorgrafik"
     },
     {
-        "id": "MAMN25",
+        "id": "31",
+        "code": "MAMN25",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Interaktionsdesign"
     },
     {
-        "id": "FMSF10",
+        "id": "32",
+        "code": "FMSF10",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Stationära stokastiska processer"
     },
     {
-        "id": "FMA120",
+        "id": "33",
+        "code": "FMA120",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Matristeori"
     },
     {
-        "id": "EDAN35",
+        "id": "34",
+        "code": "EDAN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Högpresterande datorgrafik"
     },
     {
-        "id": "FAFF20",
+        "id": "35",
+        "code": "FAFF20",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Multispektral avbildning"
     },
     {
-        "id": "FMAN40",
+        "id": "36",
+        "code": "FMAN40",
         "credits": "3",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i tillämpad matematik"
     },
     {
-        "id": "FMA135",
+        "id": "37",
+        "code": "FMA135",
         "credits": "6",
+        "cycle": "G1",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Geometri"
     },
     {
-        "id": "FMA270",
+        "id": "38",
+        "code": "FMA270",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Datorseende"
     },
     {
-        "id": "MAM101",
+        "id": "39",
+        "code": "MAM101",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Virtual Reality i teori och praktik"
     },
     {
-        "id": "MAMN01",
+        "id": "40",
+        "code": "MAMN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Avancerad interaktionsdesign"
     },
     {
-        "id": "ETIF10",
+        "id": "41",
+        "code": "ETIF10",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Signalbehandling - design och implementering"
     },
     {
-        "id": "FMN100",
+        "id": "42",
+        "code": "FMN100",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Numeriska metoder för datorgrafik"
     },
     {
-        "id": "FMSN20",
+        "id": "43",
+        "code": "FMSN20",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "bg",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Spatial statistik med bildanalys"
     },
     {
-        "id": "ETIN20",
+        "id": "44",
+        "code": "ETIN20",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Digital IC-konstruktion"
     },
     {
-        "id": "EITF35",
+        "id": "45",
+        "code": "EITF35",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Digitala strukturer på kisel"
     },
     {
-        "id": "ETIN70",
+        "id": "46",
+        "code": "ETIN70",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Modern elektronik"
     },
     {
-        "id": "ESS050",
+        "id": "47",
+        "code": "ESS050",
         "credits": "9",
+        "cycle": "G2",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Elektromagnetisk fältteori"
     },
     {
-        "id": "EITF20",
+        "id": "48",
+        "code": "EITF20",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Datorarkitektur"
     },
     {
-        "id": "EITF40",
+        "id": "49",
+        "code": "EITF40",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Digitala och analoga projekt"
     },
     {
-        "id": "ETIN45",
+        "id": "50",
+        "code": "ETIN45",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "DSP-design"
     },
     {
-        "id": "ESSF10",
+        "id": "51",
+        "code": "ESSF10",
         "credits": "5",
+        "cycle": "G2",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Mätteknik"
     },
     {
-        "id": "ETIN35",
+        "id": "52",
+        "code": "ETIN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "IC-projekt 1"
     },
     {
-        "id": "EDAN15",
+        "id": "53",
+        "code": "EDAN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Konstruktion av inbyggda system"
     },
     {
-        "id": "EDA385",
+        "id": "54",
+        "code": "EDA385",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Konstruktion av inbyggda system, fördjupningskurs"
     },
     {
-        "id": "ETIN40",
+        "id": "55",
+        "code": "ETIN40",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "IC-projekt 2"
     },
     {
-        "id": "ETIN55",
+        "id": "56",
+        "code": "ETIN55",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "dpd",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Integrerade A/D och D/A omvandlare"
     },
     {
-        "id": "EDAA25",
+        "id": "57",
+        "code": "EDAA25",
         "credits": "3",
+        "cycle": "G1",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "C-programmering"
     },
     {
-        "id": "EITF35",
+        "id": "58",
+        "code": "EITF35",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Digitala strukturer på kisel"
     },
     {
-        "id": "EDAN65",
+        "id": "59",
+        "code": "EDAN65",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Kompilatorer"
     },
     {
-        "id": "EDA230",
+        "id": "60",
+        "code": "EDA230",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Optimerande kompilatorer"
     },
     {
-        "id": "FRTN01",
+        "id": "61",
+        "code": "FRTN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Realtidssystem"
     },
     {
-        "id": "EIEF01",
+        "id": "62",
+        "code": "EIEF01",
         "credits": "10",
+        "cycle": "G2",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Tillämpad mekatronik"
     },
     {
-        "id": "EITF20",
+        "id": "63",
+        "code": "EITF20",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Datorarkitektur"
     },
     {
-        "id": "FRT090",
+        "id": "64",
+        "code": "FRT090",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i reglerteknik"
     },
     {
-        "id": "ETIN80",
+        "id": "65",
+        "code": "ETIN80",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Algoritmer i signalprocessorer - projektkurs"
     },
     {
-        "id": "EITN30",
+        "id": "66",
+        "code": "EITN30",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Internet inuti"
     },
     {
-        "id": "FRTN01",
+        "id": "67",
+        "code": "FRTN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Realtidssystem"
     },
     {
-        "id": "EDAN15",
+        "id": "68",
+        "code": "EDAN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Konstruktion av inbyggda system"
     },
     {
-        "id": "EDAF35",
+        "id": "69",
+        "code": "EDAF35",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Operativsystem"
     },
     {
-        "id": "EDA385",
+        "id": "70",
+        "code": "EDA385",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Konstruktion av inbyggda system, fördjupningskurs"
     },
     {
-        "id": "EDAN25",
+        "id": "71",
+        "code": "EDAN25",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "is",
+        "on_hold": "1",
+        "study_periods": [],
         "name": "Multicoreprogrammering"
     },
     {
-        "id": "EITN50",
+        "id": "72",
+        "code": "EITN50",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Avancerad datasäkerhet"
     },
     {
-        "id": "ETT051",
+        "id": "73",
+        "code": "ETT051",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Digital kommunikation"
     },
     {
-        "id": "FMSF15",
+        "id": "74",
+        "code": "FMSF15",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Markovprocesser"
     },
     {
-        "id": "EITF05",
+        "id": "75",
+        "code": "EITF05",
         "credits": "4",
+        "cycle": "G2",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Webbsäkerhet"
     },
     {
-        "id": "EITN41",
+        "id": "76",
+        "code": "EITN41",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Avancerad webbsäkerhet"
     },
     {
-        "id": "ETTN01",
+        "id": "77",
+        "code": "ETTN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Digital kommunikation, fortsättningskurs"
     },
     {
-        "id": "ETSF10",
+        "id": "78",
+        "code": "ETSF10",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Internetprotokoll"
     },
     {
-        "id": "EDIN01",
+        "id": "79",
+        "code": "EDIN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Kryptoteknik"
     },
     {
-        "id": "FMAN10",
+        "id": "80",
+        "code": "FMAN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Algebraiska strukturer"
     },
     {
-        "id": "ETSN01",
+        "id": "81",
+        "code": "ETSN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Avancerad telekommunikation"
     },
     {
-        "id": "EITN30",
+        "id": "82",
+        "code": "EITN30",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Internet inuti"
     },
     {
-        "id": "EITN45",
+        "id": "83",
+        "code": "EITN45",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Informationsteori"
     },
     {
-        "id": "ETS061",
+        "id": "84",
+        "code": "ETS061",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Simulering"
     },
     {
-        "id": "EITN21",
+        "id": "85",
+        "code": "EITN21",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i trådlös kommunikation"
     },
     {
-        "id": "EDI042",
+        "id": "86",
+        "code": "EDI042",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ks",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Kodningsteknik"
     },
     {
-        "id": "EDAN55",
+        "id": "87",
+        "code": "EDAN55",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Avancerade algoritmer"
     },
     {
-        "id": "EDAA25",
+        "id": "88",
+        "code": "EDAA25",
         "credits": "3",
+        "cycle": "G1",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "C-programmering"
     },
     {
-        "id": "EDAN65",
+        "id": "89",
+        "code": "EDAN65",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Kompilatorer"
     },
     {
-        "id": "EDA230",
+        "id": "90",
+        "code": "EDA230",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Optimerande kompilatorer"
     },
     {
-        "id": "EDAN20",
+        "id": "91",
+        "code": "EDAN20",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Språkteknologi"
     },
     {
-        "id": "EDAN40",
+        "id": "92",
+        "code": "EDAN40",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Funktionsprogrammering"
     },
     {
-        "id": "EDAN70",
+        "id": "93",
+        "code": "EDAN70",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i datavetenskap"
     },
     {
-        "id": "EDAN01",
+        "id": "94",
+        "code": "EDAN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Constraint-programmering"
     },
     {
-        "id": "FMA240",
+        "id": "95",
+        "code": "FMA240",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Linjär och kombinatorisk optimering"
     },
     {
-        "id": "EDA132",
+        "id": "96",
+        "code": "EDA132",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Tillämpad artificiell intelligens"
     },
     {
-        "id": "EDA031",
+        "id": "97",
+        "code": "EDA031",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "C++ - programmering"
     },
     {
-        "id": "EDA216",
+        "id": "98",
+        "code": "EDA216",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Databasteknik"
     },
     {
-        "id": "EDAF15",
+        "id": "99",
+        "code": "EDAF15",
         "credits": "5",
+        "cycle": "G2",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Algoritmimplementering"
     },
     {
-        "id": "FMAA15",
+        "id": "100",
+        "code": "FMAA15",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Diskret matematik"
     },
     {
-        "id": "EDAN70",
+        "id": "101",
+        "code": "EDAN70",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Projekt i datavetenskap"
     },
     {
-        "id": "EDAN25",
+        "id": "102",
+        "code": "EDAN25",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "pv",
+        "on_hold": "1",
+        "study_periods": [],
         "name": "Multicoreprogrammering"
     },
     {
-        "id": "EITN50",
+        "id": "103",
+        "code": "EITN50",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Avancerad datasäkerhet"
     },
     {
-        "id": "MIO012",
+        "id": "104",
+        "code": "MIO012",
         "credits": "6",
+        "cycle": "G1",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Industriell ekonomi, allmän kurs"
     },
     {
-        "id": "MAMN25",
+        "id": "105",
+        "code": "MAMN25",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Interaktionsdesign"
     },
     {
-        "id": "ETSN05",
+        "id": "106",
+        "code": "ETSN05",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Programvaruutveckling för stora system"
     },
     {
-        "id": "FRTN01",
+        "id": "107",
+        "code": "FRTN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Realtidssystem"
     },
     {
-        "id": "MIO012",
+        "id": "108",
+        "code": "MIO012",
         "credits": "6",
+        "cycle": "G1",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Industriell ekonomi, allmän kurs"
     },
     {
-        "id": "EDAN10",
+        "id": "109",
+        "code": "EDAN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Konfigurationshantering"
     },
     {
-        "id": "ETS170",
+        "id": "110",
+        "code": "ETS170",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Kravhantering"
     },
     {
-        "id": "EDA270",
+        "id": "111",
+        "code": "EDA270",
         "credits": "9",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Coachning av programvaruteam"
     },
     {
-        "id": "EDAN01",
+        "id": "112",
+        "code": "EDAN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Constraint-programmering"
     },
     {
-        "id": "ETS200",
+        "id": "113",
+        "code": "ETS200",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Programvarutestning"
     },
     {
-        "id": "EDA031",
+        "id": "114",
+        "code": "EDA031",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "C++ - programmering"
     },
     {
-        "id": "EDA216",
+        "id": "115",
+        "code": "EDA216",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Databasteknik"
     },
     {
-        "id": "FRTN01",
+        "id": "116",
+        "code": "FRTN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Realtidssystem"
     },
     {
-        "id": "MIO022",
+        "id": "117",
+        "code": "MIO022",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Företagsorganisation"
     },
     {
-        "id": "MAM120",
+        "id": "118",
+        "code": "MAM120",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "se",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Användbarhetsutvärdering"
     },
     {
-        "id": "ETT051",
+        "id": "119",
+        "code": "ETT051",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Digital kommunikation"
     },
     {
-        "id": "FRTN10",
+        "id": "120",
+        "code": "FRTN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Flervariabel reglering"
     },
     {
-        "id": "EITN55",
+        "id": "121",
+        "code": "EITN55",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Signalseparation - oberoende komponenter"
     },
     {
-        "id": "FMSF10",
+        "id": "122",
+        "code": "FMSF10",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Stationära stokastiska processer"
     },
     {
-        "id": "FMA120",
+        "id": "123",
+        "code": "FMA120",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Matristeori"
     },
     {
-        "id": "FRTN01",
+        "id": "124",
+        "code": "FRTN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Realtidssystem"
     },
     {
-        "id": "FRT041",
+        "id": "125",
+        "code": "FRT041",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Systemidentifiering"
     },
     {
-        "id": "ETTN01",
+        "id": "126",
+        "code": "ETTN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Digital kommunikation, fortsättningskurs"
     },
     {
-        "id": "FMS051",
+        "id": "127",
+        "code": "FMS051",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Matematisk statistik, tidsserieanalys"
     },
     {
-        "id": "EITN60",
+        "id": "128",
+        "code": "EITN60",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Optimal och adaptiv signalbehandling"
     },
     {
-        "id": "FRT090",
+        "id": "129",
+        "code": "FRT090",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i reglerteknik"
     },
     {
-        "id": "ETIN80",
+        "id": "130",
+        "code": "ETIN80",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Algoritmer i signalprocessorer - projektkurs"
     },
     {
-        "id": "FRTN15",
+        "id": "131",
+        "code": "FRTN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Prediktiv reglering"
     },
     {
-        "id": "FRTN01",
+        "id": "132",
+        "code": "FRTN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Realtidssystem"
     },
     {
-        "id": "BMEN01",
+        "id": "133",
+        "code": "BMEN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Medicinsk signalbehandling"
     },
     {
-        "id": "ETIF10",
+        "id": "134",
+        "code": "ETIF10",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "ssr",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Signalbehandling - design och implementering"
     },
     {
-        "id": "EXTA10",
+        "id": "135",
+        "code": "EXTA10",
         "credits": "3",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Introduktion till Kinas samhällsliv, kultur och språk"
     },
     {
-        "id": "EXTA35",
+        "id": "136",
+        "code": "EXTA35",
         "credits": "15",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Introduktionskurs i kinesiska för civilingenjörer"
     },
     {
-        "id": "EXTF60",
+        "id": "137",
+        "code": "EXTF60",
         "credits": "15",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Introduktionskurs i kinesiska för civilingenjörer, del 2"
     },
     {
-        "id": "FMNN25",
+        "id": "138",
+        "code": "FMNN25",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Avancerad kurs i numeriska algoritmer med Python/SciPy"
     },
     {
-        "id": "ETIF05",
+        "id": "139",
+        "code": "ETIF05",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Grundläggande radioteknik"
     },
     {
-        "id": "MMKF15",
+        "id": "140",
+        "code": "MMKF15",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Tillämpad robotteknik"
     },
     {
-        "id": "MAM032",
+        "id": "141",
+        "code": "MAM032",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Arbete-människa-teknik, projekt"
     },
     {
-        "id": "FMI050",
+        "id": "142",
+        "code": "FMI050",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Energisystemanalys: energi, miljö och naturresurser"
     },
     {
-        "id": "GEMA20",
+        "id": "143",
+        "code": "GEMA20",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Engelska för tekniker"
     },
     {
-        "id": "GEMA60",
+        "id": "144",
+        "code": "GEMA60",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Juridik för tekniker"
     },
     {
-        "id": "FMAN15",
+        "id": "145",
+        "code": "FMAN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Olinjära dynamiska system"
     },
     {
-        "id": "EIE061",
+        "id": "146",
+        "code": "EIE061",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i industriell elektroteknik och automation"
     },
     {
-        "id": "TNX097",
+        "id": "147",
+        "code": "TNX097",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Rehabiliteringsteknik"
     },
     {
-        "id": "EITA05",
+        "id": "148",
+        "code": "EITA05",
         "credits": "4,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Teknikhistoria"
     },
     {
-        "id": "FMIF15",
+        "id": "149",
+        "code": "FMIF15",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Teknisk miljövetenskap"
     },
     {
-        "id": "GEMA25",
+        "id": "150",
+        "code": "GEMA25",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Tyska för tekniker"
     },
     {
-        "id": "GEMA70",
+        "id": "151",
+        "code": "GEMA70",
         "credits": "15",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            },
+            {
+                "study_period": "2"
+            },
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Japanska för tekniker"
     },
     {
-        "id": "FMAN30",
+        "id": "152",
+        "code": "FMAN30",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Medicinsk bildanalys"
     },
     {
-        "id": "FRTN05",
+        "id": "153",
+        "code": "FRTN05",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Olinjär reglering och servosystem"
     },
     {
-        "id": "FMA051",
+        "id": "154",
+        "code": "FMA051",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Optimering"
     },
     {
-        "id": "FMNN05",
+        "id": "155",
+        "code": "FMNN05",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Simuleringsverktyg"
     },
     {
-        "id": "MAMF15",
+        "id": "156",
+        "code": "MAMF15",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Arbetsorganisation och ledarskap"
     },
     {
-        "id": "MIE080",
+        "id": "157",
+        "code": "MIE080",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Automation"
     },
     {
-        "id": "MIOA01",
+        "id": "158",
+        "code": "MIOA01",
         "credits": "9",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Industriell ekonomi, allmän kurs"
     },
     {
-        "id": "MIO040",
+        "id": "159",
+        "code": "MIO040",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Industriell ekonomi, fortsättningskurs"
     },
     {
-        "id": "ETIN10",
+        "id": "160",
+        "code": "ETIN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Kanalmodellering för trådlös kommunikation"
     },
     {
-        "id": "FMA111",
+        "id": "161",
+        "code": "FMA111",
         "credits": "6",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Matematiska strukturer"
     },
     {
-        "id": "FMS091",
+        "id": "162",
+        "code": "FMS091",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Monte Carlo-baserade statistiska metoder"
     },
     {
-        "id": "ETIA10",
+        "id": "163",
+        "code": "ETIA10",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Patent och annan immaterialrätt"
     },
     {
-        "id": "FRT130",
+        "id": "164",
+        "code": "FRT130",
         "credits": "3",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Reglerteori"
     },
     {
-        "id": "MMKN30",
+        "id": "165",
+        "code": "MMKN30",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Servicerobotik"
     },
     {
-        "id": "TEK280",
+        "id": "166",
+        "code": "TEK280",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Teknikstödd kommunikation"
     },
     {
-        "id": "MAM032",
+        "id": "167",
+        "code": "MAM032",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Arbete-människa-teknik, projekt"
     },
     {
-        "id": "FMI040",
+        "id": "168",
+        "code": "FMI040",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Energisystemanalys: Förnybara energikällor"
     },
     {
-        "id": "GEMA20",
+        "id": "169",
+        "code": "GEMA20",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Engelska för tekniker"
     },
     {
-        "id": "GEMA40",
+        "id": "170",
+        "code": "GEMA40",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Entreprenörskap och affärsutveckling"
     },
     {
-        "id": "GEMA01",
+        "id": "171",
+        "code": "GEMA01",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Franska för tekniker: språk, kultur och samhällsliv, grundkurs"
     },
     {
-        "id": "GEMA60",
+        "id": "172",
+        "code": "GEMA60",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Juridik för tekniker"
     },
     {
-        "id": "GEMA65",
+        "id": "173",
+        "code": "GEMA65",
         "credits": "7,5",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Kinesiska för tekniker"
     },
     {
-        "id": "FMA021",
+        "id": "174",
+        "code": "FMA021",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Kontinuerliga system"
     },
     {
-        "id": "EIEN01",
+        "id": "175",
+        "code": "EIEN01",
         "credits": "10",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Mekatronik, industriell produktframtagning"
     },
     {
-        "id": "EIE061",
+        "id": "176",
+        "code": "EIE061",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Projekt i industriell elektroteknik och automation"
     },
     {
-        "id": "TNX153",
+        "id": "177",
+        "code": "TNX153",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Rehabiliteringsteknik och design"
     },
     {
-        "id": "FMAN25",
+        "id": "178",
+        "code": "FMAN25",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            },
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Variationskalkyl"
     },
     {
-        "id": "MIE090",
+        "id": "179",
+        "code": "MIE090",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Automation för komplexa system"
     },
     {
-        "id": "FMS072",
+        "id": "180",
+        "code": "FMS072",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Försöksplanering"
     },
     {
-        "id": "MIO040",
+        "id": "181",
+        "code": "MIO040",
         "credits": "6",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Industriell ekonomi, fortsättningskurs"
     },
     {
-        "id": "KII010",
+        "id": "182",
+        "code": "KII010",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Industriellt miljöarbete"
     },
     {
-        "id": "ESS030",
+        "id": "183",
+        "code": "ESS030",
         "credits": "4,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Komponentfysik"
     },
     {
-        "id": "FMSN30",
+        "id": "184",
+        "code": "FMSN30",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Linjär och logistisk regression"
     },
     {
-        "id": "FAF150",
+        "id": "185",
+        "code": "FAF150",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Medicinsk optik"
     },
     {
-        "id": "EEMN01",
+        "id": "186",
+        "code": "EEMN01",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Mikrosensorer"
     },
     {
-        "id": "FRTN30",
+        "id": "187",
+        "code": "FRTN30",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Nätverksdynamik"
     },
     {
-        "id": "EDA095",
+        "id": "188",
+        "code": "EDA095",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Nätverksprogrammering"
     },
     {
-        "id": "FMAN35",
+        "id": "189",
+        "code": "FMAN35",
         "credits": "3",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Projekt i matematik"
     },
     {
-        "id": "ETIN15",
+        "id": "190",
+        "code": "ETIN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Radiosystem"
     },
     {
-        "id": "FMS155",
+        "id": "191",
+        "code": "FMS155",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Statistisk modellering av extremvärden"
     },
     {
-        "id": "MAMN10",
+        "id": "192",
+        "code": "MAMN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Interaktion 1: Neuromodellering, kognitiv robotik och agenter"
     },
     {
-        "id": "ETTN15",
+        "id": "193",
+        "code": "ETTN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Moderna trådlösa system - LTE och dess efterföljare"
     },
     {
-        "id": "EITN10",
+        "id": "194",
+        "code": "EITN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Multipelantennsystem"
     },
     {
-        "id": "EITN35",
+        "id": "195",
+        "code": "EITN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Projekt i elektro- och informationsteknik"
     },
     {
-        "id": "EEM031",
+        "id": "196",
+        "code": "EEM031",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "1"
+            }
+        ],
         "name": "Sensorteknik"
     },
     {
-        "id": "EEMN10",
+        "id": "197",
+        "code": "EEMN10",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Datorbaserade mätsystem"
     },
     {
-        "id": "EEMN05",
+        "id": "198",
+        "code": "EEMN05",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "EMC, störningar och störningsbegränsning"
     },
     {
-        "id": "MAMN15",
+        "id": "199",
+        "code": "MAMN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Interaktion 2: Virtualitet och kognitiv modellering"
     },
     {
-        "id": "EEMF05",
+        "id": "200",
+        "code": "EEMF05",
         "credits": "7,5",
+        "cycle": "G2",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Medicinsk mätteknik"
     },
     {
-        "id": "EITN35",
+        "id": "201",
+        "code": "EITN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "2"
+            }
+        ],
         "name": "Projekt i elektro- och informationsteknik"
     },
     {
-        "id": "EITN35",
+        "id": "202",
+        "code": "EITN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Projekt i elektro- och informationsteknik"
     },
     {
-        "id": "EEMN15",
+        "id": "203",
+        "code": "EEMN15",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "3"
+            }
+        ],
         "name": "Ultraljudsfysik och teknik"
     },
     {
-        "id": "EITN35",
+        "id": "204",
+        "code": "EITN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [
+            {
+                "study_period": "4"
+            }
+        ],
         "name": "Projekt i elektro- och informationsteknik"
     },
     {
-        "id": "FMSN35",
+        "id": "205",
+        "code": "FMSN35",
         "credits": "7,5",
+        "cycle": "A",
+        "specialization": "",
+        "on_hold": "1",
+        "study_periods": [],
         "name": "Stationär och icke-stationär spektralanalys"
     },
     {
-        "id": "GEMA45",
+        "id": "206",
+        "code": "GEMA45",
         "credits": "3",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "1",
+        "study_periods": [],
         "name": "Förståelse och lärande"
     },
     {
-        "id": "GEMA55",
+        "id": "207",
+        "code": "GEMA55",
         "credits": "6",
+        "cycle": "G1",
+        "specialization": "",
+        "on_hold": "1",
+        "study_periods": [],
         "name": "Medicin för tekniker"
     },
     {
-        "id": "EDA920",
+        "id": "208",
+        "code": "EDA920",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i datavetenskap"
     },
     {
-        "id": "EEM820",
+        "id": "209",
+        "code": "EEM820",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i elektrisk mätteknik"
     },
     {
-        "id": "EITM01",
+        "id": "210",
+        "code": "EITM01",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i elektro- och informationsteknik"
     },
     {
-        "id": "PHYM01",
+        "id": "211",
+        "code": "PHYM01",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i fysik"
     },
     {
-        "id": "EIE920",
+        "id": "212",
+        "code": "EIE920",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i industriell elektroteknik och automation"
     },
     {
-        "id": "MAMM01",
+        "id": "213",
+        "code": "MAMM01",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i interaktionsdesign"
     },
     {
-        "id": "FMA820",
+        "id": "214",
+        "code": "FMA820",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i matematik"
     },
     {
-        "id": "FMS820",
+        "id": "215",
+        "code": "FMS820",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i matematisk statistik"
     },
     {
-        "id": "FMN820",
+        "id": "216",
+        "code": "FMN820",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i numerisk analys"
     },
     {
-        "id": "MIO920",
+        "id": "217",
+        "code": "MIO920",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i produktionsekonomi"
     },
     {
-        "id": "FRT820",
+        "id": "218",
+        "code": "FRT820",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i reglerteknik"
     },
     {
-        "id": "TNS820",
+        "id": "219",
+        "code": "TNS820",
         "credits": "30",
+        "cycle": "",
+        "specialization": "",
+        "on_hold": "",
+        "study_periods": [],
         "name": "Examensarbete i rehabiliteringsteknik"
     }
 ]
