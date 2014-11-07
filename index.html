@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BackboneTutorials.com Beginner Video</title>
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+</head>
+<body>
+
+
+  <div class="container">
+    <h1>LTH</h1>
+    <hr />
+    <div class="page"></div>
+  </div>
+
+
+    <script src="lib/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/underscore-min.js" type="text/javascript"></script>
+    <script src="lib/backbone-min.js" type="text/javascript"></script>
+    <script src="lib/bootstrap.min.js" type="text/javascript"></script>
+
+
+  <script type="text/template" id="test_test">
+    <%= test %>
+  </script>
+
+  <script>
+
+    var TestView = Backbone.View.extend({
+      el: '.page',
+      render: function () {
+            var template = _.template($('#test_test').html());
+            this.$el.html(template({test: "Test"}));
+      },
+    });
+    testView = new TestView();
+      
+    var Router = Backbone.Router.extend({
+        routes: {
+          "test": "test",
+        }
+    });
+    var router = new Router;
+    router.on('route:test', function() {
+      testView.render();
+    })
+    Backbone.history.start();
+  </script>
+
+
+</body>
+</html> 
