@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BackboneTutorials.com Beginner Video</title>
+    <title>LTH</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
 </head>
 
@@ -36,7 +36,7 @@
         </tr>
     </thead>
     <tbody>
-         <% 
+         <%  
         _.each(data,function(item){
         %>
             <tr>
@@ -72,7 +72,14 @@
 
         var CourseList = Backbone.Collection.extend({
             model: Course,
+
             localStorage: new Backbone.LocalStorage("courseCollection"),
+
+            customFilter: function(filters){
+				var results = this.where(filters);
+				return new MyCollection(results);
+			},
+
         });
 
         var courses = new CourseList();
@@ -87,17 +94,33 @@
                 }));
             },
         });
+
+        var lambda = function(item) {return true; };
+        lambda = function(item){ return item.specialization == "ks"; };
+
         testView = new TestView();
         var HomeView = Backbone.View.extend({
             el: '.page',
             render: function () {
+
                 var template = _.template($('#home_template').html());
                 this.$el.html(template({
-                    data: courses.toJSON(),
+
+                	data: courses.toJSON(),
                 }));
             },
         });
+
+
         homeView = new HomeView();
+
+        /*
+        var filteredCollection = myCollection.customFilter({});
+
+        filteredHomeView = new HomeView({
+        	collection: filteredCollection
+        });
+		*/
 
         var Router = Backbone.Router.extend({
             routes: {
@@ -113,6 +136,9 @@
             homeView.render();
         })
          Backbone.history.start();
+
+
+
     </script>
 
 
