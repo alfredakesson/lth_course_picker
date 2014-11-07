@@ -1,0 +1,221 @@
+{"id:" "EDA070", "credits:" "3", "name:" "Datorer och datoranvändning" }
+{"id:" "EDAA05", "credits:" "8", "name:" "Datorer i system" }
+{"id:" "EDA016", "credits:" "7,5", "name:" "Programmeringsteknik" }
+{"id:" "FMAA01", "credits:" "15", "name:" "Endimensionell analys" }
+{"id:" "ETIA01", "credits:" "8", "name:" "Elektronik" }
+{"id:" "EDAA01", "credits:" "7,5", "name:" "Programmeringsteknik - fördjupningskurs" }
+{"id:" "ETSA01", "credits:" "5", "name:" "Ingenjörsprocessen för programvaruutveckling - metodik" }
+{"id:" "FMA420", "credits:" "6", "name:" "Linjär algebra" }
+{"id:" "ETS052", "credits:" "4,5", "name:" "Datorkommunikation" }
+{"id:" "EIT020", "credits:" "9", "name:" "Digitalteknik" }
+{"id:" "EDAF10", "credits:" "7,5", "name:" "Objektorienterad modellering och diskreta strukturer" }
+{"id:" "FMA430", "credits:" "6", "name:" "Flerdimensionell analys" }
+{"id:" "EDA260", "credits:" "6", "name:" "Programvaruutveckling i grupp – projekt" }
+{"id:" "EIT070", "credits:" "6", "name:" "Datorteknik" }
+{"id:" "FMAF10", "credits:" "5", "name:" "Tillämpad matematik - Linjära system" }
+{"id:" "EDAF05", "credits:" "5", "name:" "Algoritmer, datastrukturer och komplexitet" }
+{"id:" "ETSA05", "credits:" "4", "name:" "Ingenjörsprocessen för programvaruutveckling - samhällsaspekter" }
+{"id:" "ETI265", "credits:" "7,5", "name:" "Signalbehandling i multimedia" }
+{"id:" "FMAF01", "credits:" "7", "name:" "Matematik - Funktionsteori" }
+{"id:" "FMAF05", "credits:" "7", "name:" "Matematik - System och transformer" }
+{"id:" "FRT010", "credits:" "7,5", "name:" "Reglerteknik, allmän kurs" }
+{"id:" "FMS012", "credits:" "9", "name:" "Matematisk statistik, allmän kurs" }
+{"id:" "EDA040", "credits:" "6", "name:" "Realtidsprogrammering" }
+{"id:" "TEK210", "credits:" "4,5", "name:" "Kognition" }
+{"id:" "FAFF25", "credits:" "11", "name:" "Fysik" }
+{"id:" "EIT060", "credits:" "7,5", "name:" "Datasäkerhet" }
+{"id:" "ETSF01", "credits:" "4", "name:" "Ingenjörsprocessen för programvaruutveckling - ekonomi och kvalitet" }
+{"id:" "ETS075", "credits:" "4,5", "name:" "Kösystem" }
+{"id:" "FMN011", "credits:" "6", "name:" "Numerisk analys" }
+{"id:" "FMAN20", "credits:" "7,5", "name:" "Bildanalys" }
+{"id:" "EDA221", "credits:" "7,5", "name:" "Datorgrafik" }
+{"id:" "MAMN25", "credits:" "7,5", "name:" "Interaktionsdesign" }
+{"id:" "FMSF10", "credits:" "7,5", "name:" "Stationära stokastiska processer" }
+{"id:" "FMA120", "credits:" "6", "name:" "Matristeori" }
+{"id:" "EDAN35", "credits:" "7,5", "name:" "Högpresterande datorgrafik" }
+{"id:" "FAFF20", "credits:" "7,5", "name:" "Multispektral avbildning" }
+{"id:" "FMAN40", "credits:" "3", "name:" "Projekt i tillämpad matematik" }
+{"id:" "FMA135", "credits:" "6", "name:" "Geometri" }
+{"id:" "FMA270", "credits:" "6", "name:" "Datorseende" }
+{"id:" "MAM101", "credits:" "7,5", "name:" "Virtual Reality i teori och praktik" }
+{"id:" "MAMN01", "credits:" "7,5", "name:" "Avancerad interaktionsdesign" }
+{"id:" "ETIF10", "credits:" "7,5", "name:" "Signalbehandling - design och implementering" }
+{"id:" "FMN100", "credits:" "6", "name:" "Numeriska metoder för datorgrafik" }
+{"id:" "FMSN20", "credits:" "7,5", "name:" "Spatial statistik med bildanalys" }
+{"id:" "ETIN20", "credits:" "7,5", "name:" "Digital IC-konstruktion" }
+{"id:" "EITF35", "credits:" "7,5", "name:" "Digitala strukturer på kisel" }
+{"id:" "ETIN70", "credits:" "7,5", "name:" "Modern elektronik" }
+{"id:" "ESS050", "credits:" "9", "name:" "Elektromagnetisk fältteori" }
+{"id:" "EITF20", "credits:" "7,5", "name:" "Datorarkitektur" }
+{"id:" "EITF40", "credits:" "7,5", "name:" "Digitala och analoga projekt" }
+{"id:" "ETIN45", "credits:" "7,5", "name:" "DSP-design" }
+{"id:" "ESSF10", "credits:" "5", "name:" "Mätteknik" }
+{"id:" "ETIN35", "credits:" "7,5", "name:" "IC-projekt 1" }
+{"id:" "EDAN15", "credits:" "7,5", "name:" "Konstruktion av inbyggda system" }
+{"id:" "EDA385", "credits:" "7,5", "name:" "Konstruktion av inbyggda system, fördjupningskurs" }
+{"id:" "ETIN40", "credits:" "7,5", "name:" "IC-projekt 2" }
+{"id:" "ETIN55", "credits:" "7,5", "name:" "Integrerade A/D och D/A omvandlare" }
+{"id:" "EDAA25", "credits:" "3", "name:" "C-programmering" }
+{"id:" "EITF35", "credits:" "7,5", "name:" "Digitala strukturer på kisel" }
+{"id:" "EDAN65", "credits:" "7,5", "name:" "Kompilatorer" }
+{"id:" "EDA230", "credits:" "7,5", "name:" "Optimerande kompilatorer" }
+{"id:" "FRTN01", "credits:" "10", "name:" "Realtidssystem" }
+{"id:" "EIEF01", "credits:" "10", "name:" "Tillämpad mekatronik" }
+{"id:" "EITF20", "credits:" "7,5", "name:" "Datorarkitektur" }
+{"id:" "FRT090", "credits:" "7,5", "name:" "Projekt i reglerteknik" }
+{"id:" "ETIN80", "credits:" "7,5", "name:" "Algoritmer i signalprocessorer - projektkurs" }
+{"id:" "EITN30", "credits:" "7,5", "name:" "Internet inuti" }
+{"id:" "FRTN01", "credits:" "10", "name:" "Realtidssystem" }
+{"id:" "EDAN15", "credits:" "7,5", "name:" "Konstruktion av inbyggda system" }
+{"id:" "EDAF35", "credits:" "7,5", "name:" "Operativsystem" }
+{"id:" "EDA385", "credits:" "7,5", "name:" "Konstruktion av inbyggda system, fördjupningskurs" }
+{"id:" "EDAN25", "credits:" "6", "name:" "Multicoreprogrammering" }
+{"id:" "EITN50", "credits:" "7,5", "name:" "Avancerad datasäkerhet" }
+{"id:" "ETT051", "credits:" "7,5", "name:" "Digital kommunikation" }
+{"id:" "FMSF15", "credits:" "7,5", "name:" "Markovprocesser" }
+{"id:" "EITF05", "credits:" "4", "name:" "Webbsäkerhet" }
+{"id:" "EITN41", "credits:" "7,5", "name:" "Avancerad webbsäkerhet" }
+{"id:" "ETTN01", "credits:" "7,5", "name:" "Digital kommunikation, fortsättningskurs" }
+{"id:" "ETSF10", "credits:" "7,5", "name:" "Internetprotokoll" }
+{"id:" "EDIN01", "credits:" "7,5", "name:" "Kryptoteknik" }
+{"id:" "FMAN10", "credits:" "7,5", "name:" "Algebraiska strukturer" }
+{"id:" "ETSN01", "credits:" "7,5", "name:" "Avancerad telekommunikation" }
+{"id:" "EITN30", "credits:" "7,5", "name:" "Internet inuti" }
+{"id:" "EITN45", "credits:" "7,5", "name:" "Informationsteori" }
+{"id:" "ETS061", "credits:" "7,5", "name:" "Simulering" }
+{"id:" "EITN21", "credits:" "7,5", "name:" "Projekt i trådlös kommunikation" }
+{"id:" "EDI042", "credits:" "7,5", "name:" "Kodningsteknik" }
+{"id:" "EDAN55", "credits:" "7,5", "name:" "Avancerade algoritmer" }
+{"id:" "EDAA25", "credits:" "3", "name:" "C-programmering" }
+{"id:" "EDAN65", "credits:" "7,5", "name:" "Kompilatorer" }
+{"id:" "EDA230", "credits:" "7,5", "name:" "Optimerande kompilatorer" }
+{"id:" "EDAN20", "credits:" "7,5", "name:" "Språkteknologi" }
+{"id:" "EDAN40", "credits:" "7,5", "name:" "Funktionsprogrammering" }
+{"id:" "EDAN70", "credits:" "7,5", "name:" "Projekt i datavetenskap" }
+{"id:" "EDAN01", "credits:" "7,5", "name:" "Constraint-programmering" }
+{"id:" "FMA240", "credits:" "6", "name:" "Linjär och kombinatorisk optimering" }
+{"id:" "EDA132", "credits:" "7,5", "name:" "Tillämpad artificiell intelligens" }
+{"id:" "EDA031", "credits:" "7,5", "name:" "C++ - programmering" }
+{"id:" "EDA216", "credits:" "7,5", "name:" "Databasteknik" }
+{"id:" "EDAF15", "credits:" "5", "name:" "Algoritmimplementering" }
+{"id:" "FMAA15", "credits:" "7,5", "name:" "Diskret matematik" }
+{"id:" "EDAN70", "credits:" "7,5", "name:" "Projekt i datavetenskap" }
+{"id:" "EDAN25", "credits:" "6", "name:" "Multicoreprogrammering" }
+{"id:" "EITN50", "credits:" "7,5", "name:" "Avancerad datasäkerhet" }
+{"id:" "MIO012", "credits:" "6", "name:" "Industriell ekonomi, allmän kurs" }
+{"id:" "MAMN25", "credits:" "7,5", "name:" "Interaktionsdesign" }
+{"id:" "ETSN05", "credits:" "7,5", "name:" "Programvaruutveckling för stora system" }
+{"id:" "FRTN01", "credits:" "10", "name:" "Realtidssystem" }
+{"id:" "MIO012", "credits:" "6", "name:" "Industriell ekonomi, allmän kurs" }
+{"id:" "EDAN10", "credits:" "7,5", "name:" "Konfigurationshantering" }
+{"id:" "ETS170", "credits:" "7,5", "name:" "Kravhantering" }
+{"id:" "EDA270", "credits:" "9", "name:" "Coachning av programvaruteam" }
+{"id:" "EDAN01", "credits:" "7,5", "name:" "Constraint-programmering" }
+{"id:" "ETS200", "credits:" "7,5", "name:" "Programvarutestning" }
+{"id:" "EDA031", "credits:" "7,5", "name:" "C++ - programmering" }
+{"id:" "EDA216", "credits:" "7,5", "name:" "Databasteknik" }
+{"id:" "FRTN01", "credits:" "10", "name:" "Realtidssystem" }
+{"id:" "MIO022", "credits:" "6", "name:" "Företagsorganisation" }
+{"id:" "MAM120", "credits:" "7,5", "name:" "Användbarhetsutvärdering" }
+{"id:" "ETT051", "credits:" "7,5", "name:" "Digital kommunikation" }
+{"id:" "FRTN10", "credits:" "7,5", "name:" "Flervariabel reglering" }
+{"id:" "EITN55", "credits:" "7,5", "name:" "Signalseparation - oberoende komponenter" }
+{"id:" "FMSF10", "credits:" "7,5", "name:" "Stationära stokastiska processer" }
+{"id:" "FMA120", "credits:" "6", "name:" "Matristeori" }
+{"id:" "FRTN01", "credits:" "10", "name:" "Realtidssystem" }
+{"id:" "FRT041", "credits:" "7,5", "name:" "Systemidentifiering" }
+{"id:" "ETTN01", "credits:" "7,5", "name:" "Digital kommunikation, fortsättningskurs" }
+{"id:" "FMS051", "credits:" "7,5", "name:" "Matematisk statistik, tidsserieanalys" }
+{"id:" "EITN60", "credits:" "7,5", "name:" "Optimal och adaptiv signalbehandling" }
+{"id:" "FRT090", "credits:" "7,5", "name:" "Projekt i reglerteknik" }
+{"id:" "ETIN80", "credits:" "7,5", "name:" "Algoritmer i signalprocessorer - projektkurs" }
+{"id:" "FRTN15", "credits:" "7,5", "name:" "Prediktiv reglering" }
+{"id:" "FRTN01", "credits:" "10", "name:" "Realtidssystem" }
+{"id:" "BMEN01", "credits:" "7,5", "name:" "Medicinsk signalbehandling" }
+{"id:" "ETIF10", "credits:" "7,5", "name:" "Signalbehandling - design och implementering" }
+{"id:" "EXTA10", "credits:" "3", "name:" "Introduktion till Kinas samhällsliv, kultur och språk" }
+{"id:" "EXTA35", "credits:" "15", "name:" "Introduktionskurs i kinesiska för civilingenjörer" }
+{"id:" "EXTF60", "credits:" "15", "name:" "Introduktionskurs i kinesiska för civilingenjörer, del 2" }
+{"id:" "FMNN25", "credits:" "7,5", "name:" "Avancerad kurs i numeriska algoritmer med Python/SciPy" }
+{"id:" "ETIF05", "credits:" "7,5", "name:" "Grundläggande radioteknik" }
+{"id:" "MMKF15", "credits:" "7,5", "name:" "Tillämpad robotteknik" }
+{"id:" "MAM032", "credits:" "7,5", "name:" "Arbete-människa-teknik, projekt" }
+{"id:" "FMI050", "credits:" "7,5", "name:" "Energisystemanalys: energi, miljö och naturresurser" }
+{"id:" "GEMA20", "credits:" "7,5", "name:" "Engelska för tekniker" }
+{"id:" "GEMA60", "credits:" "7,5", "name:" "Juridik för tekniker" }
+{"id:" "FMAN15", "credits:" "7,5", "name:" "Olinjära dynamiska system" }
+{"id:" "EIE061", "credits:" "7,5", "name:" "Projekt i industriell elektroteknik och automation" }
+{"id:" "TNX097", "credits:" "7,5", "name:" "Rehabiliteringsteknik" }
+{"id:" "EITA05", "credits:" "4,5", "name:" "Teknikhistoria" }
+{"id:" "FMIF15", "credits:" "7,5", "name:" "Teknisk miljövetenskap" }
+{"id:" "GEMA25", "credits:" "7,5", "name:" "Tyska för tekniker" }
+{"id:" "GEMA70", "credits:" "15", "name:" "Japanska för tekniker" }
+{"id:" "FMAN30", "credits:" "7,5", "name:" "Medicinsk bildanalys" }
+{"id:" "FRTN05", "credits:" "7,5", "name:" "Olinjär reglering och servosystem" }
+{"id:" "FMA051", "credits:" "6", "name:" "Optimering" }
+{"id:" "FMNN05", "credits:" "7,5", "name:" "Simuleringsverktyg" }
+{"id:" "MAMF15", "credits:" "6", "name:" "Arbetsorganisation och ledarskap" }
+{"id:" "MIE080", "credits:" "7,5", "name:" "Automation" }
+{"id:" "MIOA01", "credits:" "9", "name:" "Industriell ekonomi, allmän kurs" }
+{"id:" "MIO040", "credits:" "6", "name:" "Industriell ekonomi, fortsättningskurs" }
+{"id:" "ETIN10", "credits:" "7,5", "name:" "Kanalmodellering för trådlös kommunikation" }
+{"id:" "FMA111", "credits:" "6", "name:" "Matematiska strukturer" }
+{"id:" "FMS091", "credits:" "7,5", "name:" "Monte Carlo-baserade statistiska metoder" }
+{"id:" "ETIA10", "credits:" "7,5", "name:" "Patent och annan immaterialrätt" }
+{"id:" "FRT130", "credits:" "3", "name:" "Reglerteori" }
+{"id:" "MMKN30", "credits:" "7,5", "name:" "Servicerobotik" }
+{"id:" "TEK280", "credits:" "7,5", "name:" "Teknikstödd kommunikation" }
+{"id:" "MAM032", "credits:" "7,5", "name:" "Arbete-människa-teknik, projekt" }
+{"id:" "FMI040", "credits:" "7,5", "name:" "Energisystemanalys: Förnybara energikällor" }
+{"id:" "GEMA20", "credits:" "7,5", "name:" "Engelska för tekniker" }
+{"id:" "GEMA40", "credits:" "7,5", "name:" "Entreprenörskap och affärsutveckling" }
+{"id:" "GEMA01", "credits:" "7,5", "name:" "Franska för tekniker: språk, kultur och samhällsliv, grundkurs" }
+{"id:" "GEMA60", "credits:" "7,5", "name:" "Juridik för tekniker" }
+{"id:" "GEMA65", "credits:" "7,5", "name:" "Kinesiska för tekniker" }
+{"id:" "FMA021", "credits:" "7,5", "name:" "Kontinuerliga system" }
+{"id:" "EIEN01", "credits:" "10", "name:" "Mekatronik, industriell produktframtagning" }
+{"id:" "EIE061", "credits:" "7,5", "name:" "Projekt i industriell elektroteknik och automation" }
+{"id:" "TNX153", "credits:" "7,5", "name:" "Rehabiliteringsteknik och design" }
+{"id:" "FMAN25", "credits:" "7,5", "name:" "Variationskalkyl" }
+{"id:" "MIE090", "credits:" "7,5", "name:" "Automation för komplexa system" }
+{"id:" "FMS072", "credits:" "7,5", "name:" "Försöksplanering" }
+{"id:" "MIO040", "credits:" "6", "name:" "Industriell ekonomi, fortsättningskurs" }
+{"id:" "KII010", "credits:" "7,5", "name:" "Industriellt miljöarbete" }
+{"id:" "ESS030", "credits:" "4,5", "name:" "Komponentfysik" }
+{"id:" "FMSN30", "credits:" "7,5", "name:" "Linjär och logistisk regression" }
+{"id:" "FAF150", "credits:" "7,5", "name:" "Medicinsk optik" }
+{"id:" "EEMN01", "credits:" "7,5", "name:" "Mikrosensorer" }
+{"id:" "FRTN30", "credits:" "7,5", "name:" "Nätverksdynamik" }
+{"id:" "EDA095", "credits:" "7,5", "name:" "Nätverksprogrammering" }
+{"id:" "FMAN35", "credits:" "3", "name:" "Projekt i matematik" }
+{"id:" "ETIN15", "credits:" "7,5", "name:" "Radiosystem" }
+{"id:" "FMS155", "credits:" "7,5", "name:" "Statistisk modellering av extremvärden" }
+{"id:" "MAMN10", "credits:" "7,5", "name:" "Interaktion 1: Neuromodellering, kognitiv robotik och agenter" }
+{"id:" "ETTN15", "credits:" "7,5", "name:" "Moderna trådlösa system - LTE och dess efterföljare" }
+{"id:" "EITN10", "credits:" "7,5", "name:" "Multipelantennsystem" }
+{"id:" "EITN35", "credits:" "7,5", "name:" "Projekt i elektro- och informationsteknik" }
+{"id:" "EEM031", "credits:" "7,5", "name:" "Sensorteknik" }
+{"id:" "EEMN10", "credits:" "7,5", "name:" "Datorbaserade mätsystem" }
+{"id:" "EEMN05", "credits:" "7,5", "name:" "EMC, störningar och störningsbegränsning" }
+{"id:" "MAMN15", "credits:" "7,5", "name:" "Interaktion 2: Virtualitet och kognitiv modellering" }
+{"id:" "EEMF05", "credits:" "7,5", "name:" "Medicinsk mätteknik" }
+{"id:" "EITN35", "credits:" "7,5", "name:" "Projekt i elektro- och informationsteknik" }
+{"id:" "EITN35", "credits:" "7,5", "name:" "Projekt i elektro- och informationsteknik" }
+{"id:" "EEMN15", "credits:" "7,5", "name:" "Ultraljudsfysik och teknik" }
+{"id:" "EITN35", "credits:" "7,5", "name:" "Projekt i elektro- och informationsteknik" }
+{"id:" "FMSN35", "credits:" "7,5", "name:" "Stationär och icke-stationär spektralanalys" }
+{"id:" "GEMA45", "credits:" "3", "name:" "Förståelse och lärande" }
+{"id:" "GEMA55", "credits:" "6", "name:" "Medicin för tekniker" }
+{"id:" "EDA920", "credits:" "30", "name:" "Examensarbete i datavetenskap" }
+{"id:" "EEM820", "credits:" "30", "name:" "Examensarbete i elektrisk mätteknik" }
+{"id:" "EITM01", "credits:" "30", "name:" "Examensarbete i elektro- och informationsteknik" }
+{"id:" "PHYM01", "credits:" "30", "name:" "Examensarbete i fysik" }
+{"id:" "EIE920", "credits:" "30", "name:" "Examensarbete i industriell elektroteknik och automation" }
+{"id:" "MAMM01", "credits:" "30", "name:" "Examensarbete i interaktionsdesign" }
+{"id:" "FMA820", "credits:" "30", "name:" "Examensarbete i matematik" }
+{"id:" "FMS820", "credits:" "30", "name:" "Examensarbete i matematisk statistik" }
+{"id:" "FMN820", "credits:" "30", "name:" "Examensarbete i numerisk analys" }
+{"id:" "MIO920", "credits:" "30", "name:" "Examensarbete i produktionsekonomi" }
+{"id:" "FRT820", "credits:" "30", "name:" "Examensarbete i reglerteknik" }
+{"id:" "TNS820", "credits:" "30", "name:" "Examensarbete i rehabiliteringsteknik" }
+
