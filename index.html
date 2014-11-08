@@ -27,72 +27,77 @@
 
 
     <script type="text/template" id="home_template">
-<table>
-    <thead>
-        <tr>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Credits</th>
-            <th> </th>
-        </tr>
-    </thead>
-    <tbody>
-         <%  
-        _.each(data,function(item){
-        %>
-            <tr>
-                <!-- use variables -->
-                <td>
-                    <%= item.code %>
-                </td>
-                <td>
-                    <%= item.name %>
-                </td>
-                <td>
-                    <%= item.credits %>
-                </td>
-                <td>
-                    <a href="#" class="btn" data-id=<%= item.id%>> Lägg till</a>
-                </td>
-            </tr>
-            <% }); %>
-    </tbody>
-</table>
+		
+		<table>
+		    <thead>
+		        <tr>
+		            <th>Code</th>
+		            <th>Name</th>
+		            <th>Credits</th>
+		            <th> </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		         <%  
+		        _.each(data,function(item){
+		        %>
+		            <tr>
+		                <!-- use variables -->
+		                <td>
+		                    <%= item.code %>
+		                </td>
+		                <td>
+		                    <%= item.name %>
+		                </td>
+		                <td>
+		                    <%= item.credits %>
+		                </td>
+		                <td>
+		                    <a href="#" class="btn" data-id=<%= item.id%>> Lägg till</a>
+		                </td>
+		            </tr>
+		            <% }); %>
+		    </tbody>
+		</table>
+
     </script>
+
     
     
     <script type="text/template" id="side_template">
-<table>
-    <thead>
-        <tr>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Credits</th>
-            <th> </th>
-        </tr>
-    </thead>
-    <tbody>
-         <% 
-        _.each(data,function(item){
-        %>
-            <tr>
-                <!-- use variables -->
-                <td>
-                    <%= item.code %>
-                </td>
-                <td>
-                    <%= item.name %>
-                </td>
-                <td>
-                    <%= item.credits %>
-                </td>
-                <td>
-                    <a href="#" class="btn" data-id=<%= item.id%>> Ta bort</a>
-                </td>
-            </tr>
-            <% }); %>
-    </tbody>
-</table>
+		
+		<table>
+		    <thead>
+		        <tr>
+		            <th>Code</th>
+		            <th>Name</th>
+		            <th>Credits</th>
+		            <th> </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		         <% 
+		        _.each(data,function(item){
+		        %>
+		            <tr>
+		                <!-- use variables -->
+		                <td>
+		                    <%= item.code %>
+		                </td>
+		                <td>
+		                    <%= item.name %>
+		                </td>
+		                <td>
+		                    <%= item.credits %>
+		                </td>
+		                <td>
+		                    <a href="#" class="btn" data-id=<%= item.id%>> Ta bort</a>
+		                </td>
+		            </tr>
+		            <% }); %>
+		    </tbody>
+		</table>
+
     </script>
 
     <script type="text/template" id="test_test">
@@ -100,6 +105,11 @@
     </script>
 
     <script>
+
+    	
+    	/*	*******************************************************************	*/
+    	/* Objects and Collections */
+        
         var Course = Backbone.Model.extend({
             initialize: function () {
                 //console.log("Hej hopp");
@@ -111,16 +121,21 @@
 
             localStorage: new Backbone.LocalStorage("courseCollection"),
 
-            customFilter: function(filters){
-				var results = this.where(filters);
-				return new MyCollection(results);
-			},
+			show_specialization: function(spec) {
+      			return this.where({specialization: spec});
+    		},
 
         });
+        /*	*******************************************************************	*/
+
 
         var courses = new CourseList();
         var coursesAdded = new CourseList();
         courses.add(ourData);
+
+
+        /*	*******************************************************************	*/
+        /* Views */
 
         var TestView = Backbone.View.extend({
             el: '.page',
@@ -131,11 +146,7 @@
                 }));
             },
         });
-
-        var lambda = function(item) {return true; };
-        lambda = function(item){ return item.specialization == "ks"; };
-
-        testView = new TestView();
+		
         var HomeView = Backbone.View.extend({
             el: '.page',
             events: {
@@ -161,8 +172,6 @@
             },
         });
 
-
-        homeView = new HomeView();
         var SideView = HomeView.extend({
             temp: '#side_template',
             el: '.page2',
@@ -175,32 +184,37 @@
                 sideView.render();
             }
         });
-        sideView = new SideView();        
+        /*	*******************************************************************	*/
+        
 
-        /*
-        var filteredCollection = myCollection.customFilter({});
+		/*	*******************************************************************	*/
+		/* The application */
 
-        filteredHomeView = new HomeView({
-        	collection: filteredCollection
-        });
-		*/
+		var testView = new TestView();
+        var homeView = new HomeView();
+        var sideView = new SideView();
 
-        var Router = Backbone.Router.extend({
+        /*	*******************************************************************	*/
+    	/* The router */
+
+    	var Router = Backbone.Router.extend({
             routes: {
                 "test": "test",
                 "": "home"
             }
         });
+        
         var router = new Router;
+        
         router.on('route:test', function () {
             testView.render();
         })
          router.on('route:home', function () {
             homeView.render();
         })
-         Backbone.history.start();
-
-
+        
+        Backbone.history.start();
+        /*	*******************************************************************	*/
 
     </script>
 
