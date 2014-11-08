@@ -113,13 +113,13 @@
         var Course = Backbone.Model.extend({
             initialize: function () {
                 //console.log("Hej hopp");
-            }
+            },
         });
 
         var CourseList = Backbone.Collection.extend({
-            model: Course,
 
-            localStorage: new Backbone.LocalStorage("courseCollection"),
+            model: Course,
+            localStorage: new Backbone.LocalStorage("SomeCollection"),
 
 			show_specialization: function(spec) {
       			return this.where({specialization: spec});
@@ -157,7 +157,7 @@
             render: function () {
 
                 console.log("render");
-                var template = _.template($(this.temp).html());
+                var template = _.template($(this. temp).html());
                 this.$el.html(template({
                     data: this.dataSource.toJSON(),
 
@@ -167,8 +167,11 @@
                 e.preventDefault();
                 var id = $(e.currentTarget).data("id");
                 var item = courses.get(id);
-                coursesAdded.add([item]);
+                coursesAdded.fetch();
+                coursesAdded.add([item.clone()]);
+                item.save();
                 sideView.render();
+                
             },
         });
 
@@ -179,11 +182,21 @@
             clicked: function(e){
                 e.preventDefault();
                 var id = $(e.currentTarget).data("id");
-                var item = courses.get(id);
-                coursesAdded.remove([item]);
+                var item = coursesAdded.get(id);
+                coursesAdded.fetch();
+                item.destroy();
                 sideView.render();
             }
         });
+
+		var FilterView = Backbone.View.extend({
+            el: '.page3',
+
+            render: function () {
+                console.log("render FilterView");
+            },
+        });
+
         /*	*******************************************************************	*/
         
 
@@ -193,6 +206,7 @@
 		var testView = new TestView();
         var homeView = new HomeView();
         var sideView = new SideView();
+        var filterView = new FilterView();
 
         /*	*******************************************************************	*/
     	/* The router */
@@ -211,6 +225,8 @@
         })
          router.on('route:home', function () {
             homeView.render();
+            coursesAdded.fetch();
+            sideView.render();
         })
         
         Backbone.history.start();
