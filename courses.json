@@ -7,9 +7,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Datorer och datoranvändning"
     },
@@ -21,12 +19,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Datorer i system"
     },
@@ -38,12 +32,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Programmeringsteknik"
     },
@@ -55,15 +45,9 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            }
+            1,
+            2,
+            3
         ],
         "name": "Endimensionell analys"
     },
@@ -75,15 +59,9 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            2,
+            3,
+            4
         ],
         "name": "Elektronik"
     },
@@ -95,9 +73,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Programmeringsteknik - fördjupningskurs"
     },
@@ -109,9 +85,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Ingenjörsprocessen för programvaruutveckling - metodik"
     },
@@ -123,9 +97,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Linjär algebra"
     },
@@ -137,9 +109,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Datorkommunikation"
     },
@@ -151,12 +121,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Digitalteknik"
     },
@@ -168,12 +134,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Objektorienterad modellering och diskreta strukturer"
     },
@@ -185,9 +147,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Flerdimensionell analys"
     },
@@ -199,12 +159,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            }
+            2,
+            3
         ],
         "name": "Programvaruutveckling i grupp – projekt"
     },
@@ -216,9 +172,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Datorteknik"
     },
@@ -230,9 +184,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Tillämpad matematik - Linjära system"
     },
@@ -244,9 +196,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Algoritmer, datastrukturer och komplexitet"
     },
@@ -258,9 +208,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Ingenjörsprocessen för programvaruutveckling - samhällsaspekter"
     },
@@ -272,9 +220,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Signalbehandling i multimedia"
     },
@@ -286,9 +232,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Matematik - Funktionsteori"
     },
@@ -300,9 +244,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Matematik - System och transformer"
     },
@@ -314,9 +256,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Reglerteknik, allmän kurs"
     },
@@ -328,12 +268,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Matematisk statistik, allmän kurs"
     },
@@ -345,12 +281,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Realtidsprogrammering"
     },
@@ -362,9 +294,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Kognition"
     },
@@ -376,12 +306,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            }
+            2,
+            3
         ],
         "name": "Fysik"
     },
@@ -393,9 +319,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Datasäkerhet"
     },
@@ -407,9 +331,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Ingenjörsprocessen för programvaruutveckling - ekonomi och kvalitet"
     },
@@ -421,9 +343,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Kösystem"
     },
@@ -435,9 +355,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Numerisk analys"
     },
@@ -449,9 +367,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Bildanalys"
     },
@@ -463,9 +379,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Datorgrafik"
     },
@@ -477,9 +391,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Interaktionsdesign"
     },
@@ -491,9 +403,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Stationära stokastiska processer"
     },
@@ -505,12 +415,8 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Matristeori"
     },
@@ -522,9 +428,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Högpresterande datorgrafik"
     },
@@ -536,9 +440,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Multispektral avbildning"
     },
@@ -550,9 +452,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Projekt i tillämpad matematik"
     },
@@ -564,12 +464,8 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            }
+            2,
+            3
         ],
         "name": "Geometri"
     },
@@ -581,9 +477,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Datorseende"
     },
@@ -595,12 +489,8 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Virtual Reality i teori och praktik"
     },
@@ -612,9 +502,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Avancerad interaktionsdesign"
     },
@@ -626,9 +514,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Signalbehandling - design och implementering"
     },
@@ -640,9 +526,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Numeriska metoder för datorgrafik"
     },
@@ -654,9 +538,7 @@ ourData = [
         "specialization": "bg",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Spatial statistik med bildanalys"
     },
@@ -668,9 +550,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Digital IC-konstruktion"
     },
@@ -682,9 +562,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Digitala strukturer på kisel"
     },
@@ -696,9 +574,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Modern elektronik"
     },
@@ -710,12 +586,8 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Elektromagnetisk fältteori"
     },
@@ -727,9 +599,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Datorarkitektur"
     },
@@ -741,9 +611,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Digitala och analoga projekt"
     },
@@ -755,9 +623,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "DSP-design"
     },
@@ -769,9 +635,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Mätteknik"
     },
@@ -783,12 +647,8 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "IC-projekt 1"
     },
@@ -800,9 +660,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Konstruktion av inbyggda system"
     },
@@ -814,9 +672,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Konstruktion av inbyggda system, fördjupningskurs"
     },
@@ -828,12 +684,8 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "IC-projekt 2"
     },
@@ -845,9 +697,7 @@ ourData = [
         "specialization": "dpd",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Integrerade A/D och D/A omvandlare"
     },
@@ -859,9 +709,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "C-programmering"
     },
@@ -873,9 +721,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Digitala strukturer på kisel"
     },
@@ -887,9 +733,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Kompilatorer"
     },
@@ -901,9 +745,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Optimerande kompilatorer"
     },
@@ -915,12 +757,8 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Realtidssystem"
     },
@@ -932,12 +770,8 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Tillämpad mekatronik"
     },
@@ -949,9 +783,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Datorarkitektur"
     },
@@ -963,9 +795,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Projekt i reglerteknik"
     },
@@ -977,9 +807,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Algoritmer i signalprocessorer - projektkurs"
     },
@@ -991,9 +819,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Internet inuti"
     },
@@ -1005,12 +831,8 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Realtidssystem"
     },
@@ -1022,9 +844,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Konstruktion av inbyggda system"
     },
@@ -1036,9 +856,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Operativsystem"
     },
@@ -1050,9 +868,7 @@ ourData = [
         "specialization": "is",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Konstruktion av inbyggda system, fördjupningskurs"
     },
@@ -1074,9 +890,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Avancerad datasäkerhet"
     },
@@ -1088,9 +902,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Digital kommunikation"
     },
@@ -1102,9 +914,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Markovprocesser"
     },
@@ -1116,9 +926,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Webbsäkerhet"
     },
@@ -1130,9 +938,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Avancerad webbsäkerhet"
     },
@@ -1144,9 +950,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Digital kommunikation, fortsättningskurs"
     },
@@ -1158,9 +962,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Internetprotokoll"
     },
@@ -1172,9 +974,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Kryptoteknik"
     },
@@ -1186,9 +986,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Algebraiska strukturer"
     },
@@ -1200,9 +998,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Avancerad telekommunikation"
     },
@@ -1214,9 +1010,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Internet inuti"
     },
@@ -1228,9 +1022,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Informationsteori"
     },
@@ -1242,9 +1034,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Simulering"
     },
@@ -1256,12 +1046,8 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Projekt i trådlös kommunikation"
     },
@@ -1273,9 +1059,7 @@ ourData = [
         "specialization": "ks",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Kodningsteknik"
     },
@@ -1287,9 +1071,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Avancerade algoritmer"
     },
@@ -1301,9 +1083,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "C-programmering"
     },
@@ -1315,9 +1095,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Kompilatorer"
     },
@@ -1329,9 +1107,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Optimerande kompilatorer"
     },
@@ -1343,9 +1119,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Språkteknologi"
     },
@@ -1357,9 +1131,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Funktionsprogrammering"
     },
@@ -1371,9 +1143,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Projekt i datavetenskap"
     },
@@ -1385,9 +1155,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Constraint-programmering"
     },
@@ -1399,9 +1167,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Linjär och kombinatorisk optimering"
     },
@@ -1413,9 +1179,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Tillämpad artificiell intelligens"
     },
@@ -1427,12 +1191,8 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "C++ - programmering"
     },
@@ -1444,12 +1204,8 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Databasteknik"
     },
@@ -1461,9 +1217,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Algoritmimplementering"
     },
@@ -1475,9 +1229,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Diskret matematik"
     },
@@ -1489,9 +1241,7 @@ ourData = [
         "specialization": "pv",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Projekt i datavetenskap"
     },
@@ -1513,9 +1263,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Avancerad datasäkerhet"
     },
@@ -1527,9 +1275,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Industriell ekonomi, allmän kurs"
     },
@@ -1541,9 +1287,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Interaktionsdesign"
     },
@@ -1555,9 +1299,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Programvaruutveckling för stora system"
     },
@@ -1569,12 +1311,8 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Realtidssystem"
     },
@@ -1586,9 +1324,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Industriell ekonomi, allmän kurs"
     },
@@ -1600,9 +1336,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Konfigurationshantering"
     },
@@ -1614,9 +1348,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Kravhantering"
     },
@@ -1628,12 +1360,8 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            }
+            2,
+            3
         ],
         "name": "Coachning av programvaruteam"
     },
@@ -1645,9 +1373,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Constraint-programmering"
     },
@@ -1659,9 +1385,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Programvarutestning"
     },
@@ -1673,12 +1397,8 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "C++ - programmering"
     },
@@ -1690,12 +1410,8 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Databasteknik"
     },
@@ -1707,12 +1423,8 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Realtidssystem"
     },
@@ -1724,9 +1436,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Företagsorganisation"
     },
@@ -1738,9 +1448,7 @@ ourData = [
         "specialization": "se",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Användbarhetsutvärdering"
     },
@@ -1752,9 +1460,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Digital kommunikation"
     },
@@ -1766,9 +1472,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Flervariabel reglering"
     },
@@ -1780,9 +1484,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Signalseparation - oberoende komponenter"
     },
@@ -1794,9 +1496,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Stationära stokastiska processer"
     },
@@ -1808,12 +1508,8 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Matristeori"
     },
@@ -1825,12 +1521,8 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Realtidssystem"
     },
@@ -1842,12 +1534,8 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Systemidentifiering"
     },
@@ -1859,9 +1547,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Digital kommunikation, fortsättningskurs"
     },
@@ -1873,9 +1559,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Matematisk statistik, tidsserieanalys"
     },
@@ -1887,9 +1571,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Optimal och adaptiv signalbehandling"
     },
@@ -1901,9 +1583,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Projekt i reglerteknik"
     },
@@ -1915,9 +1595,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Algoritmer i signalprocessorer - projektkurs"
     },
@@ -1929,12 +1607,8 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Prediktiv reglering"
     },
@@ -1946,12 +1620,8 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Realtidssystem"
     },
@@ -1963,9 +1633,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Medicinsk signalbehandling"
     },
@@ -1977,9 +1645,7 @@ ourData = [
         "specialization": "ssr",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Signalbehandling - design och implementering"
     },
@@ -1991,12 +1657,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Introduktion till Kinas samhällsliv, kultur och språk"
     },
@@ -2008,12 +1670,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Introduktionskurs i kinesiska för civilingenjörer"
     },
@@ -2025,12 +1683,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Introduktionskurs i kinesiska för civilingenjörer, del 2"
     },
@@ -2042,9 +1696,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Avancerad kurs i numeriska algoritmer med Python/SciPy"
     },
@@ -2056,9 +1708,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Grundläggande radioteknik"
     },
@@ -2070,9 +1720,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Tillämpad robotteknik"
     },
@@ -2084,12 +1732,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Arbete-människa-teknik, projekt"
     },
@@ -2101,12 +1745,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Energisystemanalys: energi, miljö och naturresurser"
     },
@@ -2118,12 +1758,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Engelska för tekniker"
     },
@@ -2135,12 +1771,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Juridik för tekniker"
     },
@@ -2152,12 +1784,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Olinjära dynamiska system"
     },
@@ -2169,12 +1797,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Projekt i industriell elektroteknik och automation"
     },
@@ -2186,12 +1810,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Rehabiliteringsteknik"
     },
@@ -2203,12 +1823,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Teknikhistoria"
     },
@@ -2220,12 +1836,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Teknisk miljövetenskap"
     },
@@ -2237,12 +1849,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            }
+            1,
+            2
         ],
         "name": "Tyska för tekniker"
     },
@@ -2254,15 +1862,9 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            },
-            {
-                "study_period": "2"
-            },
-            {
-                "study_period": "3"
-            }
+            1,
+            2,
+            3
         ],
         "name": "Japanska för tekniker"
     },
@@ -2274,9 +1876,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Medicinsk bildanalys"
     },
@@ -2288,9 +1888,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Olinjär reglering och servosystem"
     },
@@ -2302,9 +1900,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Optimering"
     },
@@ -2316,9 +1912,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Simuleringsverktyg"
     },
@@ -2330,9 +1924,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Arbetsorganisation och ledarskap"
     },
@@ -2344,9 +1936,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Automation"
     },
@@ -2358,9 +1948,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Industriell ekonomi, allmän kurs"
     },
@@ -2372,9 +1960,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Industriell ekonomi, fortsättningskurs"
     },
@@ -2386,9 +1972,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Kanalmodellering för trådlös kommunikation"
     },
@@ -2400,9 +1984,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Matematiska strukturer"
     },
@@ -2414,9 +1996,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Monte Carlo-baserade statistiska metoder"
     },
@@ -2428,9 +2008,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Patent och annan immaterialrätt"
     },
@@ -2442,9 +2020,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Reglerteori"
     },
@@ -2456,9 +2032,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Servicerobotik"
     },
@@ -2470,9 +2044,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Teknikstödd kommunikation"
     },
@@ -2484,12 +2056,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Arbete-människa-teknik, projekt"
     },
@@ -2501,12 +2069,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Energisystemanalys: Förnybara energikällor"
     },
@@ -2518,12 +2082,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Engelska för tekniker"
     },
@@ -2535,12 +2095,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Entreprenörskap och affärsutveckling"
     },
@@ -2552,12 +2108,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Franska för tekniker: språk, kultur och samhällsliv, grundkurs"
     },
@@ -2569,12 +2121,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Juridik för tekniker"
     },
@@ -2586,12 +2134,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Kinesiska för tekniker"
     },
@@ -2603,12 +2147,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Kontinuerliga system"
     },
@@ -2620,12 +2160,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Mekatronik, industriell produktframtagning"
     },
@@ -2637,12 +2173,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Projekt i industriell elektroteknik och automation"
     },
@@ -2654,12 +2186,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Rehabiliteringsteknik och design"
     },
@@ -2671,12 +2199,8 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            },
-            {
-                "study_period": "4"
-            }
+            3,
+            4
         ],
         "name": "Variationskalkyl"
     },
@@ -2688,9 +2212,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Automation för komplexa system"
     },
@@ -2702,9 +2224,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Försöksplanering"
     },
@@ -2716,9 +2236,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Industriell ekonomi, fortsättningskurs"
     },
@@ -2730,9 +2248,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Industriellt miljöarbete"
     },
@@ -2744,9 +2260,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Komponentfysik"
     },
@@ -2758,9 +2272,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Linjär och logistisk regression"
     },
@@ -2772,9 +2284,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Medicinsk optik"
     },
@@ -2786,9 +2296,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Mikrosensorer"
     },
@@ -2800,9 +2308,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Nätverksdynamik"
     },
@@ -2814,9 +2320,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Nätverksprogrammering"
     },
@@ -2828,9 +2332,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Projekt i matematik"
     },
@@ -2842,9 +2344,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Radiosystem"
     },
@@ -2856,9 +2356,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Statistisk modellering av extremvärden"
     },
@@ -2870,9 +2368,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Interaktion 1: Neuromodellering, kognitiv robotik och agenter"
     },
@@ -2884,9 +2380,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Moderna trådlösa system - LTE och dess efterföljare"
     },
@@ -2898,9 +2392,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Multipelantennsystem"
     },
@@ -2912,9 +2404,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Projekt i elektro- och informationsteknik"
     },
@@ -2926,9 +2416,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "1"
-            }
+            1
         ],
         "name": "Sensorteknik"
     },
@@ -2940,9 +2428,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Datorbaserade mätsystem"
     },
@@ -2954,9 +2440,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "EMC, störningar och störningsbegränsning"
     },
@@ -2968,9 +2452,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Interaktion 2: Virtualitet och kognitiv modellering"
     },
@@ -2982,9 +2464,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Medicinsk mätteknik"
     },
@@ -2996,9 +2476,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "2"
-            }
+            2
         ],
         "name": "Projekt i elektro- och informationsteknik"
     },
@@ -3010,9 +2488,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Projekt i elektro- och informationsteknik"
     },
@@ -3024,9 +2500,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "3"
-            }
+            3
         ],
         "name": "Ultraljudsfysik och teknik"
     },
@@ -3038,9 +2512,7 @@ ourData = [
         "specialization": "",
         "on_hold": "",
         "study_periods": [
-            {
-                "study_period": "4"
-            }
+            4
         ],
         "name": "Projekt i elektro- och informationsteknik"
     },

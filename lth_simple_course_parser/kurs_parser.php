@@ -309,15 +309,13 @@ foreach($courses as $c) {
 		$list_size = count($c->lasperioder);
 		$i = 0;
 		foreach ($c->lasperioder as $key => $value) {
-			echo "{";
 			if($i != $list_size - 1) {
-				echo "\"study_period\": \"" . $key . "\" ";
+				echo $key;
 				$i= $i + 1;
-				echo "}, ";
+				echo ", ";
 			}
 			else {
-				echo "\"study_period\": \"" . $key . "\" ";
-				echo "} ";
+				echo $key;
 			}
 			
 		}

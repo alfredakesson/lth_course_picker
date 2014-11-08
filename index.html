@@ -25,17 +25,10 @@
     </div>
 
     <div class="container">
-    	<div class="filter">
-    		<h3>Choose which study period you want to add courses to</h3>
-	        <ul class="nav nav-justified">
-	          <li class="active"><a href="#">Study Period 1</a></li>
-	          <li><a href="#">Study Period 2</a></li>
-	          <li><a href="#">Study Period 3</a></li>
-	          <li><a href="#">Study Period 4</a></li>
-	          <li><a href="#">Study Period 5</a></li>
-	          <li><a href="#">Study Period 6</a></li>
-	        </ul>
-      </div>
+    	
+    	
+	    	<div class="filter"></div>
+      
 
         <h1>Courses</h1>
         <hr />
@@ -62,6 +55,20 @@
     <script src="lib/backbone.localStorage-min.js" type="text/javascript"></script>
     <script src="courses.json" type="text/javascript"></script>
 
+
+    <script type="text/template" id="sp_filter">
+		
+		<ul class="nav nav-justified">
+	    	<h3>Filter study periods: </h3>
+	    	<li><a data-id= "1" href="#1">Study Period 1</a></li>
+	    	<li><a data-id= "2" href="#2">Study Period 2</a></li>
+	    	<li><a data-id= "3" href="#3">Study Period 3</a></li>
+	    	<li><a data-id= "4" href="#4">Study Period 4</a></li>
+	    	<!--<li><a data-id= "5" href="#5">Study Period 5</a></li>
+	    	<li><a data-id= "6" href="#6">Study Period 6</a></li>-->
+			
+		</ul>
+	</script>
 
     <script type="text/template" id="home_template">
 		
@@ -138,9 +145,13 @@
     </script>
 
 
+    <!-- Not in use atm... -->
     <script type="text/template" id="filter_template">
         <%= filter %>
     </script>
+
+
+
 
     <script type="text/template" id="test_test">
         <%= test %>
@@ -164,8 +175,19 @@
             localStorage: new Backbone.LocalStorage("SomeCollection"),
 
 			show_specialization: function(spec) {
-      			return this.where({specialization: spec});
+      			return this.where( {specialization: spec} );
     		},
+
+    		show_study_period: function(sp) {
+    			filtered = this.filter(function(c) {
+    				var sp_list = c.attributes.study_periods;
+    				return _.find(sp_list, function(e){ return e == sp }) != null;
+    				
+    			});
+    			return new CourseList(filtered);
+    		},
+	    	
+
 
         });
         /*	*******************************************************************	*/
@@ -194,6 +216,11 @@
             events: {
                 "click a": "clicked"
             },
+
+            initialize: function(options){
+    			
+  			},
+
             dataSource: courses,
             temp: '#home_template',
             render: function () {
@@ -205,7 +232,7 @@
 
                 }));
             },
-            clicked: function(e){
+            clicked: function (e) {
                 e.preventDefault();
                 var id = $(e.currentTarget).data("id");
                 var item = courses.get(id);
@@ -215,7 +242,41 @@
                 sideView.render();
                 
             },
+
+            filter_sp: function(sp) {
+  				
+  				this.dataSource = this.dataSource.show_study_period(sp);//constant for now... 
+  				this.render();
+},
         });
+
+        var SpFilterView = Backbone.View.extend({
+        	el: '.filter',
+        	template: 'sp_filter',
+        	events: {
+        		'click a': 'clicked'
+        	},
+        	dataSource: courses,
+        	
+        	render: function () {
+        		var template = _.template($('#sp_filter').html());
+        		this.$el.html(template({}));
+                console.log("render spfilter");
+        	},
+        	
+        	clicked: function (e) {
+        		e.preventDefault();
+        		console.log('click on sp ' + $(e.currentTarget).data("id"));
+        		
+        		//filter_courses = courses.show_study_period($(e.currentTarget).data("id"));
+        		//courses = filter_courses;
+        		homeView.filter_sp($(e.currentTarget).data("id"));
+        		
+        	},
+
+
+
+        })
 
         var SideView = HomeView.extend({
             temp: '#side_template',
@@ -229,24 +290,10 @@
                 item.destroy();
                 sideView.render();
             }
-        });
-
-		var FilterView = Backbone.View.extend({
-            el: '.page3',
-            
-
-            render: function () {
-            	
-            	var template = _.template($('#filter_template').html());
-            	this.$el.html(template({
-                    filter: "filter rendered"
-                }));
-
-                console.log("render filter_view");
-            },
 
         });
 
+		
         /*	*******************************************************************	*/
         
 
@@ -256,7 +303,7 @@
 		var testView = new TestView();
         var homeView = new HomeView();
         var sideView = new SideView();
-        var filterView = new FilterView();
+        var spFilterView = new SpFilterView();
 
         /*	*******************************************************************	*/
     	/* The router */
@@ -277,8 +324,8 @@
             homeView.render();
             coursesAdded.fetch();
             sideView.render();
+            spFilterView.render();
             //testView.render();
-            //filterView.render();
         })
         
         Backbone.history.start();
