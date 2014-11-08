@@ -27,7 +27,7 @@
     <div class="container">
     	
     	
-	    	<div class="filter"></div>
+	    <div class="filter"></div>
       
 
         <h1>Courses</h1>
@@ -56,17 +56,34 @@
     <script src="courses.json" type="text/javascript"></script>
 
 
-    <script type="text/template" id="sp_filter">
+    <script type="text/template" id="filter">
 		
 		<ul class="nav nav-justified">
 	    	<h3>Filter study periods: </h3>
-	    	<li><a data-id= "1" href="#1">Study Period 1</a></li>
-	    	<li><a data-id= "2" href="#2">Study Period 2</a></li>
-	    	<li><a data-id= "3" href="#3">Study Period 3</a></li>
-	    	<li><a data-id= "4" href="#4">Study Period 4</a></li>
-	    	<!--<li><a data-id= "5" href="#5">Study Period 5</a></li>
-	    	<li><a data-id= "6" href="#6">Study Period 6</a></li>-->
+	    	<li><a class="study_period" data-id= "1" href="#1">Study Period 1</a></li>
+	    	<li><a class="study_period" data-id= "2" href="#2">Study Period 2</a></li>
+	    	<li><a class="study_period" data-id= "3" href="#3">Study Period 3</a></li>
+	    	<li><a class="study_period" data-id= "4" href="#4">Study Period 4</a></li>
+	    	<!--
+	    	<li><a data-id= "5" href="#5">Study Period 5</a></li>
+	    	<li><a data-id= "6" href="#6">Study Period 6</a></li>
+	    	-->
 			
+		</ul>
+        
+		<ul class="nav nav-justified">
+	    	<h4>Filter on specialization: </h4>
+            <% _.each(data,function(item){ %>
+                <li><a class="specialization" data-id=<%= item[0] %> href="#1"><%= item[1] %></a></li>
+            <% }); %>
+		</ul>
+
+	</script>
+
+	<script type="text/template" id="spec_filter">
+		
+		<ul class="nav nav-justified">
+	    	<h4>Filter on specialization: </h4>
 		</ul>
 	</script>
 
@@ -143,14 +160,6 @@
 		</table>
 
     </script>
-
-
-    <!-- Not in use atm... -->
-    <script type="text/template" id="filter_template">
-        <%= filter %>
-    </script>
-
-
 
 
     <script type="text/template" id="test_test">
@@ -248,31 +257,47 @@
   				this.dataSource = courses;
   				this.dataSource = this.dataSource.show_study_period(sp);//constant for now... 
   				this.render();
-},
+			},
         });
 
-        var SpFilterView = Backbone.View.extend({
+        var FilterView = Backbone.View.extend({
         	el: '.filter',
-        	template: 'sp_filter',
+        	template: 'filter',
         	events: {
-        		'click a': 'clicked'
+        		'click a.study_period': 'clicked_sp',
+        		'click a.specialization': 'clicked_spec'
         	},
         	dataSource: courses,
+
+            render: function () {
+                spec_list = _.uniq(courses.pluck('specialization'), false, function(item) {
+                    return item[0];
+                });
+
+                
+                
+                var template = _.template($('#filter').html());
+                var template = _.template($('#filter').html());
+                this.$el.html(template({
+                    data: spec_list,
+                }));
+                
+            },
         	
-        	render: function () {
-        		var template = _.template($('#sp_filter').html());
-        		this.$el.html(template({}));
-                console.log("render spfilter");
-        	},
         	
-        	clicked: function (e) {
+        	clicked_sp: function (e) {
         		e.preventDefault();
-        		console.log('click on sp ' + $(e.currentTarget).data("id"));
-        		
-        		//filter_courses = courses.show_study_period($(e.currentTarget).data("id"));
-        		//courses = filter_courses;
+        		console.log('click on filter study period: ' + $(e.currentTarget).data("id"));
         		homeView.filter_sp($(e.currentTarget).data("id"));
         		
+        	},
+
+
+            
+
+        	clicked_spec: function (e) {
+        		e.preventDefault();
+        		console.log('clicked on filter specialization: ' + $(e.currentTarget).data("id"));        		
         	},
 
 
@@ -304,7 +329,7 @@
 		var testView = new TestView();
         var homeView = new HomeView();
         var sideView = new SideView();
-        var spFilterView = new SpFilterView();
+        var filterView = new FilterView();
 
         /*	*******************************************************************	*/
     	/* The router */
@@ -321,11 +346,11 @@
         router.on('route:test', function () {
             testView.render();
         })
-         router.on('route:home', function () {
+        router.on('route:home', function () {
             homeView.render();
             coursesAdded.fetch();
             sideView.render();
-            spFilterView.render();
+            filterView.render();
             //testView.render();
         })
         

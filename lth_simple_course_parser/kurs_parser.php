@@ -23,13 +23,9 @@ $from_year = $argv[2];
 $to_year = $argv[3];
 
 
-/* Typ av utskrift */
-//$output = "vanlig";
-$output = "json";
-
 
 /* Bygg hemsidans adress och skapa ett DOM-träd */
-$url = 'http://kurser.lth.se/lot/?lasar=' . $from_year . '_' . $to_year . '&prog=' . $program . '&val=program';
+$url = 'http://kurser.lth.se/lot/?lasar=' . $from_year . '_' . $to_year . '&prog=' . $program . '&val=program';// . '&lang=en_US';
 $html = file_get_html($url);
 
 /* Representation av en kurs parsad från lth */
@@ -41,7 +37,8 @@ class Kurs {
 	public $niva;					// Nivå* 
 	public $lut;					// Lämplig för bytisar
 	public $sprak;					// Föreläsningsspråk
-	public $inriktning;				// Inriktning*
+	public $inriktning_id;			// Inriktning förkortning*
+	public $inriktning;				// Inriktning 
 	public $ingar_i_arskurs;		// Ingår i årskurs
 	public $from_arskurs;			// Från årskurs
 	public $typ;					// Obligatorisk, alternativobligatorisk eller valfri
@@ -74,7 +71,17 @@ class Kurs {
 			array_shift($array_data);
 			array_shift($array_data);
 			array_shift($array_data);
-			array_shift($array_data);
+			$this->inriktning_id = array_shift($array_data);
+			
+			//$this->inriktning = array_shift($array_data);
+			if($this->inriktning_id == 'ak1') {
+				$this->inriktning = 'Årskurs 1';
+			} else if($this->inriktning_id == 'ak2') {
+				$this->inriktning = 'Årskurs 2';
+			} else {
+				$this->inriktning = 'Årskurs 3';
+			}
+
 			$this->program = array_shift($array_data);
 			$this->typ = array_shift($array_data);
 			$this->ingar_i_arskurs = array_shift($array_data);
@@ -92,14 +99,18 @@ class Kurs {
 			$this->lut = array_shift($array_data);
 			$this->sprak = array_shift($array_data);
 			$this->kursnamn = array_shift($array_data);
+			$this->inriktning_id = array_shift($array_data);
+			$this->program = array_shift($array_data);
+			array_shift($array_data);
 			$this->inriktning = array_shift($array_data);
 			
-			$this->program = array_shift($array_data);
 		}
 		else if($block == "exjobb") {
 			$this->kurskod = array_shift($array_data);
 			$this->poang = array_shift($array_data);
 			$this->kursnamn = array_shift($array_data);
+			$this->inriktning_id = 'exjobb';
+			$this->inriktning = 'Examensarbete - D';
 		}
 		else {
 			// Skapa en valfri kurs
@@ -116,7 +127,8 @@ class Kurs {
 			array_shift($array_data);
 
 			$this->typ = array_shift($array_data);
-
+			$this->inriktning_id = 'valfri';
+			$this->inriktning = 'Valfria kurser - D';
 		}
 
 	}
@@ -142,7 +154,9 @@ till kla
 
 foreach($html->find('table[class]') as $table) {
 	
-	$inriktning = hitta_inriktning($table);	
+	$inriktning_id = hitta_inriktning_id($table);
+	$inriktning = hitta_inriktning($table);
+	
 	$index = 0;
 	$child_of_table = $table->children();
 	
@@ -193,9 +207,9 @@ foreach($html->find('table[class]') as $table) {
 				}
 
 			}
-			array_push($course_data, $inriktning);
+			array_push($course_data, $inriktning_id);
 
-			if($inriktning == 'ak1' || $inriktning == 'ak2' || $inriktning == 'ak3') {
+			if($inriktning_id == 'ak1' || $inriktning_id == 'ak2' || $inriktning_id == 'ak3') {
 				// Data parsad från grundblock
 				
 				// Spara vilket program
@@ -205,13 +219,13 @@ foreach($html->find('table[class]') as $table) {
 				array_push($course_data, hitta_typ($table));
 
 				// Spara vilken årskurs
-				array_push($course_data, intval(substr($inriktning, 2)));
+				array_push($course_data, intval(substr($inriktning_id, 2)));
 
 
 				$course = new Kurs($course_data, $lasperioder, $course_webpages, $fotnot, $periodiserad, "grundblock");
 				$courses[$course_data[0]] = $course;
 			}
-			else if($inriktning == "valfri"){
+			else if($inriktning_id == "valfri"){
 				
 				// Data parsad från valfria kurser
 				array_push($course_data, "V");//lägg till info om valfri kurs
@@ -219,7 +233,7 @@ foreach($html->find('table[class]') as $table) {
 				array_push($courses, $course);
 				
 			}
-			else if($inriktning == "exjobb") {
+			else if($inriktning_id == "exjobb") {
 				$course = new Kurs($course_data, $lasperioder, $course_webpages, $fotnot, $periodiserad, "exjobb");
 				array_push($courses, $course);
 			}
@@ -227,6 +241,7 @@ foreach($html->find('table[class]') as $table) {
 				
 				// Data parsad från specialiseringsblocken
 				array_push($course_data, $program);
+				array_push($course_data, $inriktning_id);
 				array_push($course_data, $inriktning);
 				
 				$course = new Kurs($course_data, $lasperioder, $course_webpages, $fotnot, $periodiserad, "specialisering");
@@ -239,12 +254,20 @@ foreach($html->find('table[class]') as $table) {
 	}
 }
 
-function hitta_inriktning($table) {
-	$inriktning = $table;
-	while($inriktning->tag != 'a')
-		$inriktning = $inriktning->prev_sibling();
-	return $inriktning->name;
+function hitta_inriktning_id($table) {
+	$inriktning_id = $table;
+	while($inriktning_id->tag != 'a')
+		$inriktning_id = $inriktning_id->prev_sibling();
+	return $inriktning_id->name;
 }
+
+function hitta_inriktning($table) {
+	$inriktning_id = $table;
+	while($inriktning_id->tag != 'h3')
+		$inriktning_id = $inriktning_id->prev_sibling();
+	return $inriktning_id->plaintext;
+}
+
 
 function hitta_typ($table) {
 	// Hitta typ i grundblock. 
@@ -258,72 +281,54 @@ function hitta_typ($table) {
 		return 'O';
 
 }
+
 $id = 0;
-echo "[";
-if($output == "vanlig")
-	echo "kurskod\tprogram\tpoäng\tnivå\tlut\tspråk\tåk\tfr.åk\tinr\ttyp\tlp\n";
+echo "ourData = [";
+
+$nbr_courses = count($courses);
+
 foreach($courses as $c) {
 
-	if($output == "vanlig") {
-		echo $c->kurskod . "\t";
-		echo $c->program . "\t";
-		echo $c->poang . "\t";
-		echo $c->niva . "\t";
-		echo $c->lut . "\t";
-		echo $c->sprak . "\t";
-		echo $c->ingar_i_arskurs . "\t";
-		echo $c->from_arskurs . "\t";
-		echo $c->inriktning . "\t";
-		echo $c->typ . "\t";
+	echo "{";
+	echo "\"id\": \"" . $id . "\", ";
+	echo "\"code\": \"" . $c->kurskod . "\", ";
+	echo "\"credits\": \"" . $c->poang . "\", ";
+	echo "\"cycle\": \"" . $c->niva . "\", ";
 
-		foreach ($c->lasperioder as $key => $value) {
-			echo $key . " ";
-		}
-		echo "\t";
+	echo "\"specialization\": [ ";
+	echo "\"" . $c->inriktning_id . "\", \"" . $c->inriktning . "\" ], ";
 
-		if($c->periodiserad)
-			echo "Periodiserad\t";
-		else
-			echo "------------\t";
-		echo "\n";
-		
-	} else if($output == "hemsidor_och_fotnot") {
-		echo "\n# ## ## ## #\n";
-		echo $c->kursnamn . "\n";
-		echo "Fotnot:\t" . $c->fotnot . "\n";
-		foreach ($c->webbsidor as $name => $addr) {
-			echo $name . ":\t" . $addr . "\n";
-		}
-		echo "\n";	
-	}
-	else if($output == "json") {
+	/*echo "\"specialization_id\": \"" . $c->inriktning_id . "\", ";
+	echo "\"specialization\": \"" . $c->inriktning . "\", ";*/
+	echo "\"on_hold\": \"" . $c->periodiserad . "\", ";
+	echo "\"study_periods\": [";
+
+	$list_size = count($c->lasperioder);
+	$i = 0;
+	foreach ($c->lasperioder as $key => $value) {
 		echo "{";
-		echo "\"id\": \"" . $id . "\", ";
-		echo "\"code\": \"" . $c->kurskod . "\", ";
-		echo "\"credits\": \"" . $c->poang . "\", ";
-		echo "\"cycle\": \"" . $c->niva . "\", ";
-		echo "\"specialization\": \"" . $c->inriktning . "\", ";
-		echo "\"on_hold\": \"" . $c->periodiserad . "\", ";
-		echo "\"study_periods\": [";
-	
-		$list_size = count($c->lasperioder);
-		$i = 0;
-		foreach ($c->lasperioder as $key => $value) {
-			if($i != $list_size - 1) {
-				echo $key;
-				$i= $i + 1;
-				echo ", ";
-			}
-			else {
-				echo $key;
-			}
-			
+		if($i != $list_size - 1) {
+			echo "\"study_period\": \"" . $key . "\" ";
+			$i= $i + 1;
+			echo "}, ";
 		}
-		echo "], ";
-		echo "\"name\": \"" . $c->kursnamn . "\"";
-		echo " }";
+		else {
+			echo "\"study_period\": \"" . $key . "\" ";
+			echo "} ";
+		}
+		
+	}
+	echo "], ";
+	echo "\"name\": \"" . $c->kursnamn . "\"";
+	echo " }";
+	if($id != $nbr_courses - 1)
+	{
 		echo ",\n";
 	}
+	else {
+		echo "]";
+	}
+
 	$id+=1;
 
 }
