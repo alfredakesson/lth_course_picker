@@ -3,18 +3,55 @@
 
 <head>
     <meta charset="utf-8">
-    <title>LTH</title>
+    <title>LTH course picker</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
 </head>
 
 <body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">LTH Course picker</a>
+        </div>
+      </div>
+    </nav>
 
+	<div class="jumbotron">
+      <div class="container">
+        <h1>LTH course picker</h1>
+        <p>lorem ipsum dipsum lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum.</p>
+      </div>
+    </div>
 
     <div class="container">
-        <h1>LTH</h1>
+    	<div class="filter">
+    		<h3>Choose which study period you want to add courses to</h3>
+	        <ul class="nav nav-justified">
+	          <li class="active"><a href="#">Study Period 1</a></li>
+	          <li><a href="#">Study Period 2</a></li>
+	          <li><a href="#">Study Period 3</a></li>
+	          <li><a href="#">Study Period 4</a></li>
+	          <li><a href="#">Study Period 5</a></li>
+	          <li><a href="#">Study Period 6</a></li>
+	        </ul>
+      </div>
+
+        <h1>Courses</h1>
         <hr />
         <div class="page col-md-6"></div>
-        <div class="page2 col-md-6"></div>
+        <div class="page2 col-md-6">
+
+        	<div class="row"><h4>Study Peroid 1</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 2</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 3</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 4</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 5</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 6</h4><hr /></div>
+        
+
+
+        <div class="page3 col-md-6"></div>
     </div>
 
 
@@ -53,7 +90,7 @@
 		                    <%= item.credits %>
 		                </td>
 		                <td>
-		                    <a href="#" class="btn" data-id=<%= item.id%>> Lägg till</a>
+		                    <a href="#" class="btn" data-id=<%= item.id%>> Add</a>
 		                </td>
 		            </tr>
 		            <% }); %>
@@ -91,13 +128,18 @@
 		                    <%= item.credits %>
 		                </td>
 		                <td>
-		                    <a href="#" class="btn" data-id=<%= item.id%>> Ta bort</a>
+		                    <a href="#" class="btn" data-id=<%= item.id%>> Remove</a>
 		                </td>
 		            </tr>
 		            <% }); %>
 		    </tbody>
 		</table>
 
+    </script>
+
+
+    <script type="text/template" id="filter_template">
+        <%= filter %>
     </script>
 
     <script type="text/template" id="test_test">
@@ -157,7 +199,7 @@
             render: function () {
 
                 console.log("render");
-                var template = _.template($(this. temp).html());
+                var template = _.template($(this.temp).html());
                 this.$el.html(template({
                     data: this.dataSource.toJSON(),
 
@@ -191,10 +233,18 @@
 
 		var FilterView = Backbone.View.extend({
             el: '.page3',
+            
 
             render: function () {
-                console.log("render FilterView");
+            	
+            	var template = _.template($('#filter_template').html());
+            	this.$el.html(template({
+                    filter: "filter rendered"
+                }));
+
+                console.log("render filter_view");
             },
+
         });
 
         /*	*******************************************************************	*/
@@ -227,6 +277,8 @@
             homeView.render();
             coursesAdded.fetch();
             sideView.render();
+            //testView.render();
+            //filterView.render();
         })
         
         Backbone.history.start();
