@@ -188,6 +188,7 @@
     		},
 
     		show_study_period: function(sp) {
+                console.log('courseList: filter show study period');
     			filtered = this.filter(function(c) {
     				var sp_list = c.attributes.study_periods;
     				return _.find(sp_list, function(e){ return e == sp }) != null;
@@ -234,7 +235,7 @@
             temp: '#home_template',
             render: function () {
 
-                console.log("render");
+                console.log("render homeview");
                 var template = _.template($(this.temp).html());
                 this.$el.html(template({
                     data: this.dataSource.toJSON(),
@@ -253,11 +254,18 @@
             },
 
             filter_sp: function(sp) {
-  				
-  				this.dataSource = courses;
-  				this.dataSource = this.dataSource.show_study_period(sp);//constant for now... 
-  				this.render();
-			},
+                
+                this.dataSource = courses;
+                this.dataSource = this.dataSource.show_study_period(sp);
+                this.render();
+            },
+
+            filter_spec: function(spec) {
+                
+                this.dataSource = courses; // this must be fixed later on. Now we dont care about the study period which is wrong
+                //this.dataSource = this.dataSource.show_specialization(spec);
+                this.render();
+            },
         });
 
         var FilterView = Backbone.View.extend({
@@ -274,9 +282,6 @@
                     return item[0];
                 });
 
-                
-                
-                var template = _.template($('#filter').html());
                 var template = _.template($('#filter').html());
                 this.$el.html(template({
                     data: spec_list,
@@ -297,7 +302,8 @@
 
         	clicked_spec: function (e) {
         		e.preventDefault();
-        		console.log('clicked on filter specialization: ' + $(e.currentTarget).data("id"));        		
+        		console.log('clicked on filter specialization: ' + $(e.currentTarget).data("id")); 
+                homeView.filter_spec($(e.currentTarget).data("id"));
         	},
 
 
