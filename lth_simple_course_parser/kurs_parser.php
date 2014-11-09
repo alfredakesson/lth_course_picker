@@ -110,7 +110,7 @@ class Kurs {
 			$this->poang = array_shift($array_data);
 			$this->kursnamn = array_shift($array_data);
 			$this->inriktning_id = 'exjobb';
-			$this->inriktning = 'Examensarbete - D';
+			$this->inriktning = 'Examensarbete';
 		}
 		else {
 			// Skapa en valfri kurs
@@ -128,7 +128,7 @@ class Kurs {
 
 			$this->typ = array_shift($array_data);
 			$this->inriktning_id = 'valfri';
-			$this->inriktning = 'Valfria kurser - D';
+			$this->inriktning = 'Valfria kurser';
 		}
 
 	}

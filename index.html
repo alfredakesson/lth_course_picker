@@ -184,7 +184,11 @@
             localStorage: new Backbone.LocalStorage("SomeCollection"),
 
 			show_specialization: function(spec) {
-      			return this.where( {specialization: spec} );
+                console.log('show spec: ' + spec);
+                filtered = this.filter(function(c) {
+                    return c.attributes.specialization[0] == spec;
+                });
+                return new CourseList(filtered);
     		},
 
     		show_study_period: function(sp) {
@@ -261,9 +265,8 @@
             },
 
             filter_spec: function(spec) {
-                
                 this.dataSource = courses; // this must be fixed later on. Now we dont care about the study period which is wrong
-                //this.dataSource = this.dataSource.show_specialization(spec);
+                this.dataSource = this.dataSource.show_specialization(spec);
                 this.render();
             },
         });
