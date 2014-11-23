@@ -26,8 +26,12 @@
 
     <div class="container">
     	
-    	
-	    <div class="filter"></div>
+        <ul class="nav nav-justified">
+            <h3>Choose academic year: (Not implemented)</h3>
+            <li><a class="year" data-id= "1" href="#">2014 - 2015</a></li>
+        </ul>
+	
+        <div class="filter"></div>
       
 
         <h1>Courses</h1>
@@ -56,17 +60,18 @@
     <script src="courses.json" type="text/javascript"></script>
 
 
+
     <script type="text/template" id="filter">
 		
 		<ul class="nav nav-justified">
 	    	<h3>Filter study periods: </h3>
-	    	<li><a class="study_period" data-id= "1" href="#1">Study Period 1</a></li>
-	    	<li><a class="study_period" data-id= "2" href="#2">Study Period 2</a></li>
-	    	<li><a class="study_period" data-id= "3" href="#3">Study Period 3</a></li>
-	    	<li><a class="study_period" data-id= "4" href="#4">Study Period 4</a></li>
+	    	<li><a class="study_period" data-sp= "1" href="#1">Study Period 1</a></li>
+	    	<li><a class="study_period" data-sp= "2" href="#2">Study Period 2</a></li>
+	    	<li><a class="study_period" data-sp= "3" href="#3">Study Period 3</a></li>
+	    	<li><a class="study_period" data-sp= "4" href="#4">Study Period 4</a></li>
 	    	<!--
-	    	<li><a data-id= "5" href="#5">Study Period 5</a></li>
-	    	<li><a data-id= "6" href="#6">Study Period 6</a></li>
+	    	<li><a data-sp= "5" href="#5">Study Period 5</a></li>
+	    	<li><a data-sp= "6" href="#6">Study Period 6</a></li>
 	    	-->
 			
 		</ul>
@@ -74,7 +79,7 @@
 		<ul class="nav nav-justified">
 	    	<h4>Filter on specialization: </h4>
             <% _.each(data,function(item){ %>
-                <li><a class="specialization" data-id=<%= item[0] %> href="#1"><%= item[1] %></a></li>
+                <li><a class="specialization" data-spec=<%= item[0] %> href="#1"><%= item[1] %></a></li>
             <% }); %>
 		</ul>
 
@@ -152,7 +157,7 @@
 		                    <%= item.credits %>
 		                </td>
 		                <td>
-		                    <a href="#" class="btn" data-id=<%= item.id%>> Remove</a>
+		                    <a href="#" class="btn" data-id=<%= item.id %>> Remove</a>
 		                </td>
 		            </tr>
 		            <% }); %>
@@ -172,6 +177,7 @@
     	/*	*******************************************************************	*/
     	/* Objects and Collections */
         
+
         var Course = Backbone.Model.extend({
             initialize: function () {
                 //console.log("Hej hopp");
@@ -182,34 +188,62 @@
 
             model: Course,
             localStorage: new Backbone.LocalStorage("SomeCollection"),
+            
 
-			show_specialization: function(spec) {
-                console.log('show spec: ' + spec);
+            show_specialization: function(spec) {
+                //console.log('show spec: ' + spec);
                 filtered = this.filter(function(c) {
                     return c.attributes.specialization[0] == spec;
                 });
                 return new CourseList(filtered);
-    		},
+            },
 
-    		show_study_period: function(sp) {
-                console.log('courseList: filter show study period');
-    			filtered = this.filter(function(c) {
-    				var sp_list = c.attributes.study_periods;
-    				return _.find(sp_list, function(e){ return e == sp }) != null;
-    				
-    			});
-    			return new CourseList(filtered);
-    		},
-	    	
+            show_study_period: function(sp) {
+                //console.log('courseList: filter show study period');
+                filtered = this.filter(function(c) {
+                    var sp_list = c.attributes.study_periods;
+                    return _.find(sp_list, function(e){ return e == sp });
+                    
+                });
+                return new CourseList(filtered);
+            },
 
+            show_study_period_2: function(period) {
+                return new CourseList(this.show_study_periods_array(period));
+            },
 
+            show_study_periods_array: function(sp) {
+
+                return this.filter(function(course) {
+                    var sp_list = course.attributes.study_periods;
+                    return _.find(sp_list, function(e){ return e == sp });
+                });
+            },
+
+            // return uniq array of all specializations
+            // type is either 'abbrev' OR 'full_name', if not, both will be returned as arrays of size 2
+            find_all_specializations: function (type) {
+
+                s = this.pluck('specialization')
+
+                if (type == 'abbrev')
+                    return _.uniq(_.map(s, function(arr){ return arr[0]; }))
+                if (type == 'full_name')
+                    return _.uniq(_.map(s, function(arr){ return arr[1]; }))
+                else 
+                    return _.uniq(s);
+                    
+            },
+
+            
         });
+
         /*	*******************************************************************	*/
 
-
-        var courses = new CourseList();
+        var courses = new CourseList(ourData);
+        courses.chosen_filters = courses.find_all_specializations('abbrev');
         var coursesAdded = new CourseList();
-        courses.add(ourData);
+        
 
 
         /*	*******************************************************************	*/
@@ -235,11 +269,11 @@
     			
   			},
 
-            dataSource: courses,
+            dataSource: new Backbone.Collection(),
             temp: '#home_template',
             render: function () {
 
-                console.log("render homeview");
+                //console.log("render homeview");
                 var template = _.template($(this.temp).html());
                 this.$el.html(template({
                     data: this.dataSource.toJSON(),
@@ -257,19 +291,26 @@
                 
             },
 
-            filter_sp: function(sp) {
+            filter_sp: function(chosen_sp) {
                 
                 this.dataSource = courses;
-                this.dataSource = this.dataSource.show_study_period(sp);
+                if (chosen_sp != 0) {
+                    this.dataSource = this.dataSource.show_study_period_2(chosen_sp);
+                }
+                else {
+                    this.dataSource = new Backbone.Collection();
+                }
                 this.render();
             },
 
-            filter_spec: function(spec) {
-                this.dataSource = courses; // this must be fixed later on. Now we dont care about the study period which is wrong
+            filter_spec: function(chosen_sp, spec) {
+                this.dataSource = courses;
+                this.dataSource = this.dataSource.show_study_period_2(chosen_sp);
                 this.dataSource = this.dataSource.show_specialization(spec);
                 this.render();
             },
         });
+
 
         var FilterView = Backbone.View.extend({
         	el: '.filter',
@@ -278,6 +319,7 @@
         		'click a.study_period': 'clicked_sp',
         		'click a.specialization': 'clicked_spec'
         	},
+
         	dataSource: courses,
 
             render: function () {
@@ -292,21 +334,29 @@
                 
             },
         	
+            /* ----------------------------------- */
+            chosen_sp: 0,
+            toggle_study_period: function(sp){
+                if(this.chosen_sp == sp)
+                    this.chosen_sp = 0;
+                else
+                    this.chosen_sp = sp;
+            },
+            /* ----------------------------------- */
         	
         	clicked_sp: function (e) {
         		e.preventDefault();
-        		console.log('click on filter study period: ' + $(e.currentTarget).data("id"));
-        		homeView.filter_sp($(e.currentTarget).data("id"));
-        		
+                this.toggle_study_period($(e.currentTarget).data("sp"));
+        		homeView.filter_sp(this.chosen_sp);        	
         	},
 
 
-            
-
         	clicked_spec: function (e) {
         		e.preventDefault();
-        		console.log('clicked on filter specialization: ' + $(e.currentTarget).data("id")); 
-                homeView.filter_spec($(e.currentTarget).data("id"));
+                if(this.chosen_sp == 0) 
+                    alert("you must select which study period you want to choose from")
+
+                homeView.filter_spec(this.chosen_sp, $(e.currentTarget).data("spec"));
         	},
 
 

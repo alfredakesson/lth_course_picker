@@ -288,6 +288,11 @@ echo "ourData = [";
 $nbr_courses = count($courses);
 
 foreach($courses as $c) {
+	if( $c->inriktning_id == 'ak1'	||	 
+		$c->inriktning_id == 'ak2'	||
+		$c->inriktning_id == 'ak3'	||
+		$c->inriktning_id == 'exjobb')
+		continue;
 
 	echo "{";
 	echo "\"id\": \"" . $id . "\", ";
