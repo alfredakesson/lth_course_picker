@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LTH course picker</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">LTH Course picker</a>
+        </div>
+      </div>
+    </nav>
+
+	<div class="jumbotron">
+      <div class="container">
+        <h1>LTH course picker</h1>
+        <p>lorem ipsum dipsum lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum.</p>
+      </div>
+    </div>
+
+    <div class="container">
+    	
+        <ul class="nav nav-justified">
+            <h3>Choose academic year: (Not implemented)</h3>
+            <li><a class="year" data-id= "1" href="#">2014 - 2015</a></li>
+        </ul>
+	
+        <div class="filter"></div>
+      
+
+        <h1>Courses</h1>
+        <hr />
+        <div class="page col-md-6"></div>
+        <div class="page2 col-md-6">
+
+        	<div class="row"><h4>Study Peroid 1</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 2</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 3</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 4</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 5</h4><hr /></div>
+        	<div class="row"><h4>Study Peroid 6</h4><hr /></div>
+        
+
+
+        <div class="page3 col-md-6"></div>
+    </div>
+
+
+    <script src="lib/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/underscore-min.js" type="text/javascript"></script>
+    <script src="lib/backbone-min.js" type="text/javascript"></script>
+    <script src="lib/bootstrap.min.js" type="text/javascript"></script>
+    <script src="lib/backbone.localStorage-min.js" type="text/javascript"></script>
+    <script src="courses.json" type="text/javascript"></script>
+
+
+
+    <script type="text/template" id="filter">
+		
+		<ul class="nav nav-justified">
+	    	<h3>Filter study periods: </h3>
+	    	<li><a class="study_period" data-sp= "1" href="#1">Study Period 1</a></li>
+	    	<li><a class="study_period" data-sp= "2" href="#2">Study Period 2</a></li>
+	    	<li><a class="study_period" data-sp= "3" href="#3">Study Period 3</a></li>
+	    	<li><a class="study_period" data-sp= "4" href="#4">Study Period 4</a></li>
+	    	<!--
+	    	<li><a data-sp= "5" href="#5">Study Period 5</a></li>
+	    	<li><a data-sp= "6" href="#6">Study Period 6</a></li>
+	    	-->
+			
+		</ul>
+        
+		<ul class="nav nav-justified">
+	    	<h4>Filter on specialization: </h4>
+            <% _.each(data,function(item){ %>
+                <li><a class="specialization" data-spec=<%= item[0] %> href="#1"><%= item[1] %></a></li>
+            <% }); %>
+		</ul>
+
+	</script>
+
+	<script type="text/template" id="spec_filter">
+		
+		<ul class="nav nav-justified">
+	    	<h4>Filter on specialization: </h4>
+		</ul>
+	</script>
+
+    <script type="text/template" id="home_template">
+		
+		<table>
+		    <thead>
+		        <tr>
+		            <th>Code</th>
+		            <th>Name</th>
+		            <th>Credits</th>
+		            <th> </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		         <%  
+		        _.each(data,function(item){
+		        %>
+		            <tr>
+		                <!-- use variables -->
+		                <td>
+		                    <%= item.code %>
+		                </td>
+		                <td>
+		                    <%= item.name %>
+		                </td>
+		                <td>
+		                    <%= item.credits %>
+		                </td>
+		                <td>
+		                    <a href="#" class="btn" data-id=<%= item.id%>> Add</a>
+		                </td>
+		            </tr>
+		            <% }); %>
+		    </tbody>
+		</table>
+
+    </script>
+
+    
+    
+    <script type="text/template" id="side_template">
+		
+		<table>
+		    <thead>
+		        <tr>
+		            <th>Code</th>
+		            <th>Name</th>
+		            <th>Credits</th>
+		            <th> </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		         <% 
+		        _.each(data,function(item){
+		        %>
+		            <tr>
+		                <!-- use variables -->
+		                <td>
+		                    <%= item.code %>
+		                </td>
+		                <td>
+		                    <%= item.name %>
+		                </td>
+		                <td>
+		                    <%= item.credits %>
+		                </td>
+		                <td>
+		                    <a href="#" class="btn" data-id=<%= item.id %>> Remove</a>
+		                </td>
+		            </tr>
+		            <% }); %>
+		    </tbody>
+		</table>
+
+    </script>
+
+
+    <script type="text/template" id="test_test">
+        <%= test %>
+    </script>
+
+    <script>
+
+    	
+    	/*	*******************************************************************	*/
+    	/* Objects and Collections */
+        
+
+        var Course = Backbone.Model.extend({
+            initialize: function () {
+                //console.log("Hej hopp");
+            },
+        });
+
+        var CourseList = Backbone.Collection.extend({
+
+            model: Course,
+            localStorage: new Backbone.LocalStorage("SomeCollection"),
+            
+
+            show_specialization: function(spec) {
+                //console.log('show spec: ' + spec);
+                filtered = this.filter(function(c) {
+                    return c.attributes.specialization[0] == spec;
+                });
+                return new CourseList(filtered);
+            },
+
+            show_study_period: function(sp) {
+                //console.log('courseList: filter show study period');
+                filtered = this.filter(function(c) {
+                    var sp_list = c.attributes.study_periods;
+                    return _.find(sp_list, function(e){ return e == sp });
+                    
+                });
+                return new CourseList(filtered);
+            },
+
+            show_study_period_multiple: function(periods) {
+                return new CourseList(this.show_study_periods_array(periods));
+            },
+
+            show_study_periods_array: function(periods) {
+                res = [];
+                that = this;
+                periods.forEach(function(sp) {
+                    subRes = that.filter(function(course) {
+                        var sp_list = course.attributes.study_periods;
+                        return _.find(sp_list, function(e){ return e == sp });
+                    });
+                    res = res.concat(subRes);
+                });
+                return res;
+
+            },
+
+            // return uniq array of all specializations
+            // type is either 'abbrev' OR 'full_name', if not, both will be returned as arrays of size 2
+            find_all_specializations: function (type) {
+
+                s = this.pluck('specialization')
+
+                if (type == 'abbrev')
+                    return _.uniq(_.map(s, function(arr){ return arr[0]; }))
+                if (type == 'full_name')
+                    return _.uniq(_.map(s, function(arr){ return arr[1]; }))
+                else 
+                    return _.uniq(s);
+                    
+            },
+
+            
+        });
+
+        /*	*******************************************************************	*/
+
+        var courses = new CourseList(ourData);
+        courses.chosen_filters = courses.find_all_specializations('abbrev');
+        var coursesAdded = new CourseList();
+        
+
+
+        /*	*******************************************************************	*/
+        /* Views */
+
+        var TestView = Backbone.View.extend({
+            el: '.page',
+            render: function () {
+                var template = _.template($('#test_test').html());
+                this.$el.html(template({
+                    test: "Test"
+                }));
+            },
+        });
+		
+        var HomeView = Backbone.View.extend({
+            el: '.page',
+            events: {
+                "click a": "clicked"
+            },
+
+            initialize: function(options){
+    			
+  			},
+
+            dataSource: courses,
+            temp: '#home_template',
+            render: function () {
+
+                console.log("render homeview");
+                var template = _.template($(this.temp).html());
+                this.$el.html(template({
+                    data: this.dataSource.toJSON(),
+
+                }));
+            },
+            clicked: function (e) {
+                e.preventDefault();
+                var id = $(e.currentTarget).data("id");
+                var item = courses.get(id);
+                coursesAdded.fetch();
+                coursesAdded.add([item.clone()]);
+                item.save();
+                sideView.render();
+                
+            },
+
+            filter_sp: function(chosen_sp) {
+                
+                this.dataSource = courses;
+                if (this.chosen_sp != 0) {
+                    this.dataSource = this.dataSource.show_study_period_multiple(chosen_sp);
+                }
+                this.render();
+            },
+
+            filter_spec: function(chosen_sp, spec) {
+                this.dataSource = courses;
+                this.dataSource = this.dataSource.show_study_period_multiple(chosen_sp);
+                this.dataSource = this.dataSource.show_specialization(spec);
+                this.render();
+            },
+        });
+
+
+        var FilterView = Backbone.View.extend({
+        	el: '.filter',
+        	template: 'filter',
+        	events: {
+        		'click a.study_period': 'clicked_sp',
+        		'click a.specialization': 'clicked_spec'
+        	},
+
+        	dataSource: courses,
+
+            render: function () {
+                spec_list = _.uniq(courses.pluck('specialization'), false, function(item) {
+                    return item[0];
+                });
+
+                var template = _.template($('#filter').html());
+                this.$el.html(template({
+                    data: spec_list,
+                }));
+                
+            },
+        	
+            /* ----------------------------------- */
+            chosen_sp: [],
+            toggle_study_period: function(sp){
+
+                if(_.indexOf(this.chosen_sp, sp) != -1) {
+                    this.chosen_sp = _.without(this.chosen_sp, sp);
+                }
+                else
+                    this.chosen_sp.push(sp);
+            },
+            /* ----------------------------------- */
+        	
+        	clicked_sp: function (e) {
+        		e.preventDefault();
+                this.toggle_study_period($(e.currentTarget).data("sp"));
+        		homeView.filter_sp(this.chosen_sp);        	
+        	},
+
+
+        	clicked_spec: function (e) {
+        		e.preventDefault();
+                if(this.chosen_sp.length == 0) 
+                    alert("you must select at least one study period")
+                        		
+                //console.log('clicked on filter specialization: ' + $(e.currentTarget).data("spec")); 
+                homeView.filter_spec(this.chosen_sp, $(e.currentTarget).data("spec"));
+        	},
+
+
+
+        })
+
+        var SideView = HomeView.extend({
+            temp: '#side_template',
+            el: '.page2',
+            dataSource: coursesAdded,
+            clicked: function(e){
+                e.preventDefault();
+                var id = $(e.currentTarget).data("id");
+                var item = coursesAdded.get(id);
+                coursesAdded.fetch();
+                item.destroy();
+                sideView.render();
+            }
+
+        });
+
+		
+        /*	*******************************************************************	*/
+        
+
+		/*	*******************************************************************	*/
+		/* The application */
+
+		var testView = new TestView();
+        var homeView = new HomeView();
+        var sideView = new SideView();
+        var filterView = new FilterView();
+
+        /*	*******************************************************************	*/
+    	/* The router */
+
+    	var Router = Backbone.Router.extend({
+            routes: {
+                "test": "test",
+                "": "home"
+            }
+        });
+        
+        var router = new Router;
+        
+        router.on('route:test', function () {
+            testView.render();
+        })
+        router.on('route:home', function () {
+            homeView.render();
+            coursesAdded.fetch();
+            sideView.render();
+            filterView.render();
+            //testView.render();
+        })
+        
+        Backbone.history.start();
+        /*	*******************************************************************	*/
+
+    </script>
+
+
+</body>
+
+</html>
