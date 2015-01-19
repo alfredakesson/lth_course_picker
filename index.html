@@ -25,7 +25,7 @@
                 <h3>Filtrera</h3>
                 <h4>Läsår: 4 | 5
                 <h4>Läsperiod: Alla | LP1 | LP2 | LP3 | LP4</h4>
-                <h4>Inriktning: Alla | PV | IS | KS | RT</h4>
+                <h4 id="filterDetails"><!--TEMPLATE--></h4>
                 <ul id="courseList"><!--TEMPLATE--></ul>
             </div>
 
@@ -70,9 +70,14 @@
 <script type="text/template" id="detailTemplate">
     <div class="span4" class="details ">
         <div>Valda poäng: <%= totalCredit %> hp</div>
-        <div>Avancerade poäng: 0</div>
-        <div>Poäng inom specialiseringar: 0</div>
+        <div>Avancerade poäng: <%= advancedCredit %> hp</div>
+        <div><%= specCredits %></div>
     </div>
+</script>
+
+<!-- TEMPLATE: filterTemplate -->
+<script type="text/template" id="filterTemplate">
+    <%= specializations %>
 </script>
 
 

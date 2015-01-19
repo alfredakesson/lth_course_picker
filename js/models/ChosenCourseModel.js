@@ -19,9 +19,7 @@ define([
             this.set('specialization', course.get('specialization'));
             this.set('on_hold', course.get('on_hold'));
             this.set('study_periods', course.get('study_periods'));
-            
         }
-
     });
 
     return ChosenCourseModel;

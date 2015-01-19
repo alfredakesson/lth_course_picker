@@ -24,7 +24,7 @@ define([
                 return _.uniq(s);
     	},
 
-        showStudyPeriodsArray: function(periods) {
+        showStudyPeriodsArray : function(periods) {
             res = [];
             that = this;
             periods.forEach(function(sp) {
@@ -36,6 +36,7 @@ define([
             });
             return res;
         },
+
 
         /*showSpecialization: function(spec) {
             filtered = this.filter(function(c) {

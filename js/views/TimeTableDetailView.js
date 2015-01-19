@@ -16,22 +16,28 @@ define([
 
         onAdd : function () {
             this.render();
+            this.collection.eachSpecCredits();
         },
 
         render : function () {
             this.$el.empty();
             this.$el.html(this.template({
-                totalCredit: this.totalCredits()
+                totalCredit: this.collection.totalCredits(),
+                advancedCredit: this.collection.totalAdvanceCredits(),
+                specCredits: this.specCredits()
             }));
         },
 
-        totalCredits : function () {
-            total = 0;
-            this.collection.each(function (course) {
-                total += parseInt(course.get('credits'),10);
-            }, this);
-            return total;
-        }
+        specCredits : function () {
+            var list = this.collection.eachSpecCredits();
+            var result = "";
+
+            var temp = _.each(list, function (triple) {
+                result += triple[0] + ": " + triple[2] + " hp</br>";
+            });
+            return result;
+        },
+
     });
 
     return TimeTableDetailView;

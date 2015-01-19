@@ -14,7 +14,6 @@ define([
             this.$ul = $('ul', this.$el); // genväg till ul-elementet 
 
             this.listenTo(this.collection, 'add', this.onAdd);
-
             this.render();
         },
 
