@@ -40,10 +40,6 @@
                 <ul id="timeTableDetails"><!--TEMPLATE--></ul>
                 <h3>Valda kurser</h3>
                 <ul id="timeTable"><!--TEMPLATE--></ul>
-                <h4>Lp 1</h4>
-                <h4>Lp 2</h4>
-                <h4>Lp 3</h4>
-                <h4>Lp 4</h4>
             </div>
             
             
@@ -68,6 +64,14 @@
 
 
 <script type="text/template" id="timeTableItemTemplate">
+    
+    <h4>Lp 1</h4>
+        //<%= _.each(data,function(item){ %>
+    <h4>Lp 2</h4>
+    <h4>Lp 3</h4>
+    <h4>Lp 4</h4>
+
+
     <div class="span4" class="courseItem ">
         <div><%= code %>, <%= name %>, <%= credits %> hp</div>
     </div>
