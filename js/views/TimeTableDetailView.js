@@ -24,7 +24,8 @@ define([
             this.$el.html(this.template({
                 totalCredit: this.collection.totalCredits(),
                 advancedCredit: this.collection.totalAdvanceCredits(),
-                specCredits: this.specCredits()
+                specCredits: this.specCredits(),
+                studyPeriodCredits: this.studyPeriodCredits()
             }));
         },
 
@@ -37,6 +38,12 @@ define([
             });
             return result;
         },
+
+        studyPeriodCredits : function () {
+            var list = this.collection.studyPeriodCredits();
+            var result = "Valda poäng inom respektive läsperiod: ";
+            return result + list;
+        }
 
     });
 

@@ -18,7 +18,7 @@ define([
 	    totalCredits : function () {
             total = 0;
             this.each(function (course) {
-                total += parseInt(course.get('credits'),10);
+                total += parseFloat(course.get('credits'));
             });
             return total;
         },
@@ -35,7 +35,7 @@ define([
         		that.each(function (course) {
                     var currentSpec = course.get('specialization');
         			if (_.contains(currentSpec, spec))
-        				currCredits += parseInt(course.get('credits'),10);
+        				currCredits += parseFloat(course.get('credits'));
 
             	});
                 return currCredits;
@@ -43,11 +43,22 @@ define([
             return _.zip(specArrayAbbrev, specArrayFull, creditsArray);
         },
 
+        studyPeriodCredits : function () {
+            var creditsArray = [0,0,0,0];
+            this.each(function (course) {
+                var result = course.getStudyPeriodCredits();
+                for (i = 0; i<4; i++) {
+                    creditsArray[i] += result[i];
+                }
+            });
+            return creditsArray;
+        },
+
         totalAdvanceCredits : function () {
             total = 0;
             this.each(function (course) {
                 if( course.get('cycle') == "A" )
-                    total += parseInt(course.get('credits'),10);
+                    total += parseFloat(course.get('credits'));
             });
             return total;
         }

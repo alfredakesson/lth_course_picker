@@ -1,7 +1,7 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
 ], function ( $, _, Backbone ) { 
 
     ChosenCourseItemView = Backbone.View.extend({
@@ -11,7 +11,7 @@ define([
         initialize : function () {
             
             console.log('timeTable view init');
-            this.template = _.template($('#timeTableItemTemplate').html());
+            this.template = _.template($('#courseItemTemplate').html());
             this.render();
 
         },

@@ -21,6 +21,7 @@ require.config({
     'backbone'      : 'lib/backbone-min',
     'cf'            : 'lib/cf',
     'multifilter'   : 'lib/multifilter',
-    'localstorage'  : "lib/backbone.localStorage"
+    'localstorage'  : 'lib/backbone.localStorage',
+    'text'          : 'lib/text'
   }
 });
