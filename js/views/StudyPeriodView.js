@@ -27,7 +27,6 @@ define([
                 if(belongsToSp) {
                     var view = new ChosenCourseItemView({
                         model : course,
-                        'sp' : viewSp
                     });
                     this.$el.append(view.el);
                 }

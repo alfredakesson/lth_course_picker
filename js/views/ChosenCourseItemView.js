@@ -6,8 +6,8 @@ define([
 
     ChosenCourseItemView = Backbone.View.extend({
         
-        initialize : function (args) {            
-            var templateName = '#StudyPeriodViewTemplate' + args.sp;
+        initialize : function () {            
+            var templateName = '#courseItemTemplate';
             this.template = _.template($(templateName).html());
             this.render();
 
