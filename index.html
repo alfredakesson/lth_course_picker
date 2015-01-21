@@ -1,6 +1,13 @@
 <!-- TO DO: 
 
-* Fixa så att parsningen av hp klarar av att parsa 7,5 till att istället visa 7.5
+* Fixa med filtrering
+* Fixa så att parsningen av hp klarar av att parsa 7,5 till att istället visa 7.5 (PHP)
+* Om kurs är on_hold ska den inte listas. VIKTIGT! 
+* Fixa så att man kan ta bort kurser
+* Lägga till så att man kan skapa olika år (år4: [lp1,lp2,lp3,lp4], år5: [lp1,lp2,lp3,lp4])
+* göra en vacker design ;) 
+* skapa en server -> Vi kan då ta bort courses.json och även flytta templates ut ifrån index.html-filen
+* Fixa med localStorage så att det funkar igen.
 
 -->
 <!doctype html>
@@ -28,8 +35,8 @@
             <div class="span5">
                 <h2>Kurser</h2>
                 <h3>Filtrera</h3>
-                <h4>Läsår: 4 | 5
-                <h4>Läsperiod: Alla | LP1 | LP2 | LP3 | LP4</h4>
+                <h4>Läsår: 4 5</h4>
+                <h4>Läsperiod: LP1 LP2 LP3 LP4</h4>
                 <h4 id="filterDetails"><!--TEMPLATE--></h4>
                 <ul id="courseList"><!--TEMPLATE--></ul>
             </div>
@@ -39,7 +46,14 @@
                 <h3>Detaljer</h3>
                 <ul id="timeTableDetails"><!--TEMPLATE--></ul>
                 <h3>Valda kurser</h3>
-                <ul id="timeTable"><!--TEMPLATE--></ul>
+                <h4>Läsperiod 1</h4>
+                <ul class="table" id="timeTableSp1"><!--TEMPLATE--></ul>
+                <h4>Läsperiod 2</h4>
+                <ul class="table" id="timeTableSp2"><!--TEMPLATE--></ul>
+                <h4>Läsperiod 3</h4>
+                <ul class="table" id="timeTableSp3"><!--TEMPLATE--></ul>
+                <h4>Läsperiod 4</h4>
+                <ul class="table" id="timeTableSp4"><!--TEMPLATE--></ul>
             </div>
             
             
@@ -61,21 +75,30 @@
     </div>
 </script>
 
-
-
-<script type="text/template" id="timeTableItemTemplate">
-    
-    <h4>Lp 1</h4>
-        //<%= _.each(data,function(item){ %>
-    <h4>Lp 2</h4>
-    <h4>Lp 3</h4>
-    <h4>Lp 4</h4>
-
-
+<script type="text/template" id="StudyPeriodViewTemplate1">
     <div class="span4" class="courseItem ">
         <div><%= code %>, <%= name %>, <%= credits %> hp</div>
     </div>
 </script>
+
+<script type="text/template" id="StudyPeriodViewTemplate2">
+    <div class="span4" class="courseItem ">
+        <div><%= code %>, <%= name %>, <%= credits %> hp</div>
+    </div>
+</script>
+
+<script type="text/template" id="StudyPeriodViewTemplate3">
+    <div class="span4" class="courseItem ">
+        <div><%= code %>, <%= name %>, <%= credits %> hp</div>
+    </div>
+</script>
+
+<script type="text/template" id="StudyPeriodViewTemplate4">
+    <div class="span4" class="courseItem ">
+        <div><%= code %>, <%= name %>, <%= credits %> hp</div>
+    </div>
+</script>
+
 
 
 <script type="text/template" id="detailTemplate">

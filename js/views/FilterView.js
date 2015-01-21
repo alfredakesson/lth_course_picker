@@ -22,9 +22,9 @@ define([
 
         getSpecializations : function() {
             var specArray = this.collection.findAllSpecializations('abbrev');
-            var startString = "Inriktning: Alla ";
-            return _.reduceRight(specArray, function(acc, spec) { 
-                return acc + "| " + spec + " "; 
+            var startString = "Inriktning: ";
+            return _.reduce(specArray, function(acc, spec) { 
+                return acc + " " + spec + " "; 
             }, startString);
         }
 
