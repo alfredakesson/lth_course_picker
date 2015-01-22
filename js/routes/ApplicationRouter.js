@@ -30,6 +30,10 @@ define([
             new FilterView({
                 collection : CoursePicker.globalCourses
             });
+
+            // LOL, detta möget funkade ju... :) 
+            console.log("TESTING!");
+            console.log($.getJSON("courses.json"));
         },
 
     });
