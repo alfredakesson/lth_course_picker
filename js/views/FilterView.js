@@ -1,7 +1,8 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
+  'views/FilterSpecItemView'
 ], function ( $, _, Backbone ) { 
 
     FilterView = Backbone.View.extend({
@@ -14,10 +15,15 @@ define([
         },
 
         render : function () {
+            var specArray = this.collection.findAllSpecializations('abbrev');
+            var that = this;
             this.$el.empty();
-            this.$el.html(this.template({
-                specializations: this.getSpecializations(),
-            }));
+            _.each(specArray, function (special) {
+                var view = new FilterSpecItemView({
+                    spec : special
+                })
+                that.$el.append(view.el);
+            })
         },
 
         getSpecializations : function() {
