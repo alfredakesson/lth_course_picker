@@ -1,7 +1,10 @@
+
+<!doctype html>
+<html lang="en">
 <!-- TO DO: 
 
 * Fixa med filtrering
-* Göra allting CAMEL-case
+* Fixa i json. Byt tillbaka så att engelska namn används i json i php-filen
 * Om kurs är on_hold ska den inte listas. VIKTIGT! 
 * Fixa så att man kan ta bort kurser
 * Lägga till så att man kan skapa olika år (år4: [lp1,lp2,lp3,lp4], år5: [lp1,lp2,lp3,lp4])
@@ -10,8 +13,6 @@
 * Fixa med localStorage så att det funkar igen.
 
 -->
-<!doctype html>
-<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -63,23 +64,23 @@
 
 </body>
 
-<script src="courses.json" type="text/javascript"></script>
+<!--<script src="courses.json" type="text/javascript"></script>-->
 <script src="js/lib/require.js" data-main="js/config.js"></script>
 
 
 <!-- TEMPLATES -->
-
+<!--<%= code %>, <%= name %>, <%= credits %> hp-->
 <script type="text/template" id="courseItemTemplate">
     <div class="span4" class="courseItem ">
-        <div><%= code %>, <%= name %>, <%= credits %> hp</div>
+        <div><%= kurskod %>, <%= kursnamn %>, <%= poang %> hp</div>
     </div>
 </script>
 
-<!--<script type="text/template" id="StudyPeriodViewTemplate">
+<script type="text/template" id="StudyPeriodViewTemplate">
     <div class="span4" class="courseItem ">
-        <div><%= code %>, <%= name %>, <%= credits %> hp</div>
+        <div><%= kurskod %>, <%= kursnamn %>, <%= poang %> hp</div>
     </div>
-</script>-->
+</script>
 
 
 

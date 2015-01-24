@@ -19,7 +19,7 @@ define([
             this.collection.each(function (course) {
 
                 var viewSp = this.viewSp;
-                var studyPeriods = course.get('study_periods');                
+                var studyPeriods = course.get('lasperioder');                
                 var belongsToSp = _.find(studyPeriods, function (sp) { 
                     return sp == viewSp; 
                 });

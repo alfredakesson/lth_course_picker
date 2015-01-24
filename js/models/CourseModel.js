@@ -6,22 +6,26 @@ define([
 
     CourseModel = Backbone.Model.extend({
 
-    	
     	defaults : {
-    		
-    		'id'				: '',
-            'code'				: '',
-            'name'				: '',
-            'credits'			: '',
-            'cycle'				: '',
-            'specialization'	: [],
-            'on_hold'			: '0',
-            'study_periods'		: [],
-
+            'kursnamn'        : '',
+            'kurskod'         : '',
+            'poang'           : 0,
+            'niva'            : '',
+            'sprak'            : '',
+            'ingar_i_arskurs' : 0,
+            'typ'             : '',
+            'program'         : '',
+            'program_id'      : '',
+            'webbsidor'       : {},
+            'fotnot'          : '',
+            'inriktning'      : '',
+            'inriktning_id'   : '',
+            'periodiserad'    : false,
+            'lasperioder'     : []
         },
        	
         initialize: function () {
-                    
+            
         },
 
         // we don't know the exact credits in each study period so we guess it is equally much in each sp. 
@@ -29,9 +33,16 @@ define([
         // we should handle errors here, but we dont do it, since we're lazy :)
         getStudyPeriodCredits : function () {
             var result = [0,0,0,0]
-            var credits = parseFloat(this.get('credits'));
-            var periodArray = this.get('study_periods');
+            var credits = parseFloat(this.get('poang'));
+            var periodArray = this.get('lasperioder');
+
+            if (periodArray.length === 0)
+                return result;
+
             var index = periodArray[0] - 1;
+            result[index] = credits;
+            return result;
+            /*
             switch (periodArray.length) {
                 case 1: 
                     result[index] = credits;
@@ -58,10 +69,8 @@ define([
                     result[index] = credits / 4;
                     break;
             }
-            if(index > 3) {
-                console.log(result);
-            }
             return result;
+            */
         }
         
 

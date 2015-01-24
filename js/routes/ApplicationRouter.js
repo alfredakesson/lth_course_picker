@@ -7,7 +7,7 @@ define([
   'views/CourseListView',
   'views/TimeTableView',
   'views/TimeTableDetailView',
-  'views/FilterView'
+  'views/FilterView',
 ], function ( $, _, Backbone, CoursePicker, CourseCollection, CourseListView, TimeTableView, TimeTableDetailView, FilterView ) {
 
     ApplicationRouter = Backbone.Router.extend({
@@ -15,14 +15,6 @@ define([
         initialize : function() {
             console.log('Application Router initialized...');
 
-            new TimeTableView({
-                collection : CoursePicker.globalTimeTable
-            });
-
-            new TimeTableDetailView({
-                collection : CoursePicker.globalTimeTable
-            });
-            
             new CourseListView({
                 collection : CoursePicker.globalCourses
             });
@@ -31,9 +23,15 @@ define([
                 collection : CoursePicker.globalCourses
             });
 
-            // LOL, detta möget funkade ju... :) 
-            console.log("TESTING!");
-            console.log($.getJSON("courses.json"));
+            new TimeTableView({
+                collection : CoursePicker.globalTimeTable
+            });
+
+            new TimeTableDetailView({
+                collection : CoursePicker.globalTimeTable
+            });
+
+            CoursePicker.globalCourses.fetch({ reset: true });
         },
 
     });

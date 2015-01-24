@@ -26,14 +26,15 @@ Kursobjektet läggs till i listan $courses
 */
 
 /* Välj program */
-$program = $argv[1];
+//$program = $argv[1];
 
 /* Välj vilket läsår som datan ska hämtas från */
-$from_year = $argv[2];
-$to_year = $argv[3];
+//$from_year = $argv[2];
+//$to_year = $argv[3];
 
-$courses = parse($program, $from_year, $to_year);
-return arrayToJson($courses);
+//$courses = parse($program, $from_year, $to_year);
+//return  json_encode($courses, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+//return arrayToJson($courses);
 
 
 /* Funktioner */
@@ -65,14 +66,8 @@ function hitta_typ($table) {
 
 }
 
-function arrayToJson($courses){
-	$json_list = array();
-	foreach($courses as $c) {
-		$json_course = json_encode($c, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-		array_push($json_list, $json_course);
-	}
-	echo "[" . implode (",\n", $json_list) . "]";
-
+function arrayToJson ($courses) {
+	return json_encode(array_values($courses), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 }
 
 function parse($program, $from_year, $to_year) {
@@ -177,7 +172,7 @@ function parse($program, $from_year, $to_year) {
 					array_push($course_data, $inriktning_id);
 					array_push($course_data, $inriktning);
 					
-					$course = new Kurs($course_data, $lasperioder, $course_webpages, $fotnot, $periodiserad, "specialisering");
+					$course = new Kurs($course_data, $lasperioder, $course_webpages, $fotnot, $periodiserad, "specialisering"); 
 					array_push($courses, $course);
 					
 				}

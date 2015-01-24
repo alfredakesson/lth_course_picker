@@ -21,7 +21,7 @@ define([
         },
 
         getSpecializations : function() {
-            var specArray = this.collection.findAllSpecializations('abbrev');
+            var specArray = this.collection.getAllSpecializationNameId()
             var startString = "Inriktning: ";
             return _.reduce(specArray, function(acc, spec) { 
                 return acc + " " + spec + " "; 

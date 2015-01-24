@@ -1,10 +1,11 @@
 
 <?php
-// OBS VI MÅSTE PARSA FLER PROGRAM MEN JAG ÄR LAT. Det är bara att copy-pastea från kurshemsidan nere i funktionen extractProgram()
 
 /* Representation av en kurs parsad från lth */
+
 class Kurs {
 
+	public $id;
 	public $kursnamn;				// Kursnamn*  
 	public $kurskod;				// Kurskod*
 	public $poang;					// Antal högskolepoäng*
@@ -27,6 +28,7 @@ class Kurs {
 
 	public function __construct($array_data, $lp, $webb_addr, $fotnot, $periodiserad, $block) {
 		
+		$this->id = (uniqid());
 		$this->lasperioder = $this->extractStudyPeriod($lp);
 		$this->webbsidor = $webb_addr;
 		$this->periodiserad = $periodiserad;
@@ -70,7 +72,7 @@ class Kurs {
 		{
 			// Skapa en specialiseringskurs
 			$this->kurskod = array_shift($array_data);
-			$this->poang = array_shift($array_data);
+			$this->poang = $this->convertToFloat(array_shift($array_data));
 			$this->niva = array_shift($array_data);
 			$this->typ = array_shift($array_data);
 			$this->ingar_i_arskurs = array_shift($array_data);
@@ -88,7 +90,7 @@ class Kurs {
 		}
 		else if($block == "exjobb") {
 			$this->kurskod = array_shift($array_data);
-			$this->poang = array_shift($array_data);
+			$this->poang = $this->convertToFloat(array_shift($array_data));
 			$this->kursnamn = array_shift($array_data);
 			$this->inriktning_id = 'exjobb';
 			$this->inriktning = 'Examensarbete';
@@ -96,7 +98,7 @@ class Kurs {
 		else {
 			// Skapa en valfri kurs
 			$this->kurskod = array_shift($array_data);
-			$this->poang = array_shift($array_data);
+			$this->poang = $this->convertToFloat(array_shift($array_data));
 			$this->niva = array_shift($array_data);
 			$this->ingar_i_arskurs = array_shift($array_data);
 			//$this->from_arskurs = array_shift($array_data);
@@ -178,30 +180,22 @@ class Kurs {
 		        return "Teknisk fysik";
 		    case "I":
 		        return "Industriell ekonomi";
-		    case "IBYA":
-		        return "Byggteknik med arkitektur";
-		    case "IBYI":
-		        return "Byggteknik, inriktning järnvägsteknik";
-		    case "IBYV":
-		        return "Byggteknik, inriktning väg- och trafikteknik";
-		    case "IDA":
-		        return "Datateknik (Hbg)";
-		    case "IDL":
-		        return "Datateknik med logistik";
-		    case "IEA":
-		        return "Elektroteknik med automation (Hbg)";
 		    case "K":
 		        return "Kemiteknik";
-		    case "KID":
-		        return "Industridesign";
 		    case "M":
 		        return "Maskinteknik";
 		    case "L":
 		    	return "Lantmäteri";
-		    case "MARK":
-		        return "Masterutbildning i arkitektur";
-		    case "INEK":
-		    	return "Industriell ekonomi (avslutning)";
+		    case "N":
+		        return "Teknisk nanoteknik";
+		    case "Pi":
+		        return "Teknisk matematik";
+		    case "RH":
+		    	return "Riskhantering";
+		    case "V":
+		    	return "Väg och vatten";
+		    case "W":
+		    	return "Ekosystemteknik";
 		}
 		return "Okänt program";
 	}

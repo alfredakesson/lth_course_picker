@@ -17,7 +17,7 @@ define([
         },
 
         onclick : function () {
-            console.log('click! '+this.model.id);
+            console.log('click!');
             this.$el.addClass('highlight');
             this.addToTimeTable();
         },

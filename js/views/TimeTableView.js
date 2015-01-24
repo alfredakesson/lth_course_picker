@@ -19,10 +19,7 @@ define([
         },
 
         onAdd : function () {
-
-            console.log('onAdd event in timeTableView');
             this.render();
-
         },
 
         render : function () {

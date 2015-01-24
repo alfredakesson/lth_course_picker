@@ -11,7 +11,7 @@ define([
 
         initialize: function() {
             console.log('course collection view init');
-            this.render();
+            this.listenTo(this.collection, 'reset', this.render);
         },
 
         render : function () {

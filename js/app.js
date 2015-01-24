@@ -3,11 +3,12 @@ define([
   'collections/CourseCollection',
 ], function ( TimeTableCollection, CourseCollection ) {
 
+	//var courses = new CourseCollection(ourData);
+	var courses = new CourseCollection();	
 	var timeTableCollection = new TimeTableCollection();
-	var courses = new CourseCollection(ourData);
 
 	return {
-		globalTimeTable : timeTableCollection,
-		globalCourses: courses
+		globalCourses: courses,
+		globalTimeTable : timeTableCollection
 	};
 });
