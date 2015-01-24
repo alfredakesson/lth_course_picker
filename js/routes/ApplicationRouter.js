@@ -10,11 +10,12 @@ define([
   'views/FilterView'
 ], function ( $, _, Backbone, CoursePicker, CourseCollection, CourseListView, TimeTableView, TimeTableDetailView, FilterView ) {
 
-    ApplicationRouter = Backbone.Router.extend({
 
+    ApplicationRouter = Backbone.Router.extend({
+        
         initialize : function() {
             console.log('Application Router initialized...');
-
+            console.log(CoursePicker.globalFilters);
             new TimeTableView({
                 collection : CoursePicker.globalTimeTable
             });
@@ -23,12 +24,16 @@ define([
                 collection : CoursePicker.globalTimeTable
             });
             
-            new CourseListView({
-                collection : CoursePicker.globalCourses
+            var CL = new CourseListView({
+                collection : CoursePicker.globalCourses,
+                filter : CoursePicker.globalFilters
             });
-
+            
             new FilterView({
-                collection : CoursePicker.globalCourses
+                collection : CoursePicker.globalCourses,
+                filter : CoursePicker.globalFilters,
+                CL : CL
+
             });
         },
 

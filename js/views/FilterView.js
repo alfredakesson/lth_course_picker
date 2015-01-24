@@ -8,8 +8,10 @@ define([
     FilterView = Backbone.View.extend({
         el : '#filterDetails',
         
-        initialize : function () {
+        initialize : function (args) {
             console.log('filterView init');
+            this.filter = args.filter;
+            this.CL = args.CL;
             this.template = _.template($('#filterTemplate').html());
             this.render();
         },
@@ -20,8 +22,12 @@ define([
             this.$el.empty();
             _.each(specArray, function (special) {
                 var view = new FilterSpecItemView({
-                    spec : special
-                })
+                    spec : special,
+                    col : that.collection,
+                    filter : that.filter,
+                    CL : that.CL
+                });
+                console.log(that.filter);
                 that.$el.append(view.el);
             })
         },

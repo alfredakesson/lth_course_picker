@@ -9,19 +9,24 @@ define([
         
         el: '#courseList',
 
-        initialize: function() {
+        initialize: function(args) {
+            this.filter = args.filter;
             console.log('course collection view init');
             this.render();
         },
 
         render : function () {
+            console.log('render');
+            var that = this;
+            var toCol= this.collection.filter(function(s){return that.filter.get("specialization") === s.attributes.specialization[0];});
+            var that = this;
             this.$el.empty();
-            this.collection.each(function (course) {
+            _.each(toCol,function (course) {
                 var view = new CourseItemView({
                     model : course
                 })
-                this.$el.append(view.el);
-            }, this);
+                that.$el.append(view.el);
+            });
         },
 
     });
