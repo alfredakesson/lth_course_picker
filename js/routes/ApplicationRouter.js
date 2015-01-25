@@ -8,7 +8,8 @@ define([
   'views/TimeTableView',
   'views/TimeTableDetailView',
   'views/FilterView',
-], function ( $, _, Backbone, CoursePicker, CourseCollection, CourseListView, TimeTableView, TimeTableDetailView, FilterView ) {
+  'views/FilterStudyPeriodView'
+], function ( $, _, Backbone, CoursePicker, CourseCollection, CourseListView, TimeTableView, TimeTableDetailView, FilterView, FilterStudyPeriodView ) {
 
 
     ApplicationRouter = Backbone.Router.extend({
@@ -38,6 +39,11 @@ define([
                 CL : CL
 
             });
+
+            new FilterStudyPeriodView({
+                collection : CoursePicker.globalCourses,
+                filter : CoursePicker.globalFilters,
+            })
         },
 
     });

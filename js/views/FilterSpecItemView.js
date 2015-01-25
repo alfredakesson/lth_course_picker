@@ -15,7 +15,7 @@ define([
 
         onclick : function () {
             console.log('click on specialization: ' + this.spec);
-            this.filter.set("inriktning_id", this.spec);
+            this.filter.setSpecialization(this.spec);
             this.CL.render();
         },
 

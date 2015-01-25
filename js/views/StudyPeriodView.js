@@ -10,18 +10,17 @@ define([
         initialize : function (args) {
             this.viewSp = args.sp;
             this.setElement('#timeTableSp' + args.sp);
+            console.log('init StudyPeriodView');
             this.render();
-
         },
 
         render : function () {
             this.$el.empty();
             this.collection.each(function (course) {
-
                 var viewSp = this.viewSp;
                 var studyPeriods = course.get('lasperioder');                
                 var belongsToSp = _.find(studyPeriods, function (sp) { 
-                    return sp == viewSp; 
+                    return sp === viewSp; 
                 });
 
                 if(belongsToSp) {

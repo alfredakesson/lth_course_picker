@@ -6,20 +6,28 @@ define([
 
     FilterModel = Backbone.Model.extend({
 
-    	
-      defaults : {
+        initialize: function () {
+            this.lasperioder = [true, true, true, true];
+            this.inriktning_id = 'none';
+        },
 
-        'inriktning_id'	: '',
-        'lasperiod'     : ''
+        resetStudyPeriod : function () {
+            this.lasperioder = [true, true, true, true];
+            this.trigger('change');
+        },
+        
+        toggleStudyPeriod : function (sp) {
+            this.lasperioder[sp-1] = !this.lasperioder[sp-1];
+            this.trigger('change');
+        },
 
-      },
-
-      initialize: function () {
-
-      }
+        setSpecialization : function (spec) {
+            this.inriktning_id = spec;
+            this.trigger('change');
+        }
       
     });
 
     return FilterModel;
-  });
+});
 

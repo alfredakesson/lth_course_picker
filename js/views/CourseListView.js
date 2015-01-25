@@ -12,7 +12,13 @@ define([
         initialize: function(args) {
             this.filter = args.filter;
             console.log('course collection view init');
-            this.listenTo(this.collection, 'reset', this.render);
+            this.listenToOnce(this.collection, 'reset', this.render);
+            this.listenTo(this.filter, 'change', this.filterHasChanged);
+        },
+
+        filterHasChanged : function () {
+            console.log('filter has changed!');
+            console.log(this.filter.inriktning_id);
         },
 
         render : function () {

@@ -40,9 +40,6 @@ define([
                 return result;
 
             var index = periodArray[0] - 1;
-            /*result[index] = credits;
-            return result;
-            */
             
             switch (periodArray.length) {
                 case 1: 
