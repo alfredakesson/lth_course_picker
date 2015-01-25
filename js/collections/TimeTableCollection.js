@@ -56,6 +56,7 @@ define([
                     creditsArray[i] += result[i];
                 }
             });
+            _.map(creditsArray, function (credits) {credits.toFixed(2)} );
             return creditsArray;
         },
 
