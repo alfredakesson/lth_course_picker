@@ -3,7 +3,7 @@ define([
   'underscore',
   'backbone',
   'views/FilterSpecItemView',
-  'views/FilterStudyPeriodItemView'
+  'views/FilterStudyPeriodItemView',
 ], function ( $, _, Backbone, FilterSpecItemView, FilterStudyPeriodItemView ) { 
 
     FilterView = Backbone.View.extend({
@@ -13,7 +13,7 @@ define([
             console.log('filterStudyPeriodView init');
             this.filter = args.filter;
             this.CL = args.CL;
-            this.template = _.template($('#filterStudyPeriodTemplate').html());
+            this.template = _.template($('#StudyPeriodViewTemplate').html());
             this.render();
         },
 

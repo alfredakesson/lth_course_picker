@@ -23,7 +23,7 @@ define([
             this.spec = args.spec;
             this.col = args.col;
             this.filter = args.filter;
-            this.template = _.template($('#filterSpecItemTemplate').html());
+            this.template = _.template($('#FilterSpecItemTemplate').html());
             this.render();
 
         },

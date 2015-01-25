@@ -2,15 +2,13 @@ define([
   'jquery',
   'underscore',
   'backbone',
-], function ( $, _, Backbone ) { 
+], function ( $, _, Backbone) { 
 
     ChosenCourseItemView = Backbone.View.extend({
         
         initialize : function () {            
-            var templateName = '#courseItemTemplate';
-            this.template = _.template($(templateName).html());
+            this.template = _.template($('#CourseItemTemplate').html());
             this.render();
-
         },
 
         render : function () {

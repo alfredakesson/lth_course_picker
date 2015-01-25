@@ -22,10 +22,8 @@ define([
 
         render : function () {
             var that = this;
-
             var toCol= this.collection.filter(function(s){
-                isCorrectSpecialization = that.filter.inriktning_id === s.get('inriktning_id')
-                
+                isCorrectSpecialization = that.filter.inriktning_id === s.get('inriktning_id');
                 studyPeriods = s.get('lasperioder');
                 isCorrectSP = false;
                 _.each(studyPeriods, function (sp) {
@@ -36,10 +34,10 @@ define([
             });
             var that = this;
             this.$el.empty();
-            _.each(toCol,function (course) {
+            _.each(toCol, function (course) {
                 var view = new CourseItemView({
                     model : course
-                })
+                });
                 that.$el.append(view.el);
             });
         },

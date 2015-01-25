@@ -10,7 +10,7 @@ define([
         
         initialize : function () {
             console.log('detailView init');
-            this.template = _.template($('#detailTemplate').html());
+            this.template = _.template($('#DetailTemplate').html());
             this.listenTo(this.collection, 'add', this.onAdd);
         },
 

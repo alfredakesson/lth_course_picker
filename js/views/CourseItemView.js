@@ -4,7 +4,7 @@ define([
   'backbone',
   'models/ChosenCourseModel',
   'models/CourseModel',
-  'app'
+  'app',
 ], function ( $, _, Backbone, ChosenCourseModel, CourseModel, CoursePicker ) { 
 
     CourseItemView = Backbone.View.extend({
@@ -31,7 +31,7 @@ define([
         },
 
         initialize : function () {
-            this.template = _.template($('#courseItemTemplate').html());
+            this.template = _.template($('#CourseItemTemplate').html());
             this.render();
 
         },

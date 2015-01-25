@@ -19,8 +19,6 @@ require.config({
     'jquery'        : 'lib/jquery.min',
     'underscore'    : 'lib/underscore-min',
     'backbone'      : 'lib/backbone-min',
-    'cf'            : 'lib/cf',
-    'multifilter'   : 'lib/multifilter',
     'localstorage'  : 'lib/backbone.localStorage',
     'text'          : 'lib/text'
   }
