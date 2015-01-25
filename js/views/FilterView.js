@@ -12,7 +12,6 @@ define([
         initialize : function (args) {
             console.log('filterView init');
             this.filter = args.filter;
-            this.CL = args.CL;
             this.template = _.template($('#filterTemplate').html());
             
             this.listenTo(this.collection, 'reset', this.render);
@@ -31,7 +30,6 @@ define([
                     spec            : special[0],
                     col             : that.collection,
                     filter          : that.filter,
-                    CL              : that.CL
                 });
 
                 that.$el.append(view.el);

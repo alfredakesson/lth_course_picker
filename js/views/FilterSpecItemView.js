@@ -16,7 +16,6 @@ define([
         onclick : function () {
             console.log('click on specialization: ' + this.spec);
             this.filter.setSpecialization(this.spec);
-            this.CL.render();
         },
 
         initialize : function (args) {
@@ -24,7 +23,6 @@ define([
             this.spec = args.spec;
             this.col = args.col;
             this.filter = args.filter;
-            this.CL = args.CL;
             this.template = _.template($('#filterSpecItemTemplate').html());
             this.render();
 

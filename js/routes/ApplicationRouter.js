@@ -28,7 +28,7 @@ define([
 
             CoursePicker.globalCourses.fetch({ reset: true });
             
-            var CL = new CourseListView({
+            new CourseListView({
                 collection : CoursePicker.globalCourses,
                 filter : CoursePicker.globalFilters
             });
@@ -36,8 +36,6 @@ define([
             new FilterView({
                 collection : CoursePicker.globalCourses,
                 filter : CoursePicker.globalFilters,
-                CL : CL
-
             });
 
             new FilterStudyPeriodView({

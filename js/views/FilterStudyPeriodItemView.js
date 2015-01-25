@@ -14,7 +14,6 @@ define([
         },
 
         onclick : function () {
-            console.log('click on studyPeriodFilter!');
             if (this.studyPeriod === 'Alla') {
                 this.filter.resetStudyPeriod();
             }
@@ -27,7 +26,6 @@ define([
             this.studyPeriod = args.studyPeriod;
             this.filter = args.filter;
             this.template = _.template($('#filterSPItemTemplate').html());
-            console.log("CREATED LP VIEW!");
             this.render();
         },
 

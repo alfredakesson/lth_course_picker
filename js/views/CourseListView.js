@@ -11,22 +11,28 @@ define([
 
         initialize: function(args) {
             this.filter = args.filter;
-            console.log('course collection view init');
             this.listenToOnce(this.collection, 'reset', this.render);
             this.listenTo(this.filter, 'change', this.filterHasChanged);
         },
 
         filterHasChanged : function () {
             console.log('filter has changed!');
-            console.log(this.filter.inriktning_id);
+            this.render();
         },
 
         render : function () {
-            console.log('render');
             var that = this;
 
             var toCol= this.collection.filter(function(s){
-                return that.filter.get("inriktning_id") === s.get('inriktning_id');
+                isCorrectSpecialization = that.filter.inriktning_id === s.get('inriktning_id')
+                
+                studyPeriods = s.get('lasperioder');
+                isCorrectSP = false;
+                _.each(studyPeriods, function (sp) {
+                    if(that.filter.lasperioder[sp-1])
+                        isCorrectSP = true;
+                });
+                return isCorrectSpecialization && isCorrectSP;
             });
             var that = this;
             this.$el.empty();
