@@ -14,9 +14,15 @@ define([
             console.log('timeTable view init');
 
             this.listenTo(this.collection, 'add', this.onAdd);
+            this.listenTo(this.collection, 'remove', this.onDelete);
             this.render();
 
         },
+
+        onDelete : function () {
+            this.render();
+        },
+
 
         onAdd : function () {
             this.render();

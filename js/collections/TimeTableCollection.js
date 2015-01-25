@@ -1,23 +1,28 @@
 define([
   'jquery',
   'underscore',
-  'backbone',
   'models/ChosenCourseModel',
-  'collections/CourseCollection'
-], function ( $, _, Backbone, ChosenCourseModel, CourseCollection ) { 
+  'collections/CourseCollection',
+  'backbone',
+  'backbone.localStorage'
+], function ( $, _, ChosenCourseModel, CourseCollection, Backbone  ) { 
 
 	TimeTableCollection = CourseCollection.extend({
 
 	    model: ChosenCourseModel,
-	    //localStorage: new Backbone.LocalStorage("timeTable"),
+	    localStorage: new Backbone.LocalStorage('timeTable'),
 
 	    addToTimeTable : function (chosenCourse) {
-            this.add(chosenCourse);
-	    	//this.invoke('save');
+            //this.add(chosenCourse);
+            this.create(chosenCourse.toJSON());
 	    },
 
         initialize: function () {
 
+        },
+
+        parse: function(response){
+            return response;
         },
 
 	    totalCredits : function () {

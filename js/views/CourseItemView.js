@@ -18,14 +18,11 @@ define([
 
         onclick : function () {
             console.log('click!');
-            this.$el.addClass('highlight');
             this.addToTimeTable();
         },
 
         addToTimeTable : function () {
-            var course = new ChosenCourseModel({
-                course : this.model
-            });
+            var course = new ChosenCourseModel(this.model.toJSON());
 
             CoursePicker.globalTimeTable.addToTimeTable(course);
         },

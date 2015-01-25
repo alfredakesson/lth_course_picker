@@ -27,6 +27,7 @@ define([
             });
 
             CoursePicker.globalCourses.fetch({ reset: true });
+            CoursePicker.globalTimeTable.fetch();
             
             new CourseListView({
                 collection : CoursePicker.globalCourses,

@@ -12,14 +12,17 @@ require.config({
     'backbone' : {
       deps : [ 'underscore', 'jquery' ],
       exports : 'Backbone'
-    }
+    }/*,
+    'backbone.localStorage': {
+      deps: ['backbone'],
+      exports: 'Backbone'
+    }*/
   },
 
   paths : {
-    'jquery'        : 'lib/jquery.min',
-    'underscore'    : 'lib/underscore-min',
-    'backbone'      : 'lib/backbone-min',
-    'localstorage'  : 'lib/backbone.localStorage',
-    'text'          : 'lib/text'
+    'jquery'                 : 'lib/jquery.min',
+    'underscore'             : 'lib/underscore-min',
+    'backbone'               : 'lib/backbone-min',
+    'backbone.localStorage'  : 'lib/backbone.localStorage'
   }
 });

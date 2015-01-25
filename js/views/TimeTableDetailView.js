@@ -11,13 +11,14 @@ define([
         initialize : function () {
             console.log('detailView init');
             this.template = _.template($('#DetailTemplate').html());
-            this.listenTo(this.collection, 'add', this.onAdd);
+            this.listenTo(this.collection, 'add', this.onEvent);
+            this.listenTo(this.collection, 'destroy', this.onEvent);
         },
 
-        onAdd : function () {
+        onEvent : function () {
             this.render();
-            this.collection.eachSpecCredits();
         },
+
 
         render : function () {
             this.$el.empty();
