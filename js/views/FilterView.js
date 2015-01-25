@@ -1,23 +1,40 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
+  'views/FilterSpecItemView'
 ], function ( $, _, Backbone ) { 
 
     FilterView = Backbone.View.extend({
         el : '#filterDetails',
         
-        initialize : function () {
+        initialize : function (args) {
             console.log('filterView init');
+            this.filter = args.filter;
+            this.CL = args.CL;
             this.template = _.template($('#filterTemplate').html());
-            this.render();
+            
+            this.listenTo(this.collection, 'reset', this.render);
         },
 
         render : function () {
+            var specArray = _.zip(
+                this.collection.getAllSpecializationNameId(),
+                this.collection.getAllSpecializationName()
+            );
+            var that = this;
             this.$el.empty();
-            this.$el.html(this.template({
-                specializations: this.getSpecializations(),
-            }));
+            _.each(specArray, function (special) {
+                var view = new FilterSpecItemView({
+                    spec_fullName   : special[1],
+                    spec            : special[0],
+                    col             : that.collection,
+                    filter          : that.filter,
+                    CL              : that.CL
+                });
+
+                that.$el.append(view.el);
+            })
         },
 
         getSpecializations : function() {

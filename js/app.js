@@ -1,14 +1,17 @@
 define([
   'collections/TimeTableCollection',
   'collections/CourseCollection',
-], function ( TimeTableCollection, CourseCollection ) {
+  'models/FilterModel'
+], function ( TimeTableCollection, CourseCollection , FilterModel) {
 
 	//var courses = new CourseCollection(ourData);
 	var courses = new CourseCollection();	
 	var timeTableCollection = new TimeTableCollection();
+    var filters = new FilterModel();
 
 	return {
-		globalCourses: courses,
-		globalTimeTable : timeTableCollection
+		globalTimeTable : timeTableCollection,
+		globalCourses 	: courses,
+        globalFilters 	: filters
 	};
 });
