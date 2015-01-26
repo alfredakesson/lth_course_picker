@@ -2,7 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-], function ( $, _, Backbone ) { 
+  'text!templates/FilterSPItemTemplate.html'
+], function ( $, _, Backbone,temp ) { 
 
     FilterStudyPeriodItemView = Backbone.View.extend({
 
@@ -25,7 +26,7 @@ define([
         initialize : function (args) {
             this.studyPeriod = args.studyPeriod;
             this.filter = args.filter;
-            this.template = _.template($('#FilterSPItemTemplate').html());
+            this.template = _.template(temp);
             this.render();
         },
 
