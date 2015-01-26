@@ -13,6 +13,7 @@ define([
 	    localStorage: new Backbone.LocalStorage('timeTable'),
 
 	    addToTimeTable : function (chosenCourse) {
+            chosenCourse.set({ studyYear : 1 }); 
             this.create(chosenCourse.toJSON());
 	    },
 
