@@ -1,8 +1,9 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ( $, _, Backbone ) { 
+  'backbone',
+  'text!templates/DetailTemplate.html'
+], function ( $, _, Backbone,temp) { 
 
     TimeTableDetailView = Backbone.View.extend({
 
@@ -10,7 +11,7 @@ define([
         
         initialize : function () {
             console.log('detailView init');
-            this.template = _.template($('#DetailTemplate').html());
+            this.template = _.template(temp);
             this.listenTo(this.collection, 'add', this.onEvent);
             this.listenTo(this.collection, 'destroy', this.onEvent);
         },

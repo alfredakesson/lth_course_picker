@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'views/FilterSpecItemView',
-  'views/FilterStudyPeriodItemView'
-], function ( $, _, Backbone, FilterSpecItemView ) { 
+  'views/FilterStudyPeriodItemView',
+  'text!templates/FilterTemplate.html'
+], function ( $, _, Backbone, FilterSpecItemView,FilterStudyPeriodItemView, temp ) { 
 
     FilterSpecializationView = Backbone.View.extend({
         el : '#filterDetails',
@@ -12,9 +13,8 @@ define([
         initialize : function (args) {
             console.log('filterSpecializationView init');
             this.filter = args.filter;
-            console.log("test");
-            
-            this.template = _.template($('#FilterTemplate').html());
+            console.log("test");   
+            this.template = _.template(temp);
             this.listenTo(this.collection, 'reset', this.render);
         },
 

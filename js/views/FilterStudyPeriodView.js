@@ -4,7 +4,8 @@ define([
   'backbone',
   'views/FilterSpecItemView',
   'views/FilterStudyPeriodItemView',
-], function ( $, _, Backbone, FilterSpecItemView, FilterStudyPeriodItemView ) { 
+  'text!templates/StudyPeriodViewTemplate.html'
+], function ( $, _, Backbone, FilterSpecItemView, FilterStudyPeriodItemView ,temp) { 
 
     FilterView = Backbone.View.extend({
         el : '#filterStudyPeriod',
@@ -13,7 +14,7 @@ define([
             console.log('filterStudyPeriodView init');
             this.filter = args.filter;
             this.CL = args.CL;
-            this.template = _.template($('#StudyPeriodViewTemplate').html());
+            this.template = _.template(temp);
             this.render();
         },
 

@@ -2,8 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'app'
-], function ( $, _, Backbone, CoursePicker) { 
+  'app',
+  'text!templates/CourseItemTemplate.html'
+], function ( $, _, Backbone, CoursePicker,temp) { 
 
     ChosenCourseItemView = Backbone.View.extend({
 
@@ -17,7 +18,7 @@ define([
         },
         
         initialize : function () {            
-            this.template = _.template($('#CourseItemTemplate').html());
+            this.template = _.template(temp);
             this.render();
         },
 

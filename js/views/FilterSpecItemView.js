@@ -1,8 +1,9 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ( $, _, Backbone ) { 
+  'backbone',
+  'text!templates/FilterSpecItemTemplate.html'
+], function ( $, _, Backbone,temp ) { 
 
     FilterSpecItemView = Backbone.View.extend({
 
@@ -23,7 +24,7 @@ define([
             this.spec = args.spec;
             this.col = args.col;
             this.filter = args.filter;
-            this.template = _.template($('#FilterSpecItemTemplate').html());
+            this.template = _.template(temp);
             this.render();
 
         },
