@@ -10,23 +10,11 @@ $fromYear = 14;
 $toYear = 15;
 
 $dataKurser = parse('D', $fromYear, $toYear);
-//$elektroKurser = parse('E', $fromYear, $toYear);
-//$fysikKurser = parse('F', $fromYear, $toYear);
-
-/*
-code            - kurskod
-credits         - poäng
-cycle           - nivå
-specialization  - inriktning
-                - inriktning_id
-
-on_hold         - periodiserad
-study_periods   - lasperioder
-name            - kursnamn
-*/
+$elektroKurser = parse('E', $fromYear, $toYear);
+$fysikKurser = parse('F', $fromYear, $toYear);
 
 file_put_contents($file_datateknik, arrayToJson($dataKurser));
-//file_put_contents($file_elektroteknik, arrayToJson($elektroKurser));
-//file_put_contents($file_tekniskfysik, arrayToJson($fysikKurser));
+file_put_contents($file_elektroteknik, arrayToJson($elektroKurser));
+file_put_contents($file_tekniskfysik, arrayToJson($fysikKurser));
 
 ?>
