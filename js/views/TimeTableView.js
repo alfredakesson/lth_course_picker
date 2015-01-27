@@ -73,6 +73,13 @@ define([
                 collection : this.collection
             });
             this.$el.append(view.el);
+            
+            var view = new StudyPeriodView({
+                'sp' : '5',
+                collection : this.collection
+            });
+            this.$el.append(view.el);
+
         },
 
     });

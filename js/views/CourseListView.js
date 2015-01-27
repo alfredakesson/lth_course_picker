@@ -33,7 +33,7 @@ define([
                     if(that.filter.get('lasperioder')[sp-1])
                         isCorrectSP = true;
                 });
-                var isPeriod = that.filter.lasperioder[4] && studyPeriods.length === 0;
+                var isPeriod = that.filter.get('lasperioder')[4] && studyPeriods.length === 0;
                 return isCorrectSpecialization && (isCorrectSP || isPeriod);
             });
             var that = this;
