@@ -25,11 +25,6 @@ define([
             var toCol= this.collection.filter(function(s){
                 isCorrectSpecialization = that.filter.inriktning_id === s.get('inriktning_id');
 
-                if(s.get('inriktning_id') == 'exjobb') {
-                    console.log("FOUND!");
-                    console.log();
-                }
-
                 studyPeriods = s.get('lasperioder');
                 isCorrectSP = false;
                 _.each(studyPeriods, function (sp) {

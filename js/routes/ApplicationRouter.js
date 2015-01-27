@@ -33,6 +33,10 @@ define([
 
             CoursePicker.globalCourses.fetch({ reset: true });
             CoursePicker.globalTimeTable.fetch();
+
+            new StudyYearCreateView({
+                collection : CoursePicker.globalTimeTable
+            });
             
             new CourseListView({
                 collection : CoursePicker.globalCourses,
