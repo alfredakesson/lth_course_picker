@@ -46,7 +46,7 @@ define([
             this.$el.append(view.el);
             
             var view = new FilterStudyPeriodItemView({
-                'studyPeriod' : 'Periodiserade',
+                'studyPeriod' : 'Saknar läsperiod',
                 'filter'      : this.filter
             });
             this.$el.append(view.el);

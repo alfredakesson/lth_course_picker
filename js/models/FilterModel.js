@@ -21,7 +21,7 @@ define([
 
             var number = parseInt(studyPeriod);
             if(isNaN(number)){
-                if (studyPeriod === "Periodiserade"){
+                if (studyPeriod === "Saknar läsperiod"){
                     return  this.get('lasperioder')[4];
                 }
                 return false;
@@ -48,7 +48,7 @@ define([
         },
         
         toggleStudyPeriod : function (sp) {
-            if (sp === "Periodiserade"){
+            if (sp === "Saknar läsperiod"){
                 this.get('lasperioder')[4] = !this.get('lasperioder')[4];
             }
             else {
