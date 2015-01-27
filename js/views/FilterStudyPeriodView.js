@@ -13,7 +13,6 @@ define([
         initialize : function (args) {
             console.log('filterStudyPeriodView init');
             this.filter = args.filter;
-            this.CL = args.CL;
             this.template = _.template(temp);
             this.render();
             this.listenTo(this.filter, 'toggleAll', this.render);

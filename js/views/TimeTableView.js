@@ -29,6 +29,22 @@ define([
         },
 
         render : function () {
+            /*
+            // 1: Find nbr of study years to render
+            var maxStudyYear = 1;
+            _.each(this.collection, function (course) {
+                if(course.studyYear > maxStudyYear)
+                    maxStudyYear = course.studyYear;
+            });
+
+            // 2: Create each studyYearView
+            for (var i = 0; i<maxStudyYear, i++) {
+                var view = new StudyYearTimeTableView({
+                    collection : this.collection
+                });
+                this.$el.append(view.el);
+            }
+            */
 
             console.log("rendering TimeTableView");
             

@@ -13,6 +13,7 @@ define([
 	    localStorage: new Backbone.LocalStorage('timeTable'),
 
 	    addToTimeTable : function (chosenCourse) {
+            chosenCourse.set({ studyYear : 0 }); 
             this.create(chosenCourse.toJSON());
 	    },
 
@@ -60,7 +61,10 @@ define([
                     creditsArray[i] += result[i];
                 }
             });
-            _.map(creditsArray, function (credits) {credits.toFixed(2)} );
+
+            creditsArray = _.map(creditsArray, function (credits) {
+                return credits.toFixed(2)
+            } );
             return creditsArray;
         },
 

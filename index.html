@@ -6,9 +6,7 @@
 * Därför är denna punkten löst: Om kurs är on_hold ska den inte listas. 
 (detta ovan måste vi dock lösa på ngt snyggt sätt i framtiden)
 
-
 * Lägga till så att man kan skapa olika år (år4: [lp1,lp2,lp3,lp4], år5: [lp1,lp2,lp3,lp4])
-* Fixa templates i separata filer. Varför funkar det inte? 
 * göra en vacker design ;) 
 
 -->
@@ -32,9 +30,12 @@
 
     <div class="container-fluid">
         <div class="row-fluid">
+
             <div class="col-md-4">
                 <h2>Filter</h2>
-                <h4>Läsår: 4 5</h4>
+                <h4>Välj läsår</h4>
+                <h5 id="addStudyYear">Lägg till läsår</h5>
+                <h5 id="studyYearItem"><!--TEMPLATE--></h5><!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
                 <h4>Läsperiod</h4>
                 <ul id="filterStudyPeriod" class="list-inline"><!--TEMPLATE--></ul>
                 <h4>Inriktningar</h4>

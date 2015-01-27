@@ -8,8 +8,9 @@ define([
   'views/TimeTableView',
   'views/TimeTableDetailView',
   'views/FilterSpecializationView',
-  'views/FilterStudyPeriodView'
-], function ( $, _, Backbone, CoursePicker, CourseCollection, CourseListView, TimeTableView, TimeTableDetailView, FilterSpecializationView, FilterStudyPeriodView ) {
+  'views/FilterStudyPeriodView',
+  'views/StudyYearCreateView'
+], function ( $, _, Backbone, CoursePicker, CourseCollection, CourseListView, TimeTableView, TimeTableDetailView, FilterSpecializationView, FilterStudyPeriodView, StudyYearCreateView ) {
 
 
     ApplicationRouter = Backbone.Router.extend({
@@ -26,8 +27,19 @@ define([
                 collection : CoursePicker.globalTimeTable
             });
 
+            new StudyYearCreateView({
+                collection : CoursePicker.globalTimeTable,
+                filter : CoursePicker.globalFilters              
+            });
+
             CoursePicker.globalCourses.fetch({ reset: true });
             CoursePicker.globalTimeTable.fetch();
+            CoursePicker.globalFilters.fetch();
+
+            new StudyYearCreateView({
+                filter     : CoursePicker.globalFilters,
+                collection : CoursePicker.globalTimeTable
+            });
             
             new CourseListView({
                 collection : CoursePicker.globalCourses,
@@ -42,7 +54,7 @@ define([
             new FilterStudyPeriodView({
                 collection : CoursePicker.globalCourses,
                 filter : CoursePicker.globalFilters,
-            })
+            });
         },
 
     });
