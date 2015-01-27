@@ -17,6 +17,7 @@ define([
             this.filter = args.filter;
             
             $('#addStudyYear').click({filter: this.filter}, this.addStudyYear);
+            $('#removeStudyYear').click({filter: this.filter}, this.removeStudyYear);
 
             this.listenTo(this.filter, 'change', this.render);
 
@@ -27,6 +28,12 @@ define([
         addStudyYear : function (args) {
             var theFilter = args.data.filter;
             theFilter.addStudyYear();
+        },
+
+        removeStudyYear : function (args) {
+            /*var theFilter = args.data.filter;
+            theFilter.addStudyYear();*/
+            console.log('REMOVE STUDY YEAR!');
         },
 
         render : function () {
