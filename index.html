@@ -25,25 +25,27 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">LTH:s kursväljare</a>
+          <a class="navbar-brand" href="#">LTH:s kursväljare BETA</a>
         </div>
       </div>
     </nav>
 
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="span5">
-                <h2>Kurser</h2>
-                <h3>Filtrera</h3>
+            <div class="col-md-4">
+                <h2>Filter</h2>
                 <h4>Läsår: 4 5</h4>
                 <h4>Läsperiod</h4>
-                <h5 id="filterStudyPeriod"><!--TEMPLATE--></h5>
+                <ul id="filterStudyPeriod" class="list-inline"><!--TEMPLATE--></ul>
                 <h4>Inriktningar</h4>
-                <h5 id="filterDetails"><!--TEMPLATE--></h5>
-                <ul id="courseList"><!--TEMPLATE--></ul>
+                <ul id="filterDetails" class="list-inline"><!--TEMPLATE--></ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Kurser</h2>
+                <ul id="courseList" class="list-unstyled"><!--TEMPLATE--></ul>
             </div>
 
-            <div class="span5">
+            <div class="col-md-4">
                 <h2>Kursplan</h2>
                 <h3>Detaljer</h3>
                 <ul id="timeTableDetails"><!--TEMPLATE--></ul>

@@ -21,6 +21,7 @@ define([
             else {
                 this.filter.toggleStudyPeriod(this.studyPeriod);
             }
+            this.filter.trigger('toggleAll');
         },
 
         initialize : function (args) {
@@ -32,7 +33,8 @@ define([
 
         render : function () {
             this.$el.html(this.template({
-                'studyPeriod' : this.studyPeriod
+                'studyPeriod' : this.studyPeriod,
+                'toggle' : this.filter.getToggle(this.studyPeriod)
             }));
         }
 

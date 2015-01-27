@@ -5,6 +5,11 @@ define([
   ], function ( $, _, Backbone ) { 
 
     FilterModel = Backbone.Model.extend({
+        
+        getToggle : function(studyPeriod){
+            return  this.lasperioder[studyPeriod-1];
+        
+        },
 
         initialize: function () {
             this.lasperioder = [true, true, true, true];

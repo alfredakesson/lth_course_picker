@@ -16,9 +16,11 @@ define([
             this.CL = args.CL;
             this.template = _.template(temp);
             this.render();
+            this.listenTo(this.filter, 'toggleAll', this.render);
         },
 
         render : function () {
+            this.$el.empty();
 
             var view = new FilterStudyPeriodItemView({
                 'studyPeriod' : '1',
