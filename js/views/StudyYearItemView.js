@@ -36,7 +36,6 @@ define([
             filter.set('activeStudyYear', activeYear);
             filter.trigger('change');
             filter.save();
-            console.log(filter);
         }
 
     });

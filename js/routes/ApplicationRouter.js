@@ -27,11 +27,6 @@ define([
                 collection : CoursePicker.globalTimeTable
             });
 
-            new StudyYearCreateView({
-                collection : CoursePicker.globalTimeTable,
-                filter : CoursePicker.globalFilters              
-            });
-
             CoursePicker.globalCourses.fetch({ reset: true });
             CoursePicker.globalTimeTable.fetch();
             CoursePicker.globalFilters.fetch();
