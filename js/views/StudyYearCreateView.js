@@ -11,13 +11,10 @@ define([
 
 
         initialize : function (args) {  
-            //eventuellt så måste den här vänta på ett event tills alla kurser är i collection.
-            //men så länge låter vi den rendera direkt. 
-
             this.filter = args.filter;
             
             $('#addStudyYear').click({filter: this.filter}, this.addStudyYear);
-            $('#removeStudyYear').click({filter: this.filter}, this.removeStudyYear);
+            $('#removeStudyYear').click({filter: this.filter, collection: this.collection}, this.removeStudyYear);
 
             this.listenTo(this.filter, 'change', this.render);
 
@@ -31,9 +28,23 @@ define([
         },
 
         removeStudyYear : function (args) {
-            /*var theFilter = args.data.filter;
-            theFilter.addStudyYear();*/
-            console.log('REMOVE STUDY YEAR!');
+            var theFilter = args.data.filter;
+            var theCollection = args.data.collection;
+            var yearToRemove = theFilter.get('nbrStudyYears') - 1;
+
+            if(yearToRemove === 0) 
+                return;
+
+            console.log(theCollection);
+            theCollection.each(function (course) {
+                if (course.get('studyYear') === yearToRemove) {
+                    course.destroy();
+                }
+            });
+            theFilter.set('nbrStudyYears', yearToRemove);
+            theFilter.set('activeStudyYear', yearToRemove - 1);
+            theFilter.trigger(change);
+
         },
 
         render : function () {
