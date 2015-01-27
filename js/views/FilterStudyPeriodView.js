@@ -45,12 +45,21 @@ define([
                 'filter'      : this.filter
             });
             this.$el.append(view.el);
+            
+            var view = new FilterStudyPeriodItemView({
+                'studyPeriod' : 'Periodiserade',
+                'filter'      : this.filter
+            });
+            this.$el.append(view.el);
 
             var view = new FilterStudyPeriodItemView({
                 'studyPeriod' : 'Alla',
                 'filter'      : this.filter
             });
+            
             this.$el.append(view.el);
+
+            
         },
 
     });
