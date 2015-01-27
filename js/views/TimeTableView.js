@@ -10,17 +10,13 @@ define([
         /*el : '#timeTable', */
 
         initialize : function (args) {
-            
-            console.log('timeTable view init');
             this.studyYear = args.studyYear;
             this.render();
 
         },
 
         render : function () {
-
-            console.log("rendering TimeTableView");
-            
+           
             var currYear = this.studyYear;
 
             this.$el.append('<h5>Läsperiod 1</h5>');

@@ -16,7 +16,6 @@ define([
         },
 
         filterHasChanged : function () {
-            console.log('filter has changed!');
             this.render();
         },
 

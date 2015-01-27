@@ -14,9 +14,7 @@ define([
         },
 
         onclick : function () {
-            console.log('clicked on studyYearItemView');
             this.chooseStudyYear();
-
         },
 
         initialize : function (args) {  

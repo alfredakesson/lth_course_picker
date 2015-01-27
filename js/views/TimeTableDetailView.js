@@ -10,7 +10,6 @@ define([
         el : '#timeTableDetails',
         
         initialize : function () {
-            console.log('detailView init');
             this.template = _.template(temp);
             this.listenTo(this.collection, 'add', this.onEvent);
             this.listenTo(this.collection, 'destroy', this.onEvent);

@@ -10,8 +10,6 @@ define([
         initialize : function (args) {
             this.viewSp = args.sp;
             this.studyYear = args.studyYear;            
-            console.log('init StudyPeriodView ' + '#timeTableSp' + args.sp);
-
             this.render();
         },
 
@@ -30,7 +28,6 @@ define([
                 }
                 
                 var courseStudyYear = course.get('studyYear');   
-                console.log('viktikg koll study year is: ' + courseStudyYear);
                 var belongsToStudyYear = courseStudyYear === this.studyYear;
 
                 if(belongsToSp && belongsToStudyYear) {        

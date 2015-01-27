@@ -23,7 +23,6 @@ define([
         },
 
         initialize: function () {
-            console.log('init courseCollection');
         },
 
     });

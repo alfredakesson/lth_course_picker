@@ -66,8 +66,6 @@ define([
 
         addStudyYear : function () {
             var nextYear = this.get('nbrStudyYears') + 1;
-            console.log('ADD STUYDY YEAR');
-            console.log('currYear is: ' + nextYear);
             this.set('nbrStudyYears', nextYear);
             this.trigger('change');
             this.save();

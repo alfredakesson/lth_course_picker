@@ -15,7 +15,6 @@ define([
         },
 
         onclick : function () {
-            console.log('click on specialization: ' + this.spec);
             this.filter.setSpecialization(this.spec);
         },
 

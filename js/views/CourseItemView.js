@@ -18,7 +18,6 @@ define([
         },
 
         onclick : function () {
-            console.log('click!');
             this.addToTimeTable();
         },
 

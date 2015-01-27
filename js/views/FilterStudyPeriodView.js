@@ -11,7 +11,6 @@ define([
         el : '#filterStudyPeriod',
         
         initialize : function (args) {
-            console.log('filterStudyPeriodView init');
             this.filter = args.filter;
             this.template = _.template(temp);
             this.render();

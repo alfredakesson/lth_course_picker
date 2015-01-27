@@ -39,8 +39,6 @@ define([
         render : function () {
 
             this.$el.empty();
-            console.log("JAG RENDERAR");
-            console.log(this.filter.get('nbrStudyYears'));
 
             var nbrStudyYears = this.filter.get('nbrStudyYears');
             var offset = this.filter.get('offsetStudyYear');

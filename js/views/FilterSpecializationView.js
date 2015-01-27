@@ -11,9 +11,7 @@ define([
         el : '#filterDetails',
         
         initialize : function (args) {
-            console.log('filterSpecializationView init');
             this.filter = args.filter;
-            console.log("test");   
             this.template = _.template(temp);
             this.listenTo(this.collection, 'reset', this.render);
         },

@@ -13,7 +13,6 @@ define([
         },
 
         onclick : function () {
-            console.log('clicked on chosenItem');
             this.model.destroy();
         },
         

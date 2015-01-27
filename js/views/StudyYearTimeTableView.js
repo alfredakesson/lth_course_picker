@@ -10,11 +10,7 @@ define([
         el : '#timeTable', 
 
         initialize : function (args) {
-            console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
-            console.log('StudyYearTimeTableView init');
-            console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
             this.filter = args.filter;
-            
             this.listenTo(this.filter, 'change', this.render);
             this.listenTo(this.collection, 'add', this.render);
             this.listenTo(this.collection, 'remove', this.render);
@@ -23,17 +19,13 @@ define([
         },
 
         render : function () {
-
-            console.log("rendering StudyYearTimeTableView");
             this.$el.empty();
 
             var nbrStudyYears = this.filter.get('nbrStudyYears');
             var offset = this.filter.get('offsetStudyYear');
             var studyYear = this.filter.get('activeStudyYear');
 
-            for (var i = 0; i < nbrStudyYears; i++) {
-                console.log('LÄSÅR: ' + (i + offset));
-                
+            for (var i = 0; i < nbrStudyYears; i++) {                
                 this.$el.append('<h4>Läsår ' + (i + offset) + '</h4>');
 
                 var view = new TimeTableView({

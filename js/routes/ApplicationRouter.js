@@ -17,9 +17,6 @@ define([
     ApplicationRouter = Backbone.Router.extend({
         
         initialize : function() {
-            console.log('Application Router initialized...');
-
-
             new TimeTableDetailView({
                 collection : CoursePicker.globalTimeTable
             });
