@@ -22,8 +22,7 @@ define([
 
         render : function () {
             var that = this;
-            console.log("check this out");
-            console.log(this.collection.toJSON());
+            
             var toCol= this.collection.filter(function(s){
                 isCorrectSpecialization = that.filter.get('inriktning_id') === s.get('inriktning_id');
 
@@ -53,10 +52,8 @@ define([
                 this.collection.getAllSpecializationName()
             );
             var fullname = _.find(specArray, function(a) { return a[0] === cool; });
-            if (fullname){
-                console.log(fullname);
+            if (fullname)
                 $("#courseType").text(fullname[1]);
-            }
         },
 
     });

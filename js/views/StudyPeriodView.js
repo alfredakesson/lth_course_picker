@@ -10,7 +10,6 @@ define([
         initialize : function (args) {
             this.viewSp = args.sp;
             this.setElement('#timeTableSp' + args.sp);
-            console.log('init StudyPeriodView');
             this.render();
         },
 

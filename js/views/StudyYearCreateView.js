@@ -15,9 +15,7 @@ define([
             //men så länge låter vi den rendera direkt. 
 
             this.filter = args.filter;
-            console.log("TEST");
-            console.log(args);
-
+            
             $('#addStudyYear').click({filter: this.filter}, this.addStudyYear);
 
             this.listenTo(this.collection, 'add', this.render);
@@ -34,11 +32,22 @@ define([
         render : function () {
 
             this.$el.empty();
+            console.log("JAG RENDERAR");
+            console.log(this.filter.get('nbrStudyYears'));
 
-            
+            var nbrStudyYears = this.filter.get('nbrStudyYears');
+            var offset = this.filter.get('offsetStudyYear');
+            for (var i = 0; i < nbrStudyYears; i++) {
+                var view = new StudyYearItemView({
+                    'studyYear'   : i + offset,
+                    'filter'      : this.filter
+                });
+                this.$el.append(view.el);
+            }
         },
 
     });
+
 
     return StudyYearCreateView;
 
