@@ -1,15 +1,6 @@
 
 <!doctype html>
 <html lang="en">
-<!-- TO DO: 
-* Exjobb renderas inte längre, varför? CourseListView renderar bara en kurs om den är i en LP, det är inte exjobb. 
-* Därför är denna punkten löst: Om kurs är on_hold ska den inte listas. 
-(detta ovan måste vi dock lösa på ngt snyggt sätt i framtiden)
-
-* Lägga till så att man kan skapa olika år (år4: [lp1,lp2,lp3,lp4], år5: [lp1,lp2,lp3,lp4])
-* göra en vacker design ;) 
-
--->
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +27,7 @@
                 <h4>Välj läsår</h4>
                 <div><h5 id="addStudyYear" class="btn btn-default">Lägg till läsår</h5></div>
                 <ul id="studyYearItem" class="list-inline"><!--TEMPLATE--></ul>
-                <!--<div><h5 id="addStudyYear" class="btn btn-default">Lägg till läsår</h5></div>-->
+                <div><h5 id="removeStudyYear" class="btn btn-default">Ta bort senaste läsår</h5></div>
                 <h4>Läsperiod</h4>
                 <ul id="filterStudyPeriod" class="list-inline"><!--TEMPLATE--></ul>
                 <h4>Inriktningar</h4>
