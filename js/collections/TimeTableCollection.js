@@ -12,8 +12,8 @@ define([
 	    model: ChosenCourseModel,
 	    localStorage: new Backbone.LocalStorage('timeTable'),
 
-	    addToTimeTable : function (chosenCourse) {
-            chosenCourse.set({ studyYear : 0 }); 
+	    addToTimeTable : function (chosenCourse, studyYear) {
+            chosenCourse.set({ studyYear : studyYear }); 
             this.create(chosenCourse.toJSON());
 	    },
 

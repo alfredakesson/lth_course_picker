@@ -9,8 +9,9 @@ define([
 
         initialize : function (args) {
             this.viewSp = args.sp;
-            this.setElement('#timeTableSp' + args.sp);
+            this.studyYear = args.studyYear;            
             console.log('init StudyPeriodView ' + '#timeTableSp' + args.sp);
+
             this.render();
         },
 
@@ -27,7 +28,12 @@ define([
                     //console.log("Go inside");
                     belongsToSp = true;
                 }
-                if(belongsToSp) {        
+                
+                var courseStudyYear = course.get('studyYear');   
+                console.log('viktikg koll study year is: ' + courseStudyYear);
+                var belongsToStudyYear = courseStudyYear === this.studyYear;
+
+                if(belongsToSp && belongsToStudyYear) {        
                     var view = new ChosenCourseItemView({
                         model : course,
                     });

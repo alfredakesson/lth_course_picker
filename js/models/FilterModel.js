@@ -9,9 +9,12 @@ define([
         localStorage: new Backbone.LocalStorage('Filter'),
         
         defaults: {
-            'id'            : 666, /* Model must have a unique id to be saved in local storage */
-            'lasperioder'   : [true, true, true, true,true],
-            'inriktning_id' : 'none'
+            'id'                    : 666, /* Model must have a unique id to be saved in local storage */
+            'lasperioder'           : [true, true, true, true,true],
+            'inriktning_id'         : 'none',
+            'nbrStudyYears'         : 1, /* this is a "length" */
+            'activeStudyYear'       : 0, /* this is a index */
+            'offsetStudyYear'       : 4
         },
 
         getToggle : function(studyPeriod){
@@ -35,6 +38,7 @@ define([
         resetStudyPeriod : function () {
             this.set('lasperioder', [true, true, true, true,true]);
             this.set('inriktning_id', 'none');
+            this.save();
         },
 
         resetStudyPeriod : function () {
@@ -60,10 +64,15 @@ define([
             this.save();
         },
 
-        addStudyYear  : function () {
-            console.log('hej add studyyear i filter');
-        }
-      
+        addStudyYear : function () {
+            var nextYear = this.get('nbrStudyYears') + 1;
+            console.log('ADD STUYDY YEAR');
+            console.log('currYear is: ' + nextYear);
+            this.set('nbrStudyYears', nextYear);
+            this.trigger('change');
+            this.save();
+        },
+
     });
 
     return FilterModel;

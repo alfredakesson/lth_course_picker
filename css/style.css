@@ -3,3 +3,7 @@ body { padding-top: 70px; }
 .filterSpecItem {
     margin-top: 5px;
 }
+
+#addStudyYear {
+	margin-bottom: 10px;
+}
