@@ -10,13 +10,22 @@ define([
         
         defaults: {
             'id'            : 666, /* Model must have a unique id to be saved in local storage */
-            'lasperioder'   : [true,true,true,true],
+            'lasperioder'   : [true, true, true, true,true],
             'inriktning_id' : 'none'
         },
 
         getToggle : function(studyPeriod){
-            return  this.get('lasperioder')[studyPeriod-1];
+
+            var number = parseInt(studyPeriod);
+            if(isNaN(number)){
+                if (studyPeriod === "Periodiserade"){
+                    return  this.get('lasperioder')[4];
+                }
+                return false;
+            }
+            return  this.get('lasperioder')[number-1];
         },
+
 
 
         initialize: function () {
@@ -24,13 +33,23 @@ define([
         },
 
         resetStudyPeriod : function () {
-            this.set('lasperioder', [true, true, true, true]);
+            this.set('lasperioder', [true, true, true, true,true]);
+            this.set('inriktning_id', 'none');
+        },
+
+        resetStudyPeriod : function () {
+            this.set('lasperioder', [true, true, true, true,true]);
             this.trigger('change');
             this.save();
         },
         
         toggleStudyPeriod : function (sp) {
-            this.get('lasperioder')[sp-1] = !this.get('lasperioder')[sp-1];
+            if (sp === "Periodiserade"){
+                this.get('lasperioder')[4] = !this.get('lasperioder')[4];
+            }
+            else {
+                this.get('lasperioder')[sp-1] = !this.get('lasperioder')[sp-1];
+            }
             this.trigger('change');
             this.save();
         },
