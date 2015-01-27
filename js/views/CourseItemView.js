@@ -25,11 +25,13 @@ define([
         addToTimeTable : function () {
             var course = new ChosenCourseModel(this.model.toJSON());
 
-            CoursePicker.globalTimeTable.addToTimeTable(course);
+            var activeYear = this.filter.get('activeStudyYear');
+            CoursePicker.globalTimeTable.addToTimeTable(course, activeYear);
         },
 
-        initialize : function () {
+        initialize : function (args) {
             this.template = _.template(temp);
+            this.filter = args.filter;
             this.render();
 
         },

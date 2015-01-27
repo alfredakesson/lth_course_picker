@@ -10,46 +10,42 @@ define([
         el : '#timeTable', 
 
         initialize : function (args) {
-            this.set(args.studyYear);
             console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
             console.log('StudyYearTimeTableView init');
-            console.log(this.studyYear);
             console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+            this.filter = args.filter;
+            
+            this.listenTo(this.filter, 'change', this.render);
+            this.listenTo(this.collection, 'add', this.render);
+            this.listenTo(this.collection, 'remove', this.render);
+
             this.render();
         },
 
         render : function () {
 
             console.log("rendering StudyYearTimeTableView");
+            this.$el.empty();
+
+            var nbrStudyYears = this.filter.get('nbrStudyYears');
+            var offset = this.filter.get('offsetStudyYear');
+            var studyYear = this.filter.get('activeStudyYear');
+
+            for (var i = 0; i < nbrStudyYears; i++) {
+                console.log('LÄSÅR: ' + (i + offset));
+                
+                this.$el.append('<h4>Läsår ' + (i + offset) + '</h4>');
+
+                var view = new TimeTableView({
+                    collection : this.collection,
+                    studyYear  : i
+                });            
+                this.$el.append(view.el);
+
+            }
             
-            var view = new StudyPeriodView({
-                'studyYear': this.studyYear,
-                'sp' : '1',
-                collection : this.collection
-            });
-            this.$el.append(view.el);
-
-            var view = new StudyPeriodView({
-                'studyYear': this.get('studyYear');
-                'sp' : '2',
-                collection : this.collection
-            });
-            this.$el.append(view.el);
-
-            var view = new StudyPeriodView({
-                'studyYear': this.get('studyYear');
-                'sp' : '3',
-                collection : this.collection
-            });
-            this.$el.append(view.el);
-
-            var view = new StudyPeriodView({
-                'studyYear': this.get('studyYear');
-                'sp' : '4',
-                collection : this.collection
-            });
             
-            this.$el.append(view.el);
+            //this.$el.append(view.el);
         },
 
     });

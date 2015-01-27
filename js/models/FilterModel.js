@@ -12,8 +12,8 @@ define([
             'id'                    : 666, /* Model must have a unique id to be saved in local storage */
             'lasperioder'           : [true, true, true, true,true],
             'inriktning_id'         : 'none',
-            'nbrStudyYears'         : 0,
-            'activeStudyYear'       : 0,
+            'nbrStudyYears'         : 1, /* this is a "length" */
+            'activeStudyYear'       : 0, /* this is a index */
             'offsetStudyYear'       : 4
         },
 

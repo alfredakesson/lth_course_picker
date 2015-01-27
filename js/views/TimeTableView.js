@@ -7,75 +7,63 @@ define([
 
     TimeTableView = Backbone.View.extend({
 
-        el : '#timeTable', 
+        /*el : '#timeTable', */
 
-        initialize : function () {
+        initialize : function (args) {
             
             console.log('timeTable view init');
-
-            this.listenTo(this.collection, 'add', this.onAdd);
-            this.listenTo(this.collection, 'remove', this.onDelete);
+            this.studyYear = args.studyYear;
             this.render();
 
-        },
-
-        onDelete : function () {
-            this.render();
-        },
-
-
-        onAdd : function () {
-            this.render();
         },
 
         render : function () {
-            /*
-            // 1: Find nbr of study years to render
-            var maxStudyYear = 1;
-            _.each(this.collection, function (course) {
-                if(course.studyYear > maxStudyYear)
-                    maxStudyYear = course.studyYear;
-            });
-
-            // 2: Create each studyYearView
-            for (var i = 0; i<maxStudyYear, i++) {
-                var view = new StudyYearTimeTableView({
-                    collection : this.collection
-                });
-                this.$el.append(view.el);
-            }
-            */
 
             console.log("rendering TimeTableView");
             
-            this.$el.empty();
-            
+            var currYear = this.studyYear;
+
+            this.$el.append('<h5>Läsperiod 1</h5>');
+
             var view = new StudyPeriodView({
                 'sp' : '1',
+                'studyYear' : currYear,
                 collection : this.collection
             });
             this.$el.append(view.el);
+
+            this.$el.append('<h5>Läsperiod 2</h5>');
 
             var view = new StudyPeriodView({
                 'sp' : '2',
+                'studyYear' : currYear,
                 collection : this.collection
             });
             this.$el.append(view.el);
+
+            this.$el.append('<h5>Läsperiod 3</h5>');
 
             var view = new StudyPeriodView({
                 'sp' : '3',
+                'studyYear' : currYear,
                 collection : this.collection
             });
             this.$el.append(view.el);
 
+            this.$el.append('<h5>Läsperiod 4</h5>');
+
             var view = new StudyPeriodView({
                 'sp' : '4',
+                'studyYear' : currYear,
                 collection : this.collection
             });
             this.$el.append(view.el);
+
+            this.$el.append('<h5>Utan läsperiod</h5>');
             
             var view = new StudyPeriodView({
                 'sp' : '5',
+                'studyYear' : currYear,
                 collection : this.collection
             });
             this.$el.append(view.el);

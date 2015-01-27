@@ -6,7 +6,19 @@ define([
 ], function ( $, _, Backbone, temp ) { 
 
     StudyYearItemView = Backbone.View.extend({
-        
+         
+        tagName : 'li',
+          
+        events : {
+            'click' : 'onclick',
+        },
+
+        onclick : function () {
+            console.log('clicked on studyYearItemView');
+            this.chooseStudyYear();
+
+        },
+
         initialize : function (args) {  
             this.studyYear = args.studyYear;
             this.template = _.template(temp);
@@ -16,21 +28,17 @@ define([
         },
 
         render : function () {
-            var isActive = this.filter.get('activeStudyYear') === this.studyYear;
+            var offsetYear = this.filter.get('offsetStudyYear');
+            var isActive = this.filter.get('activeStudyYear') === (this.studyYear - offsetYear);
             this.$el.html(this.template({
                 'studyYear'   : this.studyYear,
                 'isActive'    : isActive    
             }));
-
-            $('#studyYearItem').click({
-              'studyYear' : this.studyYear,
-              'filter'    : this.filter 
-            }, this.chooseStudyYear);
         },
 
-        chooseStudyYear : function (args) {
-            var filter = args.data.filter;
-            var studyYear = args.data.studyYear;
+        chooseStudyYear : function () {
+            var filter = this.filter;
+            var studyYear = this.studyYear;
 
             var activeYear = studyYear - filter.get('offsetStudyYear');
             filter.set('activeStudyYear', activeYear);

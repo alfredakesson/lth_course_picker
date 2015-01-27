@@ -17,7 +17,9 @@ define([
             this.filter = args.filter;
             
             $('#addStudyYear').click({filter: this.filter}, this.addStudyYear);
-            console.log('INITITII');
+
+            this.listenTo(this.filter, 'change', this.render);
+
             this.render();
         },
 
@@ -35,7 +37,7 @@ define([
 
             var nbrStudyYears = this.filter.get('nbrStudyYears');
             var offset = this.filter.get('offsetStudyYear');
-            console.log('nbr studyyears is ' + nbrStudyYears + ', ')
+            
             for (var i = 0; i < nbrStudyYears; i++) {
                 var view = new StudyYearItemView({
                     'studyYear'   : i + offset,

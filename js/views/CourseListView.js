@@ -39,7 +39,8 @@ define([
             this.$el.empty();
             _.each(toCol, function (course) {
                 var view = new CourseItemView({
-                    model : course
+                    model : course,
+                    filter : that.filter
                 });
                 that.$el.append(view.el);
             });
