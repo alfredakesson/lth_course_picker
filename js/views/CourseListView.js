@@ -23,12 +23,12 @@ define([
         render : function () {
             var that = this;
             var toCol= this.collection.filter(function(s){
-                isCorrectSpecialization = that.filter.inriktning_id === s.get('inriktning_id');
+                isCorrectSpecialization = that.filter.get('inriktning_id') === s.get('inriktning_id');
 
                 studyPeriods = s.get('lasperioder');
                 isCorrectSP = false;
                 _.each(studyPeriods, function (sp) {
-                    if(that.filter.lasperioder[sp-1])
+                    if(that.filter.get('lasperioder')[sp-1])
                         isCorrectSP = true;
                 });
                 return isCorrectSpecialization && isCorrectSP;

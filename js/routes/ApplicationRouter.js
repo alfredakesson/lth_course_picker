@@ -28,13 +28,16 @@ define([
             });
 
             new StudyYearCreateView({
-                collection : CoursePicker.globalTimeTable              
+                collection : CoursePicker.globalTimeTable,
+                filter : CoursePicker.globalFilters              
             });
 
             CoursePicker.globalCourses.fetch({ reset: true });
             CoursePicker.globalTimeTable.fetch();
+            CoursePicker.globalFilters.fetch();
 
             new StudyYearCreateView({
+                filter     : CoursePicker.globalFilters,
                 collection : CoursePicker.globalTimeTable
             });
             

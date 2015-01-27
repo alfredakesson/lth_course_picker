@@ -15,9 +15,11 @@ define([
             this.filter = args.filter;
             this.template = _.template(temp);
             this.render();
+            this.listenTo(this.filter, 'toggleAll', this.render);
         },
 
         render : function () {
+            this.$el.empty();
 
             var view = new FilterStudyPeriodItemView({
                 'studyPeriod' : '1',
