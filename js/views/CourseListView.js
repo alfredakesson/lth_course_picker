@@ -44,7 +44,7 @@ define([
                 });
                 that.$el.append(view.el);
             });
-            this.rentderTitle(that.filter.inriktning_id);
+            this.rentderTitle(that.filter.get('inriktning_id'));
         },
         
         rentderTitle : function(cool) {
