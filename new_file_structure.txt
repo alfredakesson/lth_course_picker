@@ -1,0 +1,35 @@
+		  NEW DESIGN
+================================
+
+# MODELS
+CourseModel
+TimeTableCourseModel
+
+FilterModel
+DetailModel
+
+--------------------------------
+
+# COLLECTIONS
+CourseCollection
+TimeTableCollection 
+
+--------------------------------
+
+# VIEWS
+CourseListView
+TimeTableView
+
+CourseItemView
+TimeTableItemView
+
+FilterSpecializationView
+FilterStudyPeriodView
+FilterStudyYearView
+
+DetailView
+FilterView
+
+--------------------------------
+
+
